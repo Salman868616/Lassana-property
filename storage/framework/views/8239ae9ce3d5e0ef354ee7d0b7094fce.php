@@ -1,0 +1,7 @@
+<?php if (! ($hidePhone ?? false)): ?>
+<div class="mb-3"><label class="form-label" for="<?php echo e($fieldPrefix); ?>-phone">Phone number</label><input class="form-control" id="<?php echo e($fieldPrefix); ?>-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" value="<?php echo e(old('phone',$profileDefaults->phone ?? '')); ?>"></div>
+<?php endif; ?>
+<div class="mb-3"><label class="form-label" for="<?php echo e($fieldPrefix); ?>-agency">Agency name (optional)</label><input class="form-control" id="<?php echo e($fieldPrefix); ?>-agency" name="agency_name" maxlength="150" value="<?php echo e(old('agency_name',$profileDefaults->agency_name ?? '')); ?>"></div>
+<div class="mb-3"><label class="form-label" for="<?php echo e($fieldPrefix); ?>-areas">Service areas</label><input class="form-control" id="<?php echo e($fieldPrefix); ?>-areas" name="service_areas" maxlength="500" value="<?php echo e(old('service_areas',$profileDefaults->service_areas ?? '')); ?>"></div>
+<div class="mb-3"><label class="form-label" for="<?php echo e($fieldPrefix); ?>-bio">Professional introduction</label><textarea class="form-control" id="<?php echo e($fieldPrefix); ?>-bio" name="bio" maxlength="2000" rows="3"><?php echo e(old('bio',$profileDefaults->bio ?? '')); ?></textarea></div>
+<?php /**PATH C:\Users\AdminUser\Documents\Finder_Laravel_v1.1.0\Landing\resources\views/account/auth/agent-fields.blade.php ENDPATH**/ ?>

@@ -1,0 +1,2 @@
+<?php echo $__env->make('layouts.admin-shell', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+<?php /**PATH C:\Users\AdminUser\Documents\Finder_Laravel_v1.1.0\Landing\resources\views/layouts/dashboard.blade.php ENDPATH**/ ?>

@@ -1,0 +1,16 @@
+<section class="container" aria-labelledby="home-building-title">
+<h2 class="h1" id="home-building-title"><?php echo e(__('From finding land to planning your home')); ?></h2>
+<p class="lp-conversion-intro"><?php echo e(__('Lassana Property connects your property search with LGC professional services. Share your site, ideas and requirements so the team can discuss the next step.')); ?></p>
+<div class="lp-conversion-grid"><?php $__currentLoopData = [
+['house-plans','House plans','Discuss the rooms, spaces and layout you want for your future home.','fi-home'],
+['architectural-design','Architectural design','Prepare a design brief around your site and the way you want to live.','fi-edit'],
+['boq','BOQ services','Ask about a bill of quantities for your planned building work.','fi-file']
+]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as [$slug,$heading,$body,$icon]): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><article class="lp-conversion-card"><span class="lp-conversion-number"><i class="<?php echo e($icon); ?>" aria-hidden="true"></i></span><h3><?php echo e(__($heading)); ?></h3><p><?php echo e(__($body)); ?></p><a href="<?php echo e(route('services.show',['page'=>$slug])); ?>"><?php echo e(__('Explore this service')); ?><span class="visually-hidden">: <?php echo e(__($heading)); ?></span></a></article><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></div>
+<div class="lp-conversion-links"><a class="btn btn-primary" href="<?php echo e(!auth()->check() || auth()->user()->hasRole('buyer') ? route('buyer.services.create',['type'=>'lgc_service']) : route('contact-us')); ?>"><?php echo e(__('Discuss your building project')); ?></a><a href="<?php echo e(route('services.show',['page'=>'build-your-home'])); ?>"><?php echo e(__('How LGC services work')); ?></a></div>
+</section>
+<section class="container" aria-labelledby="home-overseas-title"><div class="lp-conversion-banner">
+<div><h2 class="h1" id="home-overseas-title"><?php echo e(__('Exploring Sri Lankan property from overseas?')); ?></h2><p><?php echo e(__('Browse listings, share the property references that interest you and arrange a conversation with our team from wherever you are.')); ?></p>
+<div class="lp-conversion-links"><a class="btn btn-primary" href="<?php echo e(route('services.show',['page'=>'overseas-property'])); ?>"><?php echo e(__('Explore overseas buyer support')); ?></a><a href="mailto:<?php echo e(config('company.email')); ?>?subject=<?php echo e(rawurlencode('Overseas property enquiry')); ?>"><?php echo e(__('Email the team')); ?></a></div></div>
+<ol class="lp-conversion-steps"><li><?php echo e(__('Shortlist the properties you would like to discuss.')); ?></li><li><?php echo e(__('Share your country, time zone and preferred contact time.')); ?></li><li><?php echo e(__('Ask the team about available viewing or inspection arrangements.')); ?></li></ol>
+</div></section>
+<?php /**PATH C:\Users\AdminUser\Documents\Finder_Laravel_v1.1.0\Landing\resources\views/home/service-promotions.blade.php ENDPATH**/ ?>

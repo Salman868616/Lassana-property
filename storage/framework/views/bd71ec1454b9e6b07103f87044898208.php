@@ -1,0 +1,5 @@
+<section class="container" aria-labelledby="home-guides-title">
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4"><h2 class="h1 mb-0" id="home-guides-title"><?php echo e(__('Property guides')); ?></h2><a class="btn btn-outline-primary" href="<?php echo e(route('guides.index')); ?>"><?php echo e(__('All property guides')); ?></a></div>
+<div class="lp-conversion-grid"><?php $__currentLoopData = config('property_guides'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slug=>$article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><article class="lp-conversion-card"><h3><?php echo e(__($article['title'])); ?></h3><p><?php echo e(__($article['summary'])); ?></p><a href="<?php echo e(route('guides.show',$slug)); ?>"><?php echo e(__('Read guide')); ?> <span class="visually-hidden"><?php echo e(__($article['title'])); ?></span></a></article><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></div>
+</section>
+<?php /**PATH C:\Users\AdminUser\Documents\Finder_Laravel_v1.1.0\Landing\resources\views/home/guides.blade.php ENDPATH**/ ?>
