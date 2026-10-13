@@ -1,0 +1,2288 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 13, 2026 at 05:18 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `lassana_property`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agent_applications`
+--
+
+CREATE TABLE `agent_applications` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `agency_name` varchar(150) DEFAULT NULL,
+  `service_areas` varchar(500) NOT NULL,
+  `bio` text NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'pending',
+  `reviewed_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `review_notes` text DEFAULT NULL,
+  `reviewed_at` datetime DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `agent_applications`
+--
+
+INSERT INTO `agent_applications` (`id`, `user_id`, `phone`, `agency_name`, `service_areas`, `bio`, `status`, `reviewed_by`, `review_notes`, `reviewed_at`, `created_at`, `updated_at`) VALUES
+(1, 14, '0777777777', NULL, 'colombo', 'im a agent in colobo district', 'approved', 6, 'approved', '2026-10-07 06:44:52', '2026-10-07 00:59:21', '2026-10-07 01:14:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agent_subscriptions`
+--
+
+CREATE TABLE `agent_subscriptions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `agent_id` bigint(20) UNSIGNED NOT NULL,
+  `subscription_plan_id` bigint(20) UNSIGNED NOT NULL,
+  `status` enum('draft','active','cancelled','expired') NOT NULL DEFAULT 'draft',
+  `agreed_price` decimal(14,2) DEFAULT NULL,
+  `currency` varchar(3) NOT NULL DEFAULT 'LKR',
+  `starts_at` datetime DEFAULT NULL,
+  `ends_at` datetime DEFAULT NULL,
+  `cancelled_at` datetime DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buyer_service_requests`
+--
+
+CREATE TABLE `buyer_service_requests` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `customer_id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `type` varchar(30) NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `location` varchar(255) DEFAULT NULL,
+  `preferred_date` date DEFAULT NULL,
+  `message` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buyer_service_requests`
+--
+
+INSERT INTO `buyer_service_requests` (`id`, `customer_id`, `property_id`, `type`, `phone`, `location`, `preferred_date`, `message`, `created_at`, `updated_at`) VALUES
+(1, 8, 5, 'inspection', '2445661', NULL, '2026-10-10', 'I would like to inspect this land and check its road access, boundaries, and water and electricity availability. Please contact me to arrange a suitable time.', '2026-10-05 03:51:44', '2026-10-05 03:51:44'),
+(2, 8, 5, 'lgc_service', '2445661', NULL, '2026-10-10', 'need to know details about the property', '2026-10-05 03:59:23', '2026-10-05 03:59:23'),
+(3, 8, 5, 'inspection', '0777777777', NULL, NULL, 'Test inspection request: Please check the property’s condition, road access, electricity and water supply. Contact me to confirm a suitable inspection date', '2026-10-08 23:21:05', '2026-10-08 23:21:05'),
+(4, 8, 9, 'lgc_service', '0777777777', NULL, NULL, 'Test: I need advice about building a house on this land.', '2026-10-08 23:29:46', '2026-10-08 23:29:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cache`
+--
+
+CREATE TABLE `cache` (
+  `key` varchar(191) NOT NULL,
+  `value` mediumtext NOT NULL,
+  `expiration` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cache`
+--
+
+INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
+('lassana-property-cache-0ade7c2cf97f75d009975f4d720d1fa6c19f4897', 'i:1;', 1791609534),
+('lassana-property-cache-0ade7c2cf97f75d009975f4d720d1fa6c19f4897:timer', 'i:1791609534;', 1791609534),
+('lassana-property-cache-1574bddb75c78a6fd2251d61e2993b5146201319', 'i:1;', 1791804152),
+('lassana-property-cache-1574bddb75c78a6fd2251d61e2993b5146201319:timer', 'i:1791804152;', 1791804152),
+('lassana-property-cache-1b6453892473a467d07372d45eb05abc2031647a', 'i:1;', 1791371519),
+('lassana-property-cache-1b6453892473a467d07372d45eb05abc2031647a:timer', 'i:1791371519;', 1791371519),
+('lassana-property-cache-5c785c036466adea360111aa28563bfd556b5fba', 'i:2;', 1791804566),
+('lassana-property-cache-5c785c036466adea360111aa28563bfd556b5fba:timer', 'i:1791804566;', 1791804566),
+('lassana-property-cache-7b52009b64fd0a2a49e6d8a939753077792b0554', 'i:1;', 1791344850),
+('lassana-property-cache-7b52009b64fd0a2a49e6d8a939753077792b0554:timer', 'i:1791344850;', 1791344850),
+('lassana-property-cache-902ba3cda1883801594b6e1b452790cc53948fda', 'i:1;', 1791609461),
+('lassana-property-cache-902ba3cda1883801594b6e1b452790cc53948fda:timer', 'i:1791609461;', 1791609461),
+('lassana-property-cache-b1d5781111d84f7b3fe45a0852e59758cd7a87e5', 'i:2;', 1791610290),
+('lassana-property-cache-b1d5781111d84f7b3fe45a0852e59758cd7a87e5:timer', 'i:1791610290;', 1791610290),
+('lassana-property-cache-bd307a3ec329e10a2cff8fb87480823da114f8f4', 'i:3;', 1791350411),
+('lassana-property-cache-bd307a3ec329e10a2cff8fb87480823da114f8f4:timer', 'i:1791350411;', 1791350411),
+('lassana-property-cache-c1dfd96eea8cc2b62785275bca38ac261256e278', 'i:1;', 1791786390),
+('lassana-property-cache-c1dfd96eea8cc2b62785275bca38ac261256e278:timer', 'i:1791786390;', 1791786390),
+('lassana-property-cache-f1abd670358e036c31296e66b3b66c382ac00812', 'i:4;', 1791804328),
+('lassana-property-cache-f1abd670358e036c31296e66b3b66c382ac00812:timer', 'i:1791804328;', 1791804328),
+('lassana-property-cache-fa35e192121eabf3dabf9f5ea6abdbcbc107ac3b', 'i:2;', 1791609347),
+('lassana-property-cache-fa35e192121eabf3dabf9f5ea6abdbcbc107ac3b:timer', 'i:1791609347;', 1791609347),
+('lassana-property-cache-fe5dbbcea5ce7e2988b8c69bcfdfde8904aabc1f', 'i:1;', 1791525153),
+('lassana-property-cache-fe5dbbcea5ce7e2988b8c69bcfdfde8904aabc1f:timer', 'i:1791525153;', 1791525153),
+('lassana-property-cache-login:c159683b77afce78f2300f9934028be27195e84ebae2dca92b69b51822d6e86d', 'i:1;', 1791521248),
+('lassana-property-cache-login:c159683b77afce78f2300f9934028be27195e84ebae2dca92b69b51822d6e86d:timer', 'i:1791521248;', 1791521248),
+('lassana-property-cache-sms-ip:12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0', 'i:1;', 1791807881),
+('lassana-property-cache-sms-ip:12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0:timer', 'i:1791807881;', 1791807881),
+('lassana-property-cache-sms-phone:71df1bd7ade4107f42593991f4f3902359f40f09db92c713187bd512acc540b5', 'i:1;', 1791807881),
+('lassana-property-cache-sms-phone:71df1bd7ade4107f42593991f4f3902359f40f09db92c713187bd512acc540b5:timer', 'i:1791807881;', 1791807881);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cache_locks`
+--
+
+CREATE TABLE `cache_locks` (
+  `key` varchar(191) NOT NULL,
+  `owner` varchar(191) NOT NULL,
+  `expiration` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign_spends`
+--
+
+CREATE TABLE `campaign_spends` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `campaign_id` bigint(20) UNSIGNED NOT NULL,
+  `reference` varchar(100) NOT NULL,
+  `spent_on` date NOT NULL,
+  `amount` decimal(14,2) NOT NULL,
+  `recorded_by` bigint(20) UNSIGNED NOT NULL,
+  `voided_at` datetime DEFAULT NULL,
+  `voided_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `void_reason` varchar(500) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaints`
+--
+
+CREATE TABLE `complaints` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `category` varchar(20) NOT NULL,
+  `property_reference` varchar(100) DEFAULT NULL,
+  `subject` varchar(200) NOT NULL,
+  `message` text NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'open',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `complaints`
+--
+
+INSERT INTO `complaints` (`id`, `user_id`, `category`, `property_reference`, `subject`, `message`, `status`, `created_at`, `updated_at`) VALUES
+(1, 8, 'property', 'LP-JAF-00008', 'we cant contact you', 'im interested with this property.so i called  the number in the website.But i can\'t reach them', 'resolved', '2026-10-07 03:23:05', '2026-10-08 22:57:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaint_updates`
+--
+
+CREATE TABLE `complaint_updates` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `complaint_id` bigint(20) UNSIGNED NOT NULL,
+  `reviewer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `status` varchar(20) NOT NULL,
+  `response` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `complaint_updates`
+--
+
+INSERT INTO `complaint_updates` (`id`, `complaint_id`, `reviewer_id`, `status`, `response`, `created_at`, `updated_at`) VALUES
+(1, 1, 6, 'in_progress', 'we will check and let you know', '2026-10-07 03:25:54', '2026-10-07 03:25:54'),
+(2, 1, 6, 'resolved', 'property information clarified. complaint resolved', '2026-10-08 22:57:09', '2026-10-08 22:57:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `crm_leads`
+--
+
+CREATE TABLE `crm_leads` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `enquiry_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `assigned_to` bigint(20) UNSIGNED DEFAULT NULL,
+  `status` varchar(40) NOT NULL DEFAULT 'new',
+  `follow_up_at` timestamp NULL DEFAULT NULL,
+  `notes` text DEFAULT NULL,
+  `outcome` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `source` varchar(40) NOT NULL DEFAULT 'unknown',
+  `first_contacted_at` timestamp NULL DEFAULT NULL,
+  `legacy_status` varchar(40) DEFAULT NULL,
+  `legacy_outcome` varchar(100) DEFAULT NULL,
+  `property_request_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `buyer_service_request_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `marketing_campaign_id` bigint(20) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `crm_leads`
+--
+
+INSERT INTO `crm_leads` (`id`, `property_id`, `enquiry_id`, `assigned_to`, `status`, `follow_up_at`, `notes`, `outcome`, `created_at`, `updated_at`, `source`, `first_contacted_at`, `legacy_status`, `legacy_outcome`, `property_request_id`, `buyer_service_request_id`, `marketing_campaign_id`) VALUES
+(1, 6, 2, 7, 'interested', '2026-10-29 21:00:00', 'customer renewed interest', NULL, '2026-10-01 00:44:22', '2026-10-08 22:48:31', 'website', NULL, 'viewing', NULL, NULL, NULL, NULL),
+(2, 5, NULL, 7, 'viewing_scheduled', '2026-10-05 06:30:00', 'contacted the buyer', NULL, '2026-10-01 04:21:48', '2026-10-01 04:35:13', 'property_request', '2026-10-01 04:30:31', NULL, NULL, 1, NULL, NULL),
+(3, 6, 3, NULL, 'new', NULL, NULL, NULL, '2026-10-01 21:57:55', '2026-10-01 21:57:55', 'website', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 5, NULL, NULL, 'new', NULL, NULL, NULL, '2026-10-05 03:51:44', '2026-10-05 03:51:44', 'inspection', NULL, NULL, NULL, NULL, 1, NULL),
+(5, 5, NULL, NULL, 'new', NULL, NULL, NULL, '2026-10-05 03:59:23', '2026-10-05 03:59:23', 'lgc_service', NULL, NULL, NULL, NULL, 2, NULL),
+(6, 10, 4, 9, 'contacted', '2026-10-10 11:30:00', 'sales follow-up update.', NULL, '2026-10-05 23:00:49', '2026-10-05 23:39:33', 'website', NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 11, 5, 14, 'viewing_scheduled', '2026-10-14 23:00:00', 'Viewing cancelled; arranging another date.', NULL, '2026-10-07 05:53:53', '2026-10-08 22:01:17', 'website', NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 5, NULL, NULL, 'contacted', '2026-10-31 22:00:00', 'Test: contacted buyer to discuss inspection requirements.', NULL, '2026-10-08 23:21:05', '2026-10-08 23:25:59', 'inspection', NULL, NULL, NULL, NULL, 3, NULL),
+(9, 9, NULL, NULL, 'new', NULL, NULL, NULL, '2026-10-08 23:29:46', '2026-10-08 23:29:46', 'lgc_service', NULL, NULL, NULL, NULL, 4, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `crm_lead_activities`
+--
+
+CREATE TABLE `crm_lead_activities` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `lead_id` bigint(20) UNSIGNED NOT NULL,
+  `performed_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `activity_type` varchar(50) NOT NULL,
+  `status` varchar(40) DEFAULT NULL,
+  `activity_at` timestamp NULL DEFAULT NULL,
+  `notes` text DEFAULT NULL,
+  `outcome` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `crm_lead_activities`
+--
+
+INSERT INTO `crm_lead_activities` (`id`, `lead_id`, `performed_by`, `activity_type`, `status`, `activity_at`, `notes`, `outcome`, `created_at`, `updated_at`) VALUES
+(1, 1, 6, 'created', 'new', '2026-10-01 00:44:22', 'Lead created from property enquiry.', NULL, '2026-10-01 00:44:22', '2026-10-01 00:44:22'),
+(2, 1, 6, 'assignment', 'new', '2026-10-01 00:54:18', 'Assignment changed from unassigned to agent (#7).', NULL, '2026-10-01 00:54:18', '2026-10-01 00:54:18'),
+(3, 1, 6, 'note', 'new', '2026-10-01 00:55:59', 'call contact with new lead by agent', NULL, '2026-10-01 00:55:59', '2026-10-01 00:55:59'),
+(4, 1, 6, 'viewing_scheduled', 'viewing', '2026-10-01 00:59:43', 'Viewing scheduled for 02 Oct 2026 11:55 AM.', NULL, '2026-10-01 00:59:43', '2026-10-01 00:59:43'),
+(5, 1, NULL, 'stage_migration', 'viewing_scheduled', '2026-10-01 03:41:42', 'Guideline alignment: viewing → viewing_scheduled. Previous outcome: none', NULL, '2026-10-01 03:41:42', '2026-10-01 03:41:42'),
+(6, 1, 9, 'note', 'interested', '2026-10-01 03:55:00', 'Viewing Scheduled → Interested.\nTest: customer is interested and would like more details.', NULL, '2026-10-01 03:55:00', '2026-10-01 03:55:00'),
+(7, 2, 8, 'created', 'new', '2026-10-01 04:21:48', 'Buyer submitted property request #1.', NULL, '2026-10-01 04:21:48', '2026-10-01 04:21:48'),
+(8, 2, 9, 'property_match', 'new', '2026-10-01 04:23:13', 'Selected LP-01M3TRTZDFAYFKFHX6R4PKEEEP for property request #1. Previous property: none.', NULL, '2026-10-01 04:23:13', '2026-10-01 04:23:13'),
+(9, 2, 9, 'assignment', 'new', '2026-10-01 04:23:31', 'Assignment changed from unassigned to agent (#7).', NULL, '2026-10-01 04:23:31', '2026-10-01 04:23:31'),
+(10, 2, 9, 'call', 'contacted', '2026-10-01 04:30:31', 'New → Contacted.\ncontacted the buyer', NULL, '2026-10-01 04:30:31', '2026-10-01 04:30:31'),
+(11, 2, 9, 'viewing_scheduled', 'viewing_scheduled', '2026-10-01 04:35:13', 'Viewing scheduled for 10 Oct 2026 03:35 PM.', NULL, '2026-10-01 04:35:13', '2026-10-01 04:35:13'),
+(12, 3, 8, 'created', 'new', '2026-10-01 21:57:55', 'Lead created from property enquiry.', NULL, '2026-10-01 21:57:55', '2026-10-01 21:57:55'),
+(13, 4, 8, 'created', 'new', '2026-10-05 03:51:44', 'Inspection request #1 submitted by buyer.', NULL, '2026-10-05 03:51:44', '2026-10-05 03:51:44'),
+(14, 5, 8, 'created', 'new', '2026-10-05 03:59:23', 'LGC service request #2 submitted by buyer.', NULL, '2026-10-05 03:59:23', '2026-10-05 03:59:23'),
+(15, 6, 6, 'created', 'new', '2026-10-05 23:00:49', 'Lead created from property enquiry.', NULL, '2026-10-05 23:00:49', '2026-10-05 23:00:49'),
+(16, 6, 6, 'note', 'contacted', '2026-10-05 23:15:55', 'New → Contacted.\nchecking CRM status history', NULL, '2026-10-05 23:15:55', '2026-10-05 23:15:55'),
+(17, 6, 6, 'assignment', 'contacted', '2026-10-05 23:37:15', 'Assignment changed from unassigned to sales (#9).', NULL, '2026-10-05 23:37:15', '2026-10-05 23:37:15'),
+(18, 6, 9, 'note', 'contacted', '2026-10-05 23:39:33', 'Contacted → Contacted.\nsales follow-up update.', NULL, '2026-10-05 23:39:33', '2026-10-05 23:39:33'),
+(19, 7, NULL, 'created', 'new', '2026-10-07 05:53:53', 'Lead created from property enquiry.', NULL, '2026-10-07 05:53:53', '2026-10-07 05:53:53'),
+(20, 7, 9, 'note', 'contacted', '2026-10-07 05:57:27', 'New → Contacted.\ncontacted we will contact again you soon(testing)', NULL, '2026-10-07 05:57:27', '2026-10-07 05:57:27'),
+(21, 7, 9, 'assignment', 'contacted', '2026-10-07 05:58:12', 'Assignment changed from unassigned to agent2 (#14).', NULL, '2026-10-07 05:58:12', '2026-10-07 05:58:12'),
+(22, 7, 14, 'viewing_scheduled', 'viewing_scheduled', '2026-10-07 06:12:47', 'Viewing scheduled for 25 Oct 2026 10:00 PM.', NULL, '2026-10-07 06:12:47', '2026-10-07 06:12:47'),
+(23, 7, 14, 'viewing_outcome', 'viewing_scheduled', '2026-10-07 06:20:53', 'Viewing #3 cancelled: Customer requested another date', NULL, '2026-10-07 06:20:53', '2026-10-07 06:20:53'),
+(24, 7, 6, 'note', 'contacted', '2026-10-08 21:55:22', 'Viewing Scheduled → Contacted.\nViewing cancelled; arranging another date.', NULL, '2026-10-08 21:55:22', '2026-10-08 21:55:22'),
+(25, 7, 6, 'viewing_scheduled', 'viewing_scheduled', '2026-10-08 22:01:17', 'Viewing scheduled for 20 Oct 2026 01:00 PM.', NULL, '2026-10-08 22:01:17', '2026-10-08 22:01:17'),
+(26, 1, 7, 'viewing_outcome', 'interested', '2026-10-08 22:35:40', 'Viewing #1 completed: Test viewing completed', NULL, '2026-10-08 22:35:40', '2026-10-08 22:35:40'),
+(27, 1, 7, 'note', 'interested', '2026-10-08 22:41:04', 'Interested → Interested.\nCustomer remains interested after the viewing. Follow-up scheduled for 12 October 2026 at 10 AM to discuss the next steps.', NULL, '2026-10-08 22:41:04', '2026-10-08 22:41:04'),
+(28, 1, 7, 'note', 'closed', '2026-10-08 22:45:37', 'Interested → Closed. Outcome: Not proceeding.\nclosing this enquiry', NULL, '2026-10-08 22:45:37', '2026-10-08 22:45:37'),
+(29, 1, 7, 'note', 'interested', '2026-10-08 22:48:31', 'Closed → Interested.\ncustomer renewed interest', NULL, '2026-10-08 22:48:31', '2026-10-08 22:48:31'),
+(30, 8, 8, 'created', 'new', '2026-10-08 23:21:05', 'Inspection request #3 submitted by buyer.', NULL, '2026-10-08 23:21:05', '2026-10-08 23:21:05'),
+(31, 8, 9, 'note', 'contacted', '2026-10-08 23:25:59', 'New → Contacted.\nTest: contacted buyer to discuss inspection requirements.', NULL, '2026-10-08 23:25:59', '2026-10-08 23:25:59'),
+(32, 9, 8, 'created', 'new', '2026-10-08 23:29:46', 'LGC service request #4 submitted by buyer.', NULL, '2026-10-08 23:29:46', '2026-10-08 23:29:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `developers`
+--
+
+CREATE TABLE `developers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `description` text DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `phone` varchar(30) DEFAULT NULL,
+  `email` varchar(191) DEFAULT NULL,
+  `website` varchar(500) DEFAULT NULL,
+  `is_published` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `developers`
+--
+
+INSERT INTO `developers` (`id`, `name`, `description`, `city`, `phone`, `email`, `website`, `is_published`, `created_at`, `updated_at`) VALUES
+(1, 'AK developers', 'here we are NK developers', 'Nittambuwa', NULL, NULL, NULL, 1, '2026-10-12 00:55:30', '2026-10-12 01:01:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `developer_applications`
+--
+
+CREATE TABLE `developer_applications` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `company_name` varchar(150) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `website` varchar(500) DEFAULT NULL,
+  `description` text NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'pending',
+  `review_notes` text DEFAULT NULL,
+  `reviewed_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `developer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `reviewed_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `developer_applications`
+--
+
+INSERT INTO `developer_applications` (`id`, `user_id`, `company_name`, `city`, `phone`, `website`, `description`, `status`, `review_notes`, `reviewed_by`, `developer_id`, `reviewed_at`, `created_at`, `updated_at`) VALUES
+(1, 15, 'NK developers', 'Nittambuwa', '0717627258', NULL, 'here we are NK developers', 'approved', 'checked and approved', 6, 1, '2026-10-12 00:55:30', '2026-10-12 00:50:16', '2026-10-12 00:55:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `email_verification_codes`
+--
+
+CREATE TABLE `email_verification_codes` (
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `code_hash` varchar(191) NOT NULL,
+  `expires_at` datetime NOT NULL,
+  `attempts` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `sent_at` datetime NOT NULL,
+  `window_started_at` datetime NOT NULL,
+  `send_count` tinyint(3) UNSIGNED NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `email_verification_codes`
+--
+
+INSERT INTO `email_verification_codes` (`user_id`, `email`, `code_hash`, `expires_at`, `attempts`, `sent_at`, `window_started_at`, `send_count`) VALUES
+(16, 'krishboutique75@gmail.com', '$2y$12$6WYEuhN3BUIkKz6MvUlaQuy5A/1yt365DJAVL0ElXikCcf5fZGUma', '2026-10-12 11:31:32', 0, '2026-10-12 11:21:32', '2026-10-12 11:15:04', 2),
+(17, 'nadiyakrishanthi62@gamil.com', '$2y$12$c8Iv3SSeMuC8qS1XLjjNh.FLsU2klrGf10Yj.fAC1hUZCjlL339aq', '2026-10-12 11:39:17', 0, '2026-10-12 11:29:17', '2026-10-12 11:29:17', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `failed_jobs`
+--
+
+CREATE TABLE `failed_jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` varchar(191) NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `queue` varchar(191) NOT NULL,
+  `payload` longtext NOT NULL,
+  `attempts` tinyint(3) UNSIGNED NOT NULL,
+  `reserved_at` int(10) UNSIGNED DEFAULT NULL,
+  `available_at` int(10) UNSIGNED NOT NULL,
+  `created_at` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job_batches`
+--
+
+CREATE TABLE `job_batches` (
+  `id` varchar(191) NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `total_jobs` int(11) NOT NULL,
+  `pending_jobs` int(11) NOT NULL,
+  `failed_jobs` int(11) NOT NULL,
+  `failed_job_ids` longtext NOT NULL,
+  `options` mediumtext DEFAULT NULL,
+  `cancelled_at` int(11) DEFAULT NULL,
+  `created_at` int(11) NOT NULL,
+  `finished_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marketing_campaigns`
+--
+
+CREATE TABLE `marketing_campaigns` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `code` varchar(60) NOT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT 1,
+  `created_by` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(191) NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '0001_01_01_000000_create_users_table', 1),
+(2, '0001_01_01_000001_create_cache_table', 1),
+(3, '0001_01_01_000002_create_jobs_table', 1),
+(4, '2026_09_28_092146_create_roles_and_role_user_tables', 2),
+(5, '2026_09_28_103900_create_properties_table', 3),
+(6, '2026_09_29_032446_create_property_images_table', 4),
+(7, '2026_09_29_061427_create_property_enquiries_table', 5),
+(8, '2026_09_29_090116_create_property_documents_table', 6),
+(9, '2026_09_29_090639_create_property_verifications_table', 7),
+(10, '2026_09_29_091209_create_crm_leads_table', 8),
+(11, '2026_09_30_094401_create_property_details_table', 9),
+(12, '2026_09_30_095315_create_crm_lead_activities_table', 10),
+(13, '2026_09_30_095542_create_property_viewings_table', 11),
+(14, '2026_09_30_095800_create_property_sales_table', 12),
+(15, '2026_09_30_102714_create_property_categories_table', 13),
+(16, '2026_09_30_104145_add_property_category_id_to_properties_table', 14),
+(17, '2026_10_01_110000_create_property_document_reviews_table', 15),
+(18, '2026_10_01_120000_add_customer_to_property_enquiries', 16),
+(19, '2026_10_01_130000_add_user_management', 17),
+(20, '2026_10_01_140000_align_lead_pipeline', 18),
+(21, '2026_10_01_150000_create_property_requests', 19),
+(22, '2026_10_01_160000_create_saved_properties_table', 20),
+(23, '2026_10_01_170000_add_account_profile_fields', 21),
+(24, '2026_10_02_120000_use_district_property_identifiers', 22),
+(25, '2026_10_03_110000_add_property_videos', 23),
+(26, '2026_10_03_120000_create_property_status_histories', 24),
+(27, '2026_10_05_120000_create_buyer_service_requests', 25),
+(28, '2026_10_06_180000_add_profile_photo_to_users', 26),
+(29, '2026_10_06_200000_create_revenue_payments_table', 27),
+(30, '2026_10_07_090000_create_email_verification_codes_table', 28),
+(31, '2026_10_07_100000_add_registration_verification_pending_to_users', 29),
+(32, '2026_10_07_110000_create_agent_applications_table', 30),
+(33, '2026_10_07_130000_create_complaints_tables', 31),
+(34, '2026_10_07_150000_create_marketing_reporting_tables', 32),
+(35, '2026_10_07_160000_prepare_agent_subscriptions', 33),
+(36, '2026_10_10_120000_add_sms_verification', 34),
+(37, '2026_10_10_150000_add_listing_type_to_properties', 35),
+(38, '2026_10_10_160000_add_featured_fields_to_properties', 36),
+(39, '2026_10_10_170000_add_public_directory_and_villa', 37),
+(40, '2026_10_10_190000_add_homepage_conversion_content', 38),
+(41, '2026_10_12_120000_add_price_negotiable_to_properties', 39),
+(42, '2026_10_12_150000_add_site_concerns_to_properties', 40);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_reset_tokens`
+--
+
+CREATE TABLE `password_reset_tokens` (
+  `email` varchar(191) NOT NULL,
+  `token` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_reset_tokens`
+--
+
+INSERT INTO `password_reset_tokens` (`email`, `token`, `created_at`) VALUES
+('buyer@gmail.com', '$2y$12$.WdJO.3ZSffHGnBLqVuVMesnrlKqmaNtLnM/zo7LZtUV9dHTgcveK', '2026-10-01 06:21:35'),
+('nadiyakrish258@gmail.com', '$2y$12$dRdIt1TABeW6UZMhPk38B.52fejTLZyLvCMRfm1strDH0Nis1rCp6', '2026-10-12 00:20:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `properties`
+--
+
+CREATE TABLE `properties` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_code` varchar(40) NOT NULL,
+  `owner_id` bigint(20) UNSIGNED NOT NULL,
+  `created_by` bigint(20) UNSIGNED NOT NULL,
+  `agent_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `title` varchar(191) NOT NULL,
+  `description` text DEFAULT NULL,
+  `category` varchar(30) NOT NULL DEFAULT 'land',
+  `property_category_id` bigint(20) UNSIGNED NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'draft',
+  `verification_level` varchar(30) NOT NULL DEFAULT 'unverified',
+  `district` varchar(100) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `location` varchar(191) DEFAULT NULL,
+  `latitude` decimal(10,7) DEFAULT NULL,
+  `longitude` decimal(10,7) DEFAULT NULL,
+  `land_size_perches` decimal(14,4) DEFAULT NULL,
+  `price_per_perch` decimal(18,2) DEFAULT NULL,
+  `total_price` decimal(18,2) DEFAULT NULL,
+  `currency` char(3) NOT NULL DEFAULT 'LKR',
+  `road_access` varchar(191) DEFAULT NULL,
+  `land_shape` varchar(100) DEFAULT NULL,
+  `facing_direction` varchar(30) DEFAULT NULL,
+  `electricity_available` tinyint(1) DEFAULT NULL,
+  `water_available` tinyint(1) DEFAULT NULL,
+  `survey_available` tinyint(1) DEFAULT NULL,
+  `published_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `video_url` varchar(2048) DEFAULT NULL,
+  `video_path` varchar(191) DEFAULT NULL,
+  `listing_type` varchar(10) NOT NULL DEFAULT 'sale',
+  `is_featured` tinyint(1) NOT NULL DEFAULT 0,
+  `featured_at` timestamp NULL DEFAULT NULL,
+  `developer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `is_price_negotiable` tinyint(1) NOT NULL DEFAULT 0,
+  `site_concerns` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `properties`
+--
+
+INSERT INTO `properties` (`id`, `property_code`, `owner_id`, `created_by`, `agent_id`, `title`, `description`, `category`, `property_category_id`, `status`, `verification_level`, `district`, `city`, `location`, `latitude`, `longitude`, `land_size_perches`, `price_per_perch`, `total_price`, `currency`, `road_access`, `land_shape`, `facing_direction`, `electricity_available`, `water_available`, `survey_available`, `published_at`, `created_at`, `updated_at`, `deleted_at`, `video_url`, `video_path`, `listing_type`, `is_featured`, `featured_at`, `developer_id`, `is_price_negotiable`, `site_concerns`) VALUES
+(5, 'LP-GAM-00005', 4, 6, NULL, 'Test Property', 'This is a land in nittambuwa to sell', 'land', 1, 'published', 'basic', 'Gampaha', 'Nittambuwa', 'No 78/2 1st lane,walpola,ruggahawila', 7.1256000, 80.1110000, 20.0000, 100000.00, 2000000.00, 'LKR', '20 foot', 'square', 'west', 1, 1, 1, '2026-10-02 23:24:18', '2026-09-30 22:11:25', '2026-10-02 23:24:18', NULL, NULL, NULL, 'sale', 0, NULL, NULL, 0, NULL),
+(6, 'LP-COL-00006', 4, 4, NULL, 'House', 'house to be sold in Dehiwala,Mount Lavinia', 'house', 2, 'archived', 'basic', 'Colombo', 'dehiwala', 'Waidya road, Dehiwala, Colombo', 6.8560100, 79.8698100, 25.0000, NULL, 7000000.00, 'LKR', '20 foot', NULL, 'northeast', 1, 1, NULL, NULL, '2026-10-01 00:11:48', '2026-10-02 22:48:54', NULL, NULL, NULL, 'sale', 0, NULL, NULL, 0, NULL),
+(7, 'LP-KAN-00007', 4, 4, NULL, 'testing apartment', 'Available in Galaha junction,Kandy for a family', 'apartment', 3, 'sold', 'basic', 'Kandy', 'Galaha', 'No 199, Galaha Junction, Kandy', 7.2660900, 80.5962600, NULL, NULL, 30000000.00, 'LKR', '30 foot', NULL, 'north', 1, 1, NULL, '2026-10-02 05:16:20', '2026-10-02 05:01:38', '2026-10-02 23:00:24', NULL, NULL, NULL, 'sale', 0, NULL, NULL, 0, NULL),
+(8, 'LP-JAF-00008', 4, 6, NULL, 'house testing', 'house for sale in Jaffana.', 'house', 2, 'published', 'silver', 'Jaffna', 'Jaffna', 'Allaipiddy, Jaffna', NULL, NULL, 25.0000, NULL, 5500000.00, 'LKR', '20 foot', NULL, 'west', 1, 1, NULL, '2026-10-06 01:15:33', '2026-10-02 23:41:14', '2026-10-06 01:15:33', NULL, NULL, NULL, 'sale', 0, NULL, NULL, 0, NULL),
+(9, 'LP-HAM-00009', 4, 4, NULL, 'testing land', 'land for sale in hambanthota', 'land', 1, 'published', 'basic', 'Hambantota', 'Hambantota', 'no 100,Hambanthota', NULL, NULL, 20.0000, 300000.00, 6000000.00, 'LKR', '30 foot', 'rectangular', 'west', 1, 1, 1, '2026-10-05 02:58:58', '2026-10-05 02:49:54', '2026-10-05 02:58:58', NULL, NULL, 'property-videos/9/UIZ5fGgzG9A5Z3h9xf6vBmfGYOjgsmgnqkfrWANW.mp4', 'sale', 0, NULL, NULL, 0, NULL),
+(10, 'LP-COL-00010', 4, 7, 7, '3-Bedroom Apartment for Sale in Pannipitiya', '3-bedroom apartment for sale in Pannipitiya, developed by AK Developers. The property offers 1,400 sq ft of floor space, 2 bathrooms, and 1 parking space.\r\nFacilities include a gym, lift, 24-hour security, and a play area.\r\nContact the assigned agent for more information or to arrange a viewing.', 'apartment', 3, 'published', 'basic', 'Colombo', 'Pannipitiya', 'no 100 AK Apartments, Pannipitiya', 6.8462000, 79.9448000, NULL, NULL, 9000000.00, 'LKR', '10 foot', NULL, 'north', 1, 1, NULL, '2026-10-05 22:29:49', '2026-10-05 22:26:12', '2026-10-12 01:01:00', NULL, NULL, NULL, 'sale', 0, NULL, 1, 0, NULL),
+(11, 'LP-COL-00011', 4, 4, NULL, 'testing house', 'sale in Nugegoda', 'house', 2, 'published', 'basic', 'Colombo', 'Nugegoda', 'no 100 nugegoda', NULL, NULL, 20.0000, NULL, 4500000.00, 'LKR', '30 foot', NULL, 'southeast', 1, 1, NULL, '2026-10-07 05:50:46', '2026-10-07 05:44:05', '2026-10-10 02:03:59', NULL, NULL, NULL, 'sale', 1, '2026-10-10 02:03:59', NULL, 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_categories`
+--
+
+CREATE TABLE `property_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `slug` varchar(100) NOT NULL,
+  `description` text DEFAULT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT 1,
+  `sort_order` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_categories`
+--
+
+INSERT INTO `property_categories` (`id`, `name`, `slug`, `description`, `is_active`, `sort_order`, `created_at`, `updated_at`) VALUES
+(1, 'Land', 'land', 'Land properties', 1, 1, '2026-09-30 05:08:13', '2026-09-30 05:08:13'),
+(2, 'House', 'house', 'House properties', 1, 2, '2026-09-30 05:08:41', '2026-09-30 05:08:41'),
+(3, 'Apartment', 'apartment', 'Apartment properties', 1, 3, '2026-09-30 05:09:00', '2026-09-30 05:09:00'),
+(4, 'Commercial', 'commercial', 'Commercial properties', 1, 4, '2026-09-30 05:09:22', '2026-09-30 05:09:22'),
+(5, 'Villa', 'villa', NULL, 1, 5, '2026-10-10 04:36:48', '2026-10-10 04:36:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_code_aliases`
+--
+
+CREATE TABLE `property_code_aliases` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `code` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_code_aliases`
+--
+
+INSERT INTO `property_code_aliases` (`id`, `property_id`, `code`) VALUES
+(1, 5, 'LP-01M3TRTZDFAYFKFHX6R4PKEEEP'),
+(2, 6, 'LP-01M3TZQCV77NVCSRF0JMK9RX3S');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_details`
+--
+
+CREATE TABLE `property_details` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `property_type` varchar(50) DEFAULT NULL,
+  `bedrooms` tinyint(3) UNSIGNED DEFAULT NULL,
+  `bathrooms` tinyint(3) UNSIGNED DEFAULT NULL,
+  `floor_area` decimal(14,2) DEFAULT NULL,
+  `land_size` decimal(14,2) DEFAULT NULL,
+  `property_age` smallint(5) UNSIGNED DEFAULT NULL,
+  `condition` varchar(50) DEFAULT NULL,
+  `parking_spaces` tinyint(3) UNSIGNED DEFAULT NULL,
+  `total_floors` tinyint(3) UNSIGNED DEFAULT NULL,
+  `floor_number` tinyint(3) UNSIGNED DEFAULT NULL,
+  `living_area` decimal(14,2) DEFAULT NULL,
+  `kitchen_area` decimal(14,2) DEFAULT NULL,
+  `developer` varchar(150) DEFAULT NULL,
+  `unit_type` varchar(100) DEFAULT NULL,
+  `amenities` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`amenities`)),
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_details`
+--
+
+INSERT INTO `property_details` (`id`, `property_id`, `property_type`, `bedrooms`, `bathrooms`, `floor_area`, `land_size`, `property_age`, `condition`, `parking_spaces`, `total_floors`, `floor_number`, `living_area`, `kitchen_area`, `developer`, `unit_type`, `amenities`, `created_at`, `updated_at`) VALUES
+(1, 6, 'house', 4, 2, 1500.00, NULL, NULL, NULL, 2, 2, NULL, NULL, NULL, NULL, NULL, NULL, '2026-10-01 00:11:48', '2026-10-01 00:13:07'),
+(2, 7, 'apartment', 3, 2, 1400.00, NULL, NULL, NULL, 1, NULL, 3, NULL, NULL, NULL, 'penthouse', '[\"nearby 2 schools\",\"nearby Peradeniya university\"]', '2026-10-02 05:01:38', '2026-10-02 05:01:38'),
+(3, 8, 'house', 3, 2, 1400.00, NULL, 4, 'good', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2026-10-02 23:41:14', '2026-10-02 23:41:14'),
+(4, 10, 'apartment', 3, 2, 1400.00, NULL, NULL, NULL, 1, NULL, 1, NULL, NULL, 'AK developers', 'penthouse', '[\"Gym\",\"lift facility\",\"24 hours security\",\"play area\"]', '2026-10-05 22:26:12', '2026-10-05 22:26:12'),
+(5, 11, 'house', 3, 2, 1500.00, NULL, 3, 'good', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2026-10-07 05:44:05', '2026-10-07 05:44:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_documents`
+--
+
+CREATE TABLE `property_documents` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `uploaded_by` bigint(20) UNSIGNED NOT NULL,
+  `document_type` varchar(50) NOT NULL,
+  `path` varchar(191) NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'pending',
+  `verified_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_documents`
+--
+
+INSERT INTO `property_documents` (`id`, `property_id`, `uploaded_by`, `document_type`, `path`, `status`, `verified_at`, `created_at`, `updated_at`) VALUES
+(1, 5, 4, 'ownership', 'properties/5/39ZGhBQZquPQO7HAvY2HJiyIufFJKe3E3uIxo556.pdf', 'approved', '2026-09-30 23:46:34', '2026-09-30 23:37:05', '2026-09-30 23:46:34'),
+(2, 9, 4, 'ownership', 'properties/9/nS01rDNG0ZIoPK4A3KxNSpFLvt6aL2AXV1sQqV6N.pdf', 'approved', '2026-10-05 02:56:38', '2026-10-05 02:51:50', '2026-10-05 02:56:38'),
+(3, 8, 4, 'ownership', 'properties/8/1hJn0XggpJ1MgMA8w0dq24LqaJDYHMB8byCv8zis.pdf', 'approved', '2026-10-06 00:08:37', '2026-10-06 00:06:30', '2026-10-06 00:08:37'),
+(4, 8, 4, 'survey', 'properties/8/TC1qQYHcNV9qNrsUa8cX87t3CKHrGnQYlNLO7kOM.pdf', 'approved', '2026-10-06 01:04:47', '2026-10-06 01:03:25', '2026-10-06 01:04:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_document_reviews`
+--
+
+CREATE TABLE `property_document_reviews` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_document_id` bigint(20) UNSIGNED NOT NULL,
+  `reviewer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `decision` varchar(30) NOT NULL,
+  `remarks` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_document_reviews`
+--
+
+INSERT INTO `property_document_reviews` (`id`, `property_document_id`, `reviewer_id`, `decision`, `remarks`, `created_at`, `updated_at`) VALUES
+(1, 1, 6, 'approved', 'document has been approved', '2026-09-30 23:46:34', '2026-09-30 23:46:34'),
+(2, 2, 10, 'approved', 'all checked', '2026-10-05 02:56:38', '2026-10-05 02:56:38'),
+(3, 3, 10, 'approved', 'checked seller identity', '2026-10-06 00:08:37', '2026-10-06 00:08:37'),
+(4, 4, 10, 'approved', 'approved', '2026-10-06 01:04:47', '2026-10-06 01:04:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_enquiries`
+--
+
+CREATE TABLE `property_enquiries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `email` varchar(254) NOT NULL,
+  `phone` varchar(30) DEFAULT NULL,
+  `message` text NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'new',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `customer_id` bigint(20) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_enquiries`
+--
+
+INSERT INTO `property_enquiries` (`id`, `property_id`, `name`, `email`, `phone`, `message`, `status`, `created_at`, `updated_at`, `customer_id`) VALUES
+(2, 6, '0210 Nadiya', 'nadiyakrish258@gmail.com', '0717627258', 'can i get more details about this?', 'new', '2026-10-01 00:44:22', '2026-10-01 00:44:22', NULL),
+(3, 6, 'test', 'test@gmail.com', '2445661', 'I\'m really interested', 'new', '2026-10-01 21:57:55', '2026-10-01 21:57:55', 8),
+(4, 10, 'krish', 'krish@gmail.com', '0724931634', 'I\'m interested. can i get more details about this?', 'new', '2026-10-05 23:00:48', '2026-10-05 23:00:48', NULL),
+(5, 11, 'tester', 'testing@gmail.com', '556554', 'T28 test enquiry', 'new', '2026-10-07 05:53:53', '2026-10-07 05:53:53', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_images`
+--
+
+CREATE TABLE `property_images` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `path` varchar(191) NOT NULL,
+  `sort_order` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_images`
+--
+
+INSERT INTO `property_images` (`id`, `property_id`, `path`, `sort_order`, `created_at`, `updated_at`) VALUES
+(12, 5, 'properties/5/z3eEtIQAjZdcbSakOIe41XT7DapLa3ybEnqE3XOa.jpg', 1, '2026-09-30 22:11:27', '2026-09-30 22:11:27'),
+(13, 5, 'properties/5/xbU3R6qLiUz2T7E2RXihInva8Oya9vA4O8hC0OB2.webp', 2, '2026-09-30 23:00:25', '2026-09-30 23:00:25'),
+(14, 5, 'properties/5/4ksKvrxIeYYFThFQ3J1hOdPJCgVn77TBjXMETth7.jpg', 3, '2026-09-30 23:25:50', '2026-09-30 23:25:50'),
+(15, 6, 'properties/6/URqBtpDdcJG6B9V8AktHcCdWqAcvYMyJ2HFk3svu.jpg', 1, '2026-10-01 00:11:48', '2026-10-01 00:11:48'),
+(16, 7, 'properties/7/vD2IQlaEPeGgar09NNu07xviq7AT8WC94Baq8u2i.jpg', 1, '2026-10-02 05:01:38', '2026-10-02 05:01:38'),
+(17, 8, 'properties/8/P8ibBS1FJKQH8ykuEHrtGNikazwfEbkaCihUaPqR.jpg', 1, '2026-10-02 23:41:14', '2026-10-02 23:41:14'),
+(18, 9, 'properties/9/VIsYAgTHz9jfVzRk7vKK7v6Ewn9PqrNpz6P441OG.jpg', 1, '2026-10-05 02:49:54', '2026-10-05 02:49:54'),
+(19, 10, 'properties/10/XpAkPzBRmSiyfeuMRsz7KhrlkbSvCeZWS1mIbNkj.jpg', 1, '2026-10-05 22:26:12', '2026-10-05 22:26:12'),
+(20, 11, 'properties/11/jsLUHsVUoMPJiQLusGQ4Bqoqb1y5PauhyoW6LuFO.jpg', 1, '2026-10-07 05:44:05', '2026-10-07 05:44:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_requests`
+--
+
+CREATE TABLE `property_requests` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `customer_id` bigint(20) UNSIGNED NOT NULL,
+  `category` varchar(40) NOT NULL,
+  `district` varchar(100) NOT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `budget_min` decimal(14,2) DEFAULT NULL,
+  `budget_max` decimal(14,2) NOT NULL,
+  `bedrooms` tinyint(3) UNSIGNED DEFAULT NULL,
+  `phone` varchar(30) DEFAULT NULL,
+  `requirements` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_requests`
+--
+
+INSERT INTO `property_requests` (`id`, `customer_id`, `category`, `district`, `city`, `budget_min`, `budget_max`, `bedrooms`, `phone`, `requirements`, `created_at`, `updated_at`) VALUES
+(1, 8, 'land', 'Gampaha', 'Nittambuwa', 1500000.00, 2000000.00, NULL, '0717627258', 'nearby a school', '2026-10-01 04:21:48', '2026-10-01 04:21:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_sales`
+--
+
+CREATE TABLE `property_sales` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `lead_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `buyer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `seller_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `agent_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `sale_price` decimal(18,2) NOT NULL,
+  `currency` char(3) NOT NULL DEFAULT 'LKR',
+  `sale_date` date NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'pending',
+  `commission_amount` decimal(18,2) DEFAULT NULL,
+  `company_revenue` decimal(18,2) DEFAULT NULL,
+  `notes` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_status_histories`
+--
+
+CREATE TABLE `property_status_histories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `from_status` varchar(30) DEFAULT NULL,
+  `to_status` varchar(30) NOT NULL,
+  `actor_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `actor_name` varchar(191) DEFAULT NULL,
+  `event` varchar(30) NOT NULL DEFAULT 'transition',
+  `remarks` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_status_histories`
+--
+
+INSERT INTO `property_status_histories` (`id`, `property_id`, `from_status`, `to_status`, `actor_id`, `actor_name`, `event`, `remarks`, `created_at`) VALUES
+(1, 5, NULL, 'published', NULL, NULL, 'baseline', 'Status when tracking was enabled. Earlier transitions are unavailable.', '2026-10-03 00:58:01'),
+(2, 6, NULL, 'archived', NULL, NULL, 'baseline', 'Status when tracking was enabled. Earlier transitions are unavailable.', '2026-10-03 00:58:01'),
+(3, 7, NULL, 'sold', NULL, NULL, 'baseline', 'Status when tracking was enabled. Earlier transitions are unavailable.', '2026-10-03 00:58:01'),
+(4, 8, NULL, 'draft', NULL, NULL, 'baseline', 'Status when tracking was enabled. Earlier transitions are unavailable.', '2026-10-03 00:58:01'),
+(5, 8, 'draft', 'submitted', 6, 'admin', 'transition', NULL, '2026-10-04 22:26:01'),
+(6, 8, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-05 00:10:15'),
+(7, 8, 'under_review', 'draft', 6, 'admin', 'transition', 'incorrect owner assigned', '2026-10-05 00:28:52'),
+(8, 8, 'draft', 'submitted', 6, 'admin', 'transition', NULL, '2026-10-05 00:30:15'),
+(9, 8, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-05 00:41:23'),
+(10, 9, NULL, 'draft', 4, 'seller1', 'created', NULL, '2026-10-05 02:49:54'),
+(11, 9, 'draft', 'submitted', 4, 'seller1', 'transition', NULL, '2026-10-05 02:52:47'),
+(12, 9, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-05 02:55:09'),
+(13, 9, 'under_review', 'approved', 6, 'admin', 'transition', NULL, '2026-10-05 02:58:37'),
+(14, 9, 'approved', 'published', 6, 'admin', 'transition', NULL, '2026-10-05 02:58:58'),
+(15, 10, NULL, 'draft', 7, 'agent', 'created', NULL, '2026-10-05 22:26:12'),
+(16, 10, 'draft', 'submitted', 7, 'agent', 'transition', NULL, '2026-10-05 22:26:49'),
+(17, 10, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-05 22:27:52'),
+(18, 10, 'under_review', 'approved', 6, 'admin', 'transition', NULL, '2026-10-05 22:29:42'),
+(19, 10, 'approved', 'published', 6, 'admin', 'transition', NULL, '2026-10-05 22:29:49'),
+(20, 8, 'under_review', 'draft', 10, 'verification', 'transition', 'Please provide seller identity evidence to complete basic verification.', '2026-10-06 00:05:42'),
+(21, 8, 'draft', 'submitted', 4, 'seller1', 'transition', NULL, '2026-10-06 00:06:49'),
+(22, 8, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-06 00:07:14'),
+(23, 8, 'under_review', 'approved', 6, 'admin', 'transition', NULL, '2026-10-06 00:09:42'),
+(24, 8, 'approved', 'draft', 6, 'admin', 'transition', 'need something to be changed', '2026-10-06 01:02:09'),
+(25, 8, 'draft', 'submitted', 4, 'seller1', 'transition', NULL, '2026-10-06 01:03:34'),
+(26, 8, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-06 01:04:06'),
+(27, 8, 'under_review', 'approved', 6, 'admin', 'transition', NULL, '2026-10-06 01:15:21'),
+(28, 8, 'approved', 'published', 6, 'admin', 'transition', NULL, '2026-10-06 01:15:33'),
+(29, 11, NULL, 'draft', 4, 'seller1', 'created', NULL, '2026-10-07 05:44:05'),
+(30, 11, 'draft', 'submitted', 4, 'seller1', 'transition', NULL, '2026-10-07 05:44:18'),
+(31, 11, 'submitted', 'under_review', 6, 'admin', 'transition', NULL, '2026-10-07 05:45:58'),
+(32, 11, 'under_review', 'approved', 6, 'admin', 'transition', NULL, '2026-10-07 05:50:42'),
+(33, 11, 'approved', 'published', 6, 'admin', 'transition', NULL, '2026-10-07 05:50:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_verifications`
+--
+
+CREATE TABLE `property_verifications` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `reviewer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `level` varchar(30) NOT NULL DEFAULT 'basic',
+  `status` varchar(30) NOT NULL DEFAULT 'pending',
+  `remarks` text DEFAULT NULL,
+  `reviewed_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_verifications`
+--
+
+INSERT INTO `property_verifications` (`id`, `property_id`, `reviewer_id`, `level`, `status`, `remarks`, `reviewed_at`, `created_at`, `updated_at`) VALUES
+(1, 5, NULL, 'basic', 'pending', NULL, NULL, '2026-09-30 23:14:48', '2026-09-30 23:14:48'),
+(2, 5, 6, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nLocal workflow test using sample seller information, property details and photos. This is not a real property verification.', '2026-09-30 23:16:26', '2026-09-30 23:16:26', '2026-09-30 23:16:26'),
+(3, 5, 6, 'basic', 'rejected', 'location issues', '2026-09-30 23:24:00', '2026-09-30 23:24:00', '2026-09-30 23:24:00'),
+(4, 5, NULL, 'basic', 'pending', NULL, NULL, '2026-09-30 23:26:20', '2026-09-30 23:26:20'),
+(5, 5, 6, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nall checked', '2026-09-30 23:26:40', '2026-09-30 23:26:40', '2026-09-30 23:26:40'),
+(6, 5, 6, 'basic', 'rejected', 'error', '2026-09-30 23:35:54', '2026-09-30 23:35:54', '2026-09-30 23:35:54'),
+(7, 5, NULL, 'basic', 'pending', NULL, NULL, '2026-09-30 23:45:33', '2026-09-30 23:45:33'),
+(8, 5, 6, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nchecked', '2026-09-30 23:46:54', '2026-09-30 23:46:54', '2026-09-30 23:46:54'),
+(9, 6, NULL, 'basic', 'pending', NULL, NULL, '2026-10-01 00:13:48', '2026-10-01 00:13:48'),
+(10, 6, 6, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nchecked', '2026-10-01 00:14:02', '2026-10-01 00:14:02', '2026-10-01 00:14:02'),
+(11, 7, NULL, 'basic', 'pending', NULL, NULL, '2026-10-02 05:12:17', '2026-10-02 05:12:17'),
+(12, 7, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nall checked', '2026-10-02 05:13:32', '2026-10-02 05:13:32', '2026-10-02 05:13:32'),
+(13, 5, 6, 'basic', 'rejected', 'need a correction', '2026-10-02 23:19:46', '2026-10-02 23:19:46', '2026-10-02 23:19:46'),
+(14, 5, NULL, 'basic', 'pending', NULL, NULL, '2026-10-02 23:22:19', '2026-10-02 23:22:19'),
+(15, 5, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nall checked', '2026-10-02 23:23:17', '2026-10-02 23:23:17', '2026-10-02 23:23:17'),
+(16, 8, NULL, 'basic', 'pending', NULL, NULL, '2026-10-02 23:42:44', '2026-10-02 23:42:44'),
+(17, 8, 6, 'basic', 'rejected', 'needed a change', '2026-10-03 00:01:46', '2026-10-03 00:01:46', '2026-10-03 00:01:46'),
+(18, 8, NULL, 'basic', 'pending', NULL, NULL, '2026-10-05 00:10:15', '2026-10-05 00:10:15'),
+(19, 8, 6, 'basic', 'rejected', 'incorrect owner assigned', '2026-10-05 00:28:52', '2026-10-05 00:28:52', '2026-10-05 00:28:52'),
+(20, 8, NULL, 'basic', 'pending', NULL, NULL, '2026-10-05 00:41:23', '2026-10-05 00:41:23'),
+(21, 9, NULL, 'basic', 'pending', NULL, NULL, '2026-10-05 02:55:09', '2026-10-05 02:55:09'),
+(22, 9, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nchecked', '2026-10-05 02:57:05', '2026-10-05 02:57:05', '2026-10-05 02:57:05'),
+(23, 10, NULL, 'basic', 'pending', NULL, NULL, '2026-10-05 22:27:52', '2026-10-05 22:27:52'),
+(24, 10, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nverified', '2026-10-05 22:28:51', '2026-10-05 22:28:51', '2026-10-05 22:28:51'),
+(25, 8, 10, 'basic', 'rejected', 'Please provide seller identity evidence to complete basic verification.', '2026-10-06 00:05:42', '2026-10-06 00:05:42', '2026-10-06 00:05:42'),
+(26, 8, NULL, 'basic', 'pending', NULL, NULL, '2026-10-06 00:07:14', '2026-10-06 00:07:14'),
+(27, 8, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nchecked', '2026-10-06 00:09:10', '2026-10-06 00:09:10', '2026-10-06 00:09:10'),
+(28, 8, 6, 'basic', 'rejected', 'need something to be changed', '2026-10-06 01:02:09', '2026-10-06 01:02:09', '2026-10-06 01:02:09'),
+(29, 8, NULL, 'basic', 'pending', NULL, NULL, '2026-10-06 01:04:06', '2026-10-06 01:04:06'),
+(30, 8, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nall checked', '2026-10-06 01:05:03', '2026-10-06 01:05:03', '2026-10-06 01:05:03'),
+(31, 8, 10, 'silver', 'approved', 'Silver checks confirmed. Survey document #4; ownership document #3.\ndone', '2026-10-06 01:06:34', '2026-10-06 01:06:34', '2026-10-06 01:06:34'),
+(32, 11, NULL, 'basic', 'pending', NULL, NULL, '2026-10-07 05:45:58', '2026-10-07 05:45:58'),
+(33, 11, 10, 'basic', 'approved', 'Basic checks confirmed: seller identity, property information, and photos.\nall checked', '2026-10-07 05:46:47', '2026-10-07 05:46:47', '2026-10-07 05:46:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `property_viewings`
+--
+
+CREATE TABLE `property_viewings` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `lead_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `customer_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `assigned_to` bigint(20) UNSIGNED DEFAULT NULL,
+  `scheduled_at` datetime NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'scheduled',
+  `notes` text DEFAULT NULL,
+  `outcome` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `property_viewings`
+--
+
+INSERT INTO `property_viewings` (`id`, `property_id`, `lead_id`, `customer_id`, `assigned_to`, `scheduled_at`, `status`, `notes`, `outcome`, `created_at`, `updated_at`) VALUES
+(1, 6, 1, NULL, 7, '2026-10-02 06:25:00', 'completed', 'meeting about agent', 'Test viewing completed', '2026-10-01 00:59:43', '2026-10-08 22:35:40'),
+(2, 5, 2, 8, 7, '2026-10-10 10:05:00', 'scheduled', 'Meet at the property entrance in Nittambuwa. Assigned agent will show the land and discuss road access and nearby schools.', NULL, '2026-10-01 04:35:13', '2026-10-01 04:35:13'),
+(3, 11, 7, NULL, 14, '2026-10-25 16:30:00', 'cancelled', 'visit the property', 'Customer requested another date', '2026-10-07 06:12:47', '2026-10-07 06:20:53'),
+(4, 11, 7, NULL, 14, '2026-10-20 07:30:00', 'scheduled', 'Replacement visit after cancellation.', NULL, '2026-10-08 22:01:17', '2026-10-08 22:01:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `revenue_payments`
+--
+
+CREATE TABLE `revenue_payments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `property_reference` varchar(191) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `amount` decimal(14,2) NOT NULL,
+  `currency` varchar(3) NOT NULL DEFAULT 'LKR',
+  `paid_on` date NOT NULL,
+  `reference` varchar(100) NOT NULL,
+  `method` varchar(30) NOT NULL,
+  `notes` text DEFAULT NULL,
+  `recorded_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `voided_at` timestamp NULL DEFAULT NULL,
+  `voided_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `void_reason` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `revenue_payments`
+--
+
+INSERT INTO `revenue_payments` (`id`, `property_id`, `property_reference`, `type`, `amount`, `currency`, `paid_on`, `reference`, `method`, `notes`, `recorded_by`, `voided_at`, `voided_by`, `void_reason`, `created_at`, `updated_at`) VALUES
+(1, 5, 'LP-GAM-00005', 'listing', 1500.00, 'LKR', '2026-10-06', 'TEST 001', 'cash', 'Test Payment', 6, '2026-10-06 05:08:26', 6, 'test completed', '2026-10-06 04:53:04', '2026-10-06 05:08:27');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `label` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `label`, `created_at`, `updated_at`) VALUES
+(1, 'buyer', 'Customer / Buyer', '2026-09-28 03:54:41', '2026-09-30 22:00:02'),
+(2, 'seller', 'Seller', '2026-09-28 03:54:41', '2026-09-30 22:00:02'),
+(3, 'agent', 'Agent', '2026-09-28 03:54:41', '2026-09-30 22:00:02'),
+(4, 'sales', 'LGC Sales Team', '2026-09-28 03:54:41', '2026-09-30 22:00:02'),
+(5, 'verification', 'Verification Team', '2026-09-28 03:54:41', '2026-09-30 22:00:02'),
+(6, 'admin', 'Admin', '2026-09-28 03:54:41', '2026-09-30 22:00:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role_user`
+--
+
+CREATE TABLE `role_user` (
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `role_user`
+--
+
+INSERT INTO `role_user` (`user_id`, `role_id`, `created_at`, `updated_at`) VALUES
+(4, 2, '2026-09-30 04:00:50', '2026-09-30 04:00:50'),
+(6, 6, '2026-09-29 23:42:36', '2026-09-29 23:42:36'),
+(7, 2, '2026-10-06 23:11:44', '2026-10-06 23:11:44'),
+(7, 3, '2026-10-01 00:51:10', '2026-10-01 00:51:10'),
+(8, 1, '2026-10-01 01:46:31', '2026-10-01 01:46:31'),
+(9, 4, '2026-10-01 01:51:50', '2026-10-01 01:51:50'),
+(10, 5, '2026-10-01 01:51:50', '2026-10-01 01:51:50'),
+(13, 1, '2026-10-06 23:14:56', '2026-10-06 23:14:56'),
+(13, 2, '2026-10-06 23:14:56', '2026-10-06 23:14:56'),
+(14, 1, '2026-10-07 00:59:21', '2026-10-07 00:59:21'),
+(14, 2, '2026-10-09 23:45:18', '2026-10-09 23:45:18'),
+(14, 3, '2026-10-07 01:14:52', '2026-10-07 01:14:52'),
+(15, 1, '2026-10-09 05:21:04', '2026-10-09 05:21:04'),
+(15, 2, '2026-10-10 01:31:44', '2026-10-10 01:31:44'),
+(16, 1, '2026-10-12 05:45:04', '2026-10-12 05:45:04'),
+(17, 1, '2026-10-12 05:59:17', '2026-10-12 05:59:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `saved_properties`
+--
+
+CREATE TABLE `saved_properties` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `property_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `saved_properties`
+--
+
+INSERT INTO `saved_properties` (`id`, `user_id`, `property_id`, `created_at`, `updated_at`) VALUES
+(5, 8, 9, '2026-10-05 05:47:09', '2026-10-05 05:47:09'),
+(6, 15, 11, '2026-10-10 05:29:17', '2026-10-10 05:29:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `id` varchar(191) NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `ip_address` varchar(45) DEFAULT NULL,
+  `user_agent` text DEFAULT NULL,
+  `payload` longtext NOT NULL,
+  `last_activity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('6yBakkd2kQm4NVpzW1IT2xtwzN95WrY14iYJSVuU', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiJzY2FEOGxyMkNLYlc0N0ZTV01Zd2sxMHVkOVRkNlZiM2F5cjhMQ2ZmIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwXC9hY2NvdW50LXNpZ25pbiIsInJvdXRlIjoiYWNjb3VudC1zaWduaW4ifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1791803351),
+('9rGNomNvFfP5XENwIDk0rquHBhpbDnAkr01BHZeW', 15, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJtRm52Q0FYR2s2b2J3cjN6WnJFS2xMZlRtc21yUHV1b0djM0xxZEx5IiwiX2ZsYXNoIjp7Im5ldyI6W10sIm9sZCI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL3ZlcmlmeS1waG9uZSIsInJvdXRlIjoicGhvbmUtdmVyaWZpY2F0aW9uLm5vdGljZSJ9LCJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI6MTUsImF1dGhfdmVyc2lvbiI6MSwib3RwX3ZlcmlmaWVkIjpbMTUsIm5hZGl5YWtyaXNoMjU4QGdtYWlsLmNvbSJdLCJzbXNfZW5yb2xsbWVudF9lbWFpbCI6WzE1LCJuYWRpeWFrcmlzaDI1OEBnbWFpbC5jb20iXSwic21zX290cF9jaGFsbGVuZ2UiOiI1YzAyZTdjZjIyY2Y4ODQ5OGUwZDVlZTRmMjJlZTAzYWVlNjQ4MTFiNzYyYjc5ZjcyMDc5MjZjOWU3NmYwZTNkIn0=', 1791804288),
+('aPI6wczEsaCuFAfV60Sgn5WOGNpX1o2YjcnFlKQt', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiIzc2l3b3NrYjNUWFdjaWpXbXV4OG81OThhZUhHb0o1NmdIU1Z6VHA2IiwidmlzaXRvcl90b2tlbiI6Ijk1NmM3ZDgxLTY4NDItNGVkNi04MDE4LTJjMWU3NDRlNWExNCIsIl9wcmV2aW91cyI6eyJ1cmwiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMCIsInJvdXRlIjoiaW5kZXgifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1791803350),
+('FhTQzWJ3nqvAgCGkjteBaBB1HIhXMueu7hpExm8F', 16, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJ2Tmc2RGxFTEs4MVpaV3Q2bTV5UVdyMmZsTENFNUFXM25kV2xRZ1FOIiwiX2ZsYXNoIjp7Im5ldyI6W10sIm9sZCI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL3ZlcmlmeS1lbWFpbCIsInJvdXRlIjoidmVyaWZpY2F0aW9uLm5vdGljZSJ9LCJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI6MTYsImF1dGhfdmVyc2lvbiI6MH0=', 1791803710),
+('h4DJw2reRwRGpntAK2LcbxDba7B1Wh3wnRNxe6Np', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiJGenI4TGV2NWgyOGVYcDhyeW1CS1B4dTNDUjJBY2N1TW9KejdKTEY2IiwidXJsIjp7ImludGVuZGVkIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL2FjY291bnRcL2NvbXBsYWludHNcL2NyZWF0ZSJ9LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL2FjY291bnQtc2lnbmluIiwicm91dGUiOiJhY2NvdW50LXNpZ25pbiJ9LCJfZmxhc2giOnsib2xkIjpbXSwibmV3IjpbXX19', 1791800817),
+('KEY9jAQTizXXbU5fIgjBYUFXEqr37AWsl6LGf4O2', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiJGcmxISElrN2FScFo5SmlqYk1WQU9OYU5NRTB4bHl3bjVoU2RrcmRjIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwXC9hY2NvdW50LXBhc3N3b3JkLXJlY292ZXJ5Iiwicm91dGUiOiJhY2NvdW50LXBhc3N3b3JkLXJlY292ZXJ5In0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1791803351),
+('Msqk49AyJ3AtKjZCkJ7IRNfXr4Vk6utGBHt5rgAP', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiJkOGNiOEl3UVhNdUN0dkRPa0hVNVdXU3pUWGZTUUJ0VGJDTDZLYTdRIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwXC9hY2NvdW50LXNpZ251cCIsInJvdXRlIjoiYWNjb3VudC1zaWdudXAifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1791803351),
+('nR0ReUjapWiCEHPbocphjRi06gwVcdG9w0VTzXZl', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiJyNmpoOHNGbmZZRWVPTFp0RXlyV0pPakE0WTdTbENHWWJLZ2VxWTd4IiwidmlzaXRvcl90b2tlbiI6ImEyNTBiOGM4LTMyOGEtNDkyZi1iODAyLTIzOWE3ZjE4NTQxNCIsIl9wcmV2aW91cyI6eyJ1cmwiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMCIsInJvdXRlIjoiaW5kZXgifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1791800817),
+('Oxnp4qbpF4Rh4Wzg4bVznf5ZfBtb4JIISF64l2vg', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26200; en-US) PowerShell/7.6.5', 'eyJfdG9rZW4iOiJsMnBldnhYYjFNZTl4SGFiam12d2JCSUpSYnlHd0lFZGl0QmVuM2hyIiwidmlzaXRvcl90b2tlbiI6IjliNGU3NzhiLTcyZmYtNDk0Mi04Yjc5LWRlODliMThiOTYyNCIsIl9wcmV2aW91cyI6eyJ1cmwiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvcHJvcGVydGllc1wvTFAtR0FNLTAwMDA1Iiwicm91dGUiOiJwcm9wZXJ0aWVzLnNob3cifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1791798079),
+('oxrYBxABX9JgDCdoLgNIu1VM3PzEgqrSamqpwKUz', 15, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJIR0xUWkw4OURucmVEMWJxblRBbUw2UzgzVWEwenpnWm5KNzdvREJlIiwiX2ZsYXNoIjp7Im5ldyI6W10sIm9sZCI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL3ZlcmlmeS1lbWFpbCIsInJvdXRlIjoidmVyaWZpY2F0aW9uLm5vdGljZSJ9LCJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI6MTUsImF1dGhfdmVyc2lvbiI6MSwibG9naW5fb3RwX2NoYWxsZW5nZSI6ImNlYTY0MjdmOGI3ZmNiM2QzYzBlYjk0ODBjYmM5YjNiOWJmM2NlMzllYTI5YzM2YTNhMTkwNGU3Y2UzYWRlY2EifQ==', 1791804223),
+('UFghREGtp2ITAW6nlrawO58nDQtG1i6K7UfoVJS6', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJtQXJVYmxyUFFkUEhIbTlMQlJJZWY0Z051a2RueUVFd1BpREZBdXpDIiwiX2ZsYXNoIjp7Im5ldyI6W10sIm9sZCI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL2FjY291bnQtc2lnbmluIiwicm91dGUiOiJhY2NvdW50LXNpZ25pbiJ9fQ==', 1791804602);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sms_verification_codes`
+--
+
+CREATE TABLE `sms_verification_codes` (
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `code_hash` varchar(191) NOT NULL,
+  `expires_at` datetime NOT NULL,
+  `attempts` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `sent_at` datetime NOT NULL,
+  `window_started_at` datetime NOT NULL,
+  `send_count` smallint(5) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sms_verification_codes`
+--
+
+INSERT INTO `sms_verification_codes` (`user_id`, `phone`, `code_hash`, `expires_at`, `attempts`, `sent_at`, `window_started_at`, `send_count`) VALUES
+(15, '94717627258', '$2y$12$Py2CppTHlf6PyBwU9tRJN.aRJt88g9C5J9h/9Au1Z3iizcyKSOP/q', '2026-10-12 11:25:10', 0, '2026-10-12 11:24:41', '2026-10-12 11:24:41', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscription_plans`
+--
+
+CREATE TABLE `subscription_plans` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `code` varchar(40) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `price` decimal(14,2) DEFAULT NULL,
+  `currency` varchar(3) NOT NULL DEFAULT 'LKR',
+  `billing_interval` enum('monthly','annual') DEFAULT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `subscription_plans`
+--
+
+INSERT INTO `subscription_plans` (`id`, `code`, `name`, `price`, `currency`, `billing_interval`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 'free', 'Free', NULL, 'LKR', NULL, 0, '2026-10-07 05:26:29', '2026-10-07 05:26:29'),
+(2, 'professional', 'Professional', NULL, 'LKR', NULL, 0, '2026-10-07 05:26:29', '2026-10-07 05:26:29'),
+(3, 'premium', 'Premium', NULL, 'LKR', NULL, 0, '2026-10-07 05:26:29', '2026-10-07 05:26:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `customer_name` varchar(150) NOT NULL,
+  `context` varchar(150) DEFAULT NULL,
+  `quote` text NOT NULL,
+  `consent_confirmed` tinyint(1) NOT NULL DEFAULT 0,
+  `consent_notes` text DEFAULT NULL,
+  `is_published` tinyint(1) NOT NULL DEFAULT 0,
+  `display_order` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `updated_by` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(191) NOT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT 1,
+  `auth_version` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `phone` varchar(30) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `bio` text DEFAULT NULL,
+  `agency_name` varchar(150) DEFAULT NULL,
+  `service_areas` varchar(500) DEFAULT NULL,
+  `profile_photo_path` varchar(191) DEFAULT NULL,
+  `registration_verification_pending` tinyint(1) NOT NULL DEFAULT 0,
+  `verified_phone` varchar(20) DEFAULT NULL,
+  `phone_verified_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `is_active`, `auth_version`, `phone`, `city`, `bio`, `agency_name`, `service_areas`, `profile_photo_path`, `registration_verification_pending`, `verified_phone`, `phone_verified_at`) VALUES
+(4, 'seller1', 'nadiyakrish258+lp-seller@gmail.com', NULL, '$2y$12$rLbnDdrjbTnBKmNhG8wQvOkmiL7KIhMK/sg6N7PRHNs3kzOO3SW0S', NULL, '2026-09-29 23:19:50', '2026-10-09 23:16:56', 1, 3, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(6, 'admin', 'nadiyakrish258+lp-admin@gmail.com', '2026-10-12 00:52:51', '$2y$12$pwfv5PQEPDlXlYhLdovj1OZdAqMToWdzGqrEyAvQmwDOT0vQA.sli', NULL, '2026-09-29 23:28:59', '2026-10-12 00:52:51', 1, 1, '0717627258', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL),
+(7, 'agent', 'nadiyakrish258+lp-agent@gmail.com', '2026-10-09 23:46:41', '$2y$12$kOMdlhf.ZEbD4Dd2DlN81.xnjMCbH7HFb5eWrzF.b4ebigZp.Hv3G', NULL, '2026-10-01 00:48:56', '2026-10-09 23:46:41', 1, 2, NULL, NULL, NULL, 'real estate agent', 'agent@gmail.com', 'profile-photos/7/39xQIcNmNPIbcW4i03ef4vwnrEyZdKQz2amQYmH0.jpg', 0, NULL, NULL),
+(8, 'buyer1', 'nadiyakrish258+lp-buyer@gmail.com', NULL, '$2y$12$k9ExuC4//aYE1ie3Ct.AwuVndNGdAT7zEzokPkIlsrBBA1JmKTgoa', NULL, '2026-10-01 01:46:31', '2026-10-09 23:16:56', 1, 2, '0777777777', 'Colombo', NULL, NULL, NULL, 'profile-photos/8/1kfv0RmKhl4zlMOUZn5imOwAQxxMi07SKr4nlRRy.jpg', 1, NULL, NULL),
+(9, 'sales', 'nadiyakrish258+lp-sales@gmail.com', '2026-10-09 23:47:54', '$2y$12$ykqO4.zaAV20FtfvyEbCK.XpJ8UM.EUx6EL01Nv7GuNs91/d6OqfS', NULL, '2026-10-01 01:49:03', '2026-10-09 23:47:54', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL),
+(10, 'verification', 'nadiyakrish258+lp-verification@gmail.com', '2026-10-10 00:00:31', '$2y$12$q/RvREEMG8ti2rNBNbQzz.5AyqEfNnjyDG.OHyRYZN.y6i03g9sAG', NULL, '2026-10-01 01:50:18', '2026-10-10 00:00:31', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL),
+(13, 'sellertest', 'nadiyakrish258+lp-sellertest@gmail.com', NULL, '$2y$12$qAMhjuREGNsXgZSgpw2kV.IRMDWN84OBApBunvtexSNhG7pKtfuru', NULL, '2026-10-06 23:14:56', '2026-10-09 23:16:56', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(14, 'agent2', 'nadiyakrish258+lp-agent2@gmail.com', '2026-10-09 23:44:47', '$2y$12$szSjaie2z61b6DZ7zpySXeKXPGLM46BPG0qWg1CxwYDn5u0MSmFy6', NULL, '2026-10-07 00:59:21', '2026-10-09 23:45:18', 1, 3, '0777777777', NULL, 'im a agent in colobo district', NULL, 'colombo', NULL, 0, NULL, NULL),
+(15, 'Nadiya', 'nadiyakrish258@gmail.com', '2026-10-12 05:54:28', '$2y$12$uvTR1iMFNwMQx3XJN7yqT.Wq/KHQ1I5iBrKpbbYhhOegu0cC08goq', NULL, '2026-10-09 05:21:04', '2026-10-12 05:55:10', 1, 1, '94717627258', 'Nittambuwa', NULL, NULL, NULL, 'profile-photos/15/qaXkeIUtN7JtzaPCPbYnF21ic8SbwzLuK0udU3Sh.jpg', 0, '94717627258', '2026-10-12 05:55:10'),
+(16, 'krishanthi', 'krishboutique75@gmail.com', NULL, '$2y$12$ahAL9tuefVzkmwfpKQeCxuQk2W2fUqbie9eEVU6Y/.IjP.5rGoIqS', NULL, '2026-10-12 05:45:04', '2026-10-12 05:45:04', 1, 0, '94717627258', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(17, 'krishanthi', 'nadiyakrishanthi62@gamil.com', NULL, '$2y$12$Tgj/hCVOeUyFQUhF7pCqL.cViGabRrEqj2pByp1eS/1VmJyhNeOsK', NULL, '2026-10-12 05:59:17', '2026-10-12 05:59:17', 1, 0, '94717627258', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_access_changes`
+--
+
+CREATE TABLE `user_access_changes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `performed_by` bigint(20) UNSIGNED NOT NULL,
+  `before` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`before`)),
+  `after` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`after`)),
+  `reason` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_access_changes`
+--
+
+INSERT INTO `user_access_changes` (`id`, `user_id`, `performed_by`, `before`, `after`, `reason`, `created_at`, `updated_at`) VALUES
+(1, 4, 6, '{\"roles\":[\"seller\"],\"active\":true}', '{\"roles\":[\"seller\"],\"active\":false}', 'testing purpose', '2026-10-01 03:25:36', '2026-10-01 03:25:36'),
+(2, 4, 6, '{\"roles\":[\"seller\"],\"active\":false}', '{\"roles\":[\"seller\"],\"active\":true}', 'testing purpose', '2026-10-01 03:26:23', '2026-10-01 03:26:23'),
+(3, 7, 7, '{\"roles\":[\"agent\"],\"active\":true}', '{\"roles\":[\"agent\",\"seller\"],\"active\":true}', 'Requested seller access.', '2026-10-06 23:11:44', '2026-10-06 23:11:44'),
+(4, 14, 6, '{\"roles\":[\"buyer\"],\"active\":true}', '{\"roles\":[\"agent\",\"buyer\"],\"active\":true}', 'Agent application #1 approved: approved', '2026-10-07 01:14:52', '2026-10-07 01:14:52'),
+(5, 14, 14, '{\"roles\":[\"agent\",\"buyer\"],\"active\":true}', '{\"roles\":[\"agent\",\"buyer\",\"seller\"],\"active\":true}', 'Requested seller access.', '2026-10-09 23:45:18', '2026-10-09 23:45:18'),
+(6, 15, 15, '{\"roles\":[\"buyer\"],\"active\":true}', '{\"roles\":[\"buyer\",\"seller\"],\"active\":true}', 'Requested seller access.', '2026-10-10 01:31:44', '2026-10-10 01:31:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `website_visitors`
+--
+
+CREATE TABLE `website_visitors` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `visited_on` date NOT NULL,
+  `visitor_hash` varchar(64) NOT NULL,
+  `page_views` int(10) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `website_visitors`
+--
+
+INSERT INTO `website_visitors` (`id`, `visited_on`, `visitor_hash`, `page_views`) VALUES
+(1, '2026-10-07', '93b7a67b85708c9da64120ac18e6ae2a464043b42e5770bb3fd7a7d9e0ae7060', 1),
+(2, '2026-10-07', '124e87973d3b56043581cd674d8d2d0a9a604019782eb2829068be070092373a', 1),
+(3, '2026-10-07', '30dcddeec5a41976842d10c1c221d13c217782f3e0553a70b0581f10992c7688', 1),
+(4, '2026-10-07', 'be5013f07841639ed99194b11b38633ecf66d61a25d43afaa5cb50b7d561bf92', 1),
+(5, '2026-10-07', '18b96c7c1bd196d8e7be51d8aee5db5877704a1ad7b8a8d07f75a86a5b246dc2', 1),
+(6, '2026-10-07', '472e477bd3290bbb07e71ac2e21c5d7cfb349a9c5d3387e30cd8eb54358e368e', 1),
+(7, '2026-10-07', '492f28f0feda318f3adfd6987c23ce956378df6b5b12619b0fea3715ad0e2bd5', 5),
+(12, '2026-10-07', '0e62d15bc1f2ebe28045915a0491bb8b5235b92aa8b4cb90bd755f4c7ad90c57', 1),
+(13, '2026-10-09', 'fd5e2dd0f7bbe4e33f0df52357ddde3f309b769cf093b71550480bcd2f50e8c1', 13),
+(26, '2026-10-09', '63cdbc09e89690510bd368cfddab74cff9dc88fe63adc0c733b59e3172ce7ddc', 1),
+(27, '2026-10-09', '623a9a1d4e433d885f4fe357b09fff58e6a90e781102fb0365ecb5f65c14b3f5', 1),
+(28, '2026-10-09', 'a253c440ff0681bb48e341a510de26a1ee670099995cfd4a988d469054766b49', 1),
+(29, '2026-10-09', '3900fa388615fed0c4b8f10338fc4bcbd5b14e9a9a73a5dcd96abb56764445c7', 1),
+(30, '2026-10-09', 'b9a47ec1f49b65df583859700d86af8dbd37badd4a8454421e64c434c42f4c65', 2),
+(32, '2026-10-09', 'b00ab57b2183b338e5713cfaf233358eb201ce51fe1233dbcad82e46b35976f3', 1),
+(33, '2026-10-09', 'ebff10dd3926ce45944f52452eaba9dd56e66a4093f0588c1923f19a4a4f5068', 2),
+(35, '2026-10-09', '0ff5b34bf44695410369d533ccda1186671144406a7ec865553f747e063d2eda', 3),
+(38, '2026-10-09', 'ac633eadc0dc620b6321496857e84bc0ace2b40b028adc544aa6a7fd2352cc73', 1),
+(39, '2026-10-09', '9378888585340ad9679902a76c9d18df17086e6a4030f43c4d8379a798eca09d', 6),
+(45, '2026-10-09', 'd227bfc88fb5f9a756a7c035afaf32cafda7ef7f6dc80750663397b40b93344f', 1),
+(46, '2026-10-09', '0b524d843b3b162a659398df91fe7cbfd19776b9d7991ecb9d1b34229e3672a9', 2),
+(48, '2026-10-09', 'a049a4fed9d547cef0f2c34633dda85f6c22fc8b26a09bed381753a8b637e7d4', 8),
+(56, '2026-10-09', 'badc951403234feaecb80f1c15c6b8ae8bf0d76a1a326e6ad0dd79c235478c80', 4),
+(60, '2026-10-09', 'f6bf5768b8b1eb802dd9622f78a7bed2766b1463a1fc1907dbe4df4f93de97cb', 1),
+(61, '2026-10-09', '3f609359d38ff279ca5268c2eff9c97f05391ef35aa728e8b5e5e96ca3bdcab4', 2),
+(63, '2026-10-09', '19830f6d2da78198837f029b0e355d1d1239bfff9cf04bf05ca53ca855fadb20', 4),
+(67, '2026-10-09', 'd9319ff8c361e54ebf9755d751804f18ff436cc0270d7d3f35e0193cc92eb11b', 1),
+(68, '2026-10-09', 'd1475f693e31f513ac247320a3d7171148fb4c54814e33d96f2150fdf1a9a9d7', 1),
+(69, '2026-10-09', '0a04aef821338bfc2fa5cda866127fa18d6f383ffdd9ea5f04531a1147ec3282', 1),
+(70, '2026-10-09', '30f95a4943d14036288098043e2ef08c27a1c6d84c438f42004af8c2c4b308c5', 1),
+(71, '2026-10-09', '14064cc955a68c395a3e5aa75dc30dbd58eb2557ecd01775072b86edbcfd9189', 9),
+(75, '2026-10-09', 'a3d84041129f5aeb0adbab550bed6babbda78e43b5443cac41192bbccc19ed9e', 1),
+(77, '2026-10-09', '465a224e58696c4dfc9951241f872ed5410583d3b3fd2e13908ba35ca2110c39', 1),
+(78, '2026-10-09', '5847d5cccf0579694cfe1a2a2e3370c112c35497bc4c2a7fe24446f243365a5f', 1),
+(79, '2026-10-09', 'b4b387974ad75b6bc715e11c6819b4dafe857489c154238c9f1f4e923c8ee5d4', 1),
+(80, '2026-10-09', '0ac4ed33e2a514636912eb9d2215eded0fd07244bbabe19cd858e8cc3ec9889c', 1),
+(81, '2026-10-09', '1a4c40c868f07fd5b3b89837840fea8037b386615156b8401c9db2b2dbf2ba5f', 1),
+(86, '2026-10-09', '5d4e1e805d5881504a0a969d1d9169033ce63071973cfdc3ce482ec3c0ce21ff', 1),
+(87, '2026-10-09', '1b69e4733fc0444ce161346f1ffa92150ddc166aeeab8cf49fe2f7effe94788b', 1),
+(88, '2026-10-09', '64c56d390b7fdf4946763be6bf05049661432581df45f82213bbef2df1761eb4', 1),
+(89, '2026-10-09', '6f5136bb6ef368e7e7b26254cd1eeb041adbb09659f1b8f2e2fdb1145d60bbf3', 3),
+(92, '2026-10-09', 'f362632d693b75bea2ad50c62d858f09ef13e2fe8ccaf1e9360f8bb814e099c7', 17),
+(109, '2026-10-09', '17078305f16fcc58c03b91ed44f032380d0e7272d1867b0b8caa6b8e88c0e3dc', 5),
+(114, '2026-10-10', '4ab9daf723842c6712abdc035cbaf18e81e486f4230462fbf6d246e0e733afbe', 1),
+(115, '2026-10-10', '02f666873422073530447f74d4ffc0278ce30b60cef44eee2b1d4b56ea186910', 1),
+(116, '2026-10-10', '17daf254f5d239888a327f5b101e25d1956806121bfcb9fc9fedf8d95379517b', 1),
+(117, '2026-10-10', '1dc0ec1cfb4875ae77bf232e48f3b3e52e3ab59bca87dc4ea2323195530f9142', 1),
+(118, '2026-10-10', '569b382ca69883ec765856b8b6ce2698ad28a5c6d3f68edf6c90c0a94a7577cc', 1),
+(119, '2026-10-10', '86f26de159a1be0828758341e83f791b03b0f31fa753dcc7e969ce9c5682304c', 1),
+(120, '2026-10-10', '80496de5ca8f6a58b6befc6e9cd151a30178b491abbf7be9e9513dc2496be846', 1),
+(121, '2026-10-10', 'ab2e493b9cd21a5560e362ebe8171a3c5a3c5bff680edb405b81b68dd9aa2838', 19),
+(126, '2026-10-10', '414903a8682579f2b58943afed79549e7aedfa28b2d425b86192aa2df69a8b6f', 1),
+(128, '2026-10-10', '9817d9decfcc6e7a907aa97d2dd4b570fe65daf01e43dde93cfae919aec057e1', 1),
+(129, '2026-10-10', 'b3a420437380af9abbd324a148ca19703cb99bc4218ba7dad7dc39c16e7f8951', 1),
+(133, '2026-10-10', 'e6c8c25b845086b8a4f01000fe567c6dea2ee8b488512c574d28870df785087c', 1),
+(134, '2026-10-10', '578fdf35c49750c3b523fd623d99f839eb6824916e64e4515108500d035a0583', 1),
+(140, '2026-10-10', 'f3e2d69791beeffe0ab5e027111b26feb1bd8dc445fc0fd80f8c3744dca20ace', 1),
+(141, '2026-10-10', '34a5061a4d3caf824e6e5454721a0042344ce854d1cec1ea4ae84dac7156fc97', 1),
+(142, '2026-10-10', '86463b43652070ec1b793a971afdf47df1405ef37f07f8356f1138c9bf27e5c7', 1),
+(143, '2026-10-10', 'd4ecd92540ed6406a4dad17e82f1810401efa76964996ff110f3a1acc70a91c7', 1),
+(146, '2026-10-10', '30d2b4193c84f832cd81a40fcb96a424318278ec5b361033b33c9d4042bf80b4', 1),
+(147, '2026-10-10', 'f9c2ba7f2c86cf69a0e96a902ffbb31f4baeb8ef2bbf8a562cdbb6db3c05e92a', 1),
+(148, '2026-10-10', '270077e16cae8e4ce2016740337a2ade67fbde91a924d09feb3f097f0bf0f7ed', 1),
+(149, '2026-10-10', '72fdf2f9b87e346d397883907bb7490c1b3060977745d36af44444b48ccaad06', 1),
+(150, '2026-10-10', 'bb5cd2aef046466ce836dc9a507efa2877155b760449cdac51e7fac09080692c', 1),
+(154, '2026-10-10', '79d3b2294a0bc373eb65791b30f5a8024776487bf721183fbc19410272d804be', 4),
+(158, '2026-10-10', 'c29500977f99b6c5d21df83f2844fcde90750573122ae7b3468c49687bcebb3e', 22),
+(171, '2026-10-10', '71ab961d788ffb894cc6f9297fa57ce3ac279b8f0e9de8fc4845eb1efab7680f', 1),
+(172, '2026-10-10', '012f74423d319bc3c22e64078052ae859abb4051a161d563c1e55b54f0c0383f', 1),
+(182, '2026-10-10', '215d6a394b415dc43aa9f1b2a8313ec395dc4eec2e3f74695190575a392acdbd', 1),
+(183, '2026-10-10', '6ad1defd69a2ef19799fb2736cdf21f7ffab2c349e786a49d28ed025ceca52f6', 1),
+(184, '2026-10-10', 'eb212e558a99fb95ea711db8953c67254967bb764bf0ca7d995ec572c57f3c3f', 1),
+(185, '2026-10-10', 'f60a4c2e57e7043d56f460fa4ee9e522e307aea5ff171c734e36722320b5514a', 1),
+(186, '2026-10-10', '9b670bc13ee6f1e29c6bd4d97a261224d8975393d75f8ce1d2864e21c4df2bab', 1),
+(187, '2026-10-10', '455b67eb05ed8260da14df0868cde366046edee7c5bed79496e9b806fea09eff', 1),
+(188, '2026-10-10', '0f9947b23251de57a29998d137b249fe1abb80207b7c6695d58f5d52852479fb', 1),
+(189, '2026-10-10', '25f66a12fb2a2d266571e739e46bd212658d036d78ea456b851e232a20cc4980', 1),
+(190, '2026-10-10', '3919df366e3490ccbe3e4ff91a2559a7ed17d195b7294756bc127df0f39735b9', 1),
+(191, '2026-10-10', '312d1223442f52fb0e95ec602f112af5089a47c10995142aeadab9a5aa78942b', 1),
+(192, '2026-10-10', 'e4f1badeb1a8c687adfa39b5e88d3350cd5d7652eab79bd7996470beb6355e8e', 3),
+(195, '2026-10-10', 'fb2a0e365735f653553e8148256e44a2c208d1554d79e5e3d61b6421d800f1b0', 1),
+(196, '2026-10-10', '785b24e58073425a06c7afba569f57e9f52b5606c2d2cafea5f7f53cb8915b7f', 1),
+(197, '2026-10-10', '6720a7feb1947118ef663034ff627fecccad0979e9295802acdc310767f7b1df', 3),
+(200, '2026-10-10', '4073cd3050ac9fad840b910b3b1f7823403b3ea6110721dd8519c8233d0ddcd1', 42),
+(216, '2026-10-10', '34352076e9c22ebc3d6bb5c47fcfabd1932fb409a4c9d65faf070aa2006b778e', 5),
+(224, '2026-10-10', 'a494c91b5afad95f6d7bdc2f09d3d178ef2431c48f292786db22969438fb9741', 5),
+(229, '2026-10-10', '5e4fb35bc615a04c2abfc728302059603d672ead2f78975d2025792cba6979ff', 5),
+(234, '2026-10-10', '943f6ee1ee63cac59b0261ff3c378a786ea353941d021a3ae98aabfb9165f8b5', 3),
+(240, '2026-10-10', '6f73c864eec42406a9b9cdcc45496d40b1db9906cacd3e0d86709da67be68535', 5),
+(245, '2026-10-10', 'a7ca5850272f162df598525031db193ed3b131f77d487012cc3c25511d38ef50', 5),
+(250, '2026-10-10', 'f2d0a17a7f10f7d5f7819adfdb560dca7419d9a18661330c772230c672416dc8', 5),
+(255, '2026-10-10', '6da22cba20cf0bc0cde707c73cbbe4b055c52136742059d7068daca565f35a0f', 5),
+(260, '2026-10-10', 'f2bc037078640f4cf6351c252bfb01b201da67ef1d29d9ced6f9e25c7705009d', 5),
+(265, '2026-10-10', '2bbbe7cfd41eafd7ab69f15b6c29e3ce28f116aba2f62cbe4e82baeae89bc8f9', 2),
+(267, '2026-10-10', '8ce1494981380fd796e59429911ec970a5880c14fdda2fc40358aa25fb855c41', 2),
+(270, '2026-10-10', '07f0d3b69fff13092514364eaeedc9a9fc4f92a33390c49624bf91983e65e8bf', 2),
+(277, '2026-10-10', '99c2869245304fa896d1a9cf79750450fb5e2c866c3f47b19719f42475837893', 3),
+(280, '2026-10-10', '6f956689cdbf34c2705f23a7a1d622019152db0bec8fc0a418d5f025c9ce5c9d', 4),
+(284, '2026-10-10', '70c7447e72b57aaea69c6f216a1fdc22a0bc54ad193b88461f6411c491d7e508', 4),
+(288, '2026-10-10', '266e3341653cd72bbe83005a3bf101861d4d27a87c870f10b493e7e652d2e2ae', 4),
+(294, '2026-10-10', 'b1b1b240c31c55eaa22e24539b0a57ae52c688659049b593752a74fefb9ebe60', 1),
+(295, '2026-10-10', 'a78e57de293100d4367b85175cab84a4552c65df0a0ab9d743efcf0348ede06c', 1),
+(300, '2026-10-10', '4e52d5841aa6ce4b9e5076ef24972391b44cd5714896f7efd47913c564b3d43a', 1),
+(309, '2026-10-10', '13319141e648e6e8566198939e96d06075a4f02aa9c26c0170a2727dc9293050', 5),
+(314, '2026-10-10', '0b46e3863a79822cb79794047ea1587bf0f18e31c852c0b3e007f0eb343221ba', 3),
+(317, '2026-10-10', 'c8597148e74dbb3cf82dd65e328c620fbba87d930e9b7052fd44bf8e433903fd', 5),
+(322, '2026-10-10', '173a7331ab304967b0dad54789f96a1cb2042272ad736176a1fb2a3bb14dacb1', 3),
+(325, '2026-10-10', 'b4a1a5db6b47f0b82a2e46aaefbaa23badb4e04f9d15eabe7dbcc271b2f76b4e', 5),
+(330, '2026-10-10', '3ba8f266861b1cffb8d3efcc8f773108d5c198123b229dd522294d84e300a57d', 3),
+(333, '2026-10-10', '0475b69f993da04268896a63402c69a492ebe3d4740f35e3241ea714d0ce87d7', 5),
+(338, '2026-10-10', '20a6e001a82c974d7ce4feb029e98fd1429455afe6d10b4bb5cce59f99275caa', 3),
+(341, '2026-10-10', '11bda13f711d0448f20d91b0a2ba3e3f723cf92acf196e010550b6cc683ee87e', 1),
+(342, '2026-10-10', '7d33e0c46140c750738ea9aede0ac3a065e3213de043dcc67a435a8573e29144', 1),
+(343, '2026-10-10', '5e2093a9f76d0bca112e6ae3eaca0bb76883a2214356b6a29523b166317a0571', 3),
+(346, '2026-10-10', '21a2528a35925e1e831801ea5d75de46f7a5dde2a7f40620e9123718d9b6651f', 3),
+(349, '2026-10-10', '5c91c590237a79adfd744cf8dee0a7e126778ae0ccf4a88e64c84828ab096370', 1),
+(350, '2026-10-10', '93b963e29551badb07f16cd0e37e5d4b36d70020739582a4dacc0efe7e0a6d88', 3),
+(353, '2026-10-10', 'eed9cab156c315cce662f069dafac256d56b6aaa7197f7ce46d11481c7230cf3', 3),
+(356, '2026-10-10', '2454372453969652196dc074d8f0f988504a2e479a961d538e393910919e1a0e', 3),
+(359, '2026-10-10', 'a42c553c2f71cdf09056509349244256bf4b4d8320f7c049456c8c945d7cb527', 3),
+(362, '2026-10-10', '859a3f9725d0c8ca40db18f0654aeff24b49bb514f06309e183df7aa6357f3c3', 3),
+(365, '2026-10-10', '9ca8073fd862ec16c7999dfb8677a265ed35d1e884ad38e06e95b36735eee844', 3),
+(368, '2026-10-10', '411b4747566a9594276d23769087d00a7e4bbde2df756ad69c909bdf8629caa8', 3),
+(371, '2026-10-10', '32f0fe85ede1e44a83773878181ffbb7f6ef91ede53bf029541ddaa07235f3f4', 3),
+(374, '2026-10-10', 'ff8e452e361fae5d67500dddf9ce90f29c9d942c0275ac5b42bb2ffb90528ab2', 3),
+(377, '2026-10-10', '1875fcadc45dd66782b84e0613bc214d8765f353c986d060a746e0b744415c25', 3),
+(380, '2026-10-10', '19ea2a622e3ab99e3ca546b14e6e97f83177baad3c1f188746139f47289b8492', 3),
+(383, '2026-10-10', 'ca7e0e5da090cd28a45ea95af034054625ca908e706c83973d0505f4307a0781', 3),
+(386, '2026-10-10', '3f147c851a39c429e444cc65bb561b43ad3f2f3575dc3f991a3e05b5e3f4ec06', 2),
+(388, '2026-10-10', '795e951b48b85f6e9231dfe498bb0cb3a61533b04580024e98adb7935cc374b2', 2),
+(390, '2026-10-12', '83669e1bd8944c65012cd1b8e1229720e38ea0cef26665574697e3999a0c6b55', 1),
+(391, '2026-10-12', '0c2ef0e839844cb9d4222f1a323ae0472e6e991c16065e1c742e60b24028ff79', 51),
+(410, '2026-10-12', '968ab9a8337b51541236d600d623f9c3006329ff73ebc503d8a6d9f8d9ce730a', 1),
+(411, '2026-10-12', '3e4b0af85b601d9f0aa06ea9f7bd538a16f2206c56057a1a839859d8cddd0053', 2),
+(413, '2026-10-12', '199d166c5ce9123ce5fbb7c688b5f998d612d7f3430564c0fade38c68ccfb3bb', 2),
+(415, '2026-10-12', 'f9cef701662fb5ba4ab229977057d2e30c359bed0abc765b4cd02052c5602da6', 2),
+(419, '2026-10-12', '808e9ce679aa4eee0afdbada3c3cf0553b7066a9d52995efd4407a7755e8cf49', 6),
+(426, '2026-10-12', '0e19a595e862734478717087a5e824a156f2ef0fefe670f9e1a1f97a0c8264f6', 6),
+(436, '2026-10-12', '22186475fad431f21d95ef7b558388dbb813f5468f3929d487534c586040da38', 6),
+(444, '2026-10-12', '956147b2449b1c3f9c3fad88bd87218d012d306f850cbef117b64fc1dac2f234', 6),
+(453, '2026-10-12', '8eeeabec99f74039fba0eb4f5d04a3392364fd3ca375928ae0c21706f9f7b739', 3),
+(456, '2026-10-12', '638d36877b836a5937493df94b7697d8699d830dc90d28564f997d0894e396e7', 3),
+(459, '2026-10-12', 'e73e24995ae8c3830fa92ef21d13fa1af6e81a088e4d81b3665f1ff8b4c35a6c', 3),
+(462, '2026-10-12', '4a3eecb420d56fde68678b93594852f519e3b3473ad1febe6cb0a5c2aa97513d', 7),
+(472, '2026-10-12', '72c94bdc9a7bc97cd84526f5f73fab9a3b38347cab01a17b790aa11f7e5f4af2', 3),
+(475, '2026-10-12', '1f57480e3b2d6f913b931ec88623451919ba7a9ab6c0ad24ff644e67cdfa9f14', 1),
+(476, '2026-10-12', 'c128643b2d32d5d0feb4c7d04b4670a51bd3ae070e76bea5710a58f618023e5c', 1),
+(477, '2026-10-12', 'c6af6d24f620135a5191015d7ca2a3d0b161071a0016a5e7ca4c6d00c8fc43bf', 3),
+(481, '2026-10-12', '26e24a3d0352439e506d605571ed652e4fd6692e4aea5859e72480f610674b4e', 3),
+(485, '2026-10-12', 'a5bc76f19c8cf3d4dc22ed6e233df9cf9a829ed2ffc5054b12b4989b09086444', 3),
+(493, '2026-10-12', '8fc2b4f3497ef2836a9451afd9fe0700e9072bc1f895e4587873c01233ed596c', 1),
+(496, '2026-10-12', 'a3507cd6dfcf7d938f32bab554bbbcd89b9bb31db8de768f1a7a2f3db981ddc0', 1),
+(497, '2026-10-12', 'f5451d7bd31c92a42bf1950c07ffb673ed58ae162aa87afd882381edfe53f84b', 1),
+(498, '2026-10-12', 'a18ca80a3a7cb0f6dbadb32016d8a9a107e5ef79497ad1a25f6f375f518aae65', 1),
+(499, '2026-10-12', 'b49c9d173a8f84d107127f4c0a131d65a663539e10bcc4e41f52ec97a2233142', 1),
+(500, '2026-10-12', 'a64c8043013159636a6bbba5344f0b0d06fc1d18190400c03947e45fc8051fdd', 1),
+(506, '2026-10-12', '1ccbe2f32ae27665ef93984f26ab6cdb60dddf16be7930965f0a17d734b81771', 1),
+(507, '2026-10-12', '42a99da89364783c902803fa37bf70bf9ac4fd7fbe4285480e5c131b464260da', 2),
+(509, '2026-10-12', 'f032577e4e05f6c6a54b1a4422b47a6485f158aa40a14bf95974b6a55d0c8122', 2),
+(511, '2026-10-12', '6cfa8a1224a6e911a4a46544dbfa9cc9e736497d1a8baef99066a9a1c0806b0f', 1),
+(512, '2026-10-12', '6d5ca2992783a6b2a1bcce69fa9e12f4aaac2bb4e6bc08e907aa89e3eb4e1731', 2),
+(514, '2026-10-12', '3c0d75813e51763ce53e2d45b5e47d94a5465ecc77fa02605d100e4ef70d8868', 2),
+(519, '2026-10-12', 'af2d91797b85e66c95d73668c2905eddcbdec491cfbd52044521fe53f02ff5ff', 25),
+(541, '2026-10-12', '037d23378ffb6dd74333dcb42927ddbcd72323eed7180b524781768941ed3748', 1),
+(542, '2026-10-12', '349dcc90ff688a0c3e0c5b8135b06d89b87401d85b73648affcbc57438bfeb55', 1),
+(546, '2026-10-12', '4a9acd64bc94fa9cb8e52ec17461d644f009e5b45923fa69068bc8bbb816057d', 1),
+(547, '2026-10-12', 'aebb4676c5165dd330899449c90137c962676c8f0c0ea4ccf66c3b850d83937b', 1),
+(548, '2026-10-12', '71bd7633005e4d8edc14881f4fab99790aab6ddebc6eab2b2a5dbea6a09f872d', 4),
+(552, '2026-10-12', '2b37f2f40a1338d7e2fc19eedf0564fff552597ba6f630670c7d72a27705e8d1', 1),
+(553, '2026-10-12', '46486bce1809dbed079e10e26994369e6969aeb4c6bbdf87ce146271a67ebbb7', 1),
+(554, '2026-10-12', 'ecc96fe5ea976295bc4c04e211d873a06e647fe7b9c05deb9b467a22d9b9f54f', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `agent_applications`
+--
+ALTER TABLE `agent_applications`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `agent_applications_reviewed_by_foreign` (`reviewed_by`),
+  ADD KEY `agent_applications_user_id_status_index` (`user_id`,`status`);
+
+--
+-- Indexes for table `agent_subscriptions`
+--
+ALTER TABLE `agent_subscriptions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `agent_subscriptions_subscription_plan_id_foreign` (`subscription_plan_id`),
+  ADD KEY `agent_subscriptions_agent_id_status_index` (`agent_id`,`status`);
+
+--
+-- Indexes for table `buyer_service_requests`
+--
+ALTER TABLE `buyer_service_requests`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buyer_service_requests_property_id_foreign` (`property_id`),
+  ADD KEY `buyer_service_requests_customer_id_id_index` (`customer_id`,`id`);
+
+--
+-- Indexes for table `cache`
+--
+ALTER TABLE `cache`
+  ADD PRIMARY KEY (`key`),
+  ADD KEY `cache_expiration_index` (`expiration`);
+
+--
+-- Indexes for table `cache_locks`
+--
+ALTER TABLE `cache_locks`
+  ADD PRIMARY KEY (`key`),
+  ADD KEY `cache_locks_expiration_index` (`expiration`);
+
+--
+-- Indexes for table `campaign_spends`
+--
+ALTER TABLE `campaign_spends`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `campaign_spends_campaign_id_reference_unique` (`campaign_id`,`reference`),
+  ADD KEY `campaign_spends_recorded_by_foreign` (`recorded_by`),
+  ADD KEY `campaign_spends_voided_by_foreign` (`voided_by`);
+
+--
+-- Indexes for table `complaints`
+--
+ALTER TABLE `complaints`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `complaints_user_id_foreign` (`user_id`),
+  ADD KEY `complaints_status_index` (`status`);
+
+--
+-- Indexes for table `complaint_updates`
+--
+ALTER TABLE `complaint_updates`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `complaint_updates_complaint_id_foreign` (`complaint_id`),
+  ADD KEY `complaint_updates_reviewer_id_foreign` (`reviewer_id`);
+
+--
+-- Indexes for table `crm_leads`
+--
+ALTER TABLE `crm_leads`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `crm_leads_property_request_id_unique` (`property_request_id`),
+  ADD UNIQUE KEY `crm_leads_buyer_service_request_id_unique` (`buyer_service_request_id`),
+  ADD KEY `crm_leads_property_id_foreign` (`property_id`),
+  ADD KEY `crm_leads_enquiry_id_foreign` (`enquiry_id`),
+  ADD KEY `crm_leads_assigned_to_foreign` (`assigned_to`),
+  ADD KEY `crm_leads_status_assigned_to_index` (`status`,`assigned_to`),
+  ADD KEY `crm_leads_status_index` (`status`),
+  ADD KEY `crm_leads_follow_up_at_index` (`follow_up_at`),
+  ADD KEY `crm_leads_source_index` (`source`),
+  ADD KEY `crm_leads_marketing_campaign_id_foreign` (`marketing_campaign_id`);
+
+--
+-- Indexes for table `crm_lead_activities`
+--
+ALTER TABLE `crm_lead_activities`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `crm_lead_activities_performed_by_foreign` (`performed_by`),
+  ADD KEY `crm_lead_activities_lead_id_activity_at_index` (`lead_id`,`activity_at`),
+  ADD KEY `crm_lead_activities_activity_type_activity_at_index` (`activity_type`,`activity_at`);
+
+--
+-- Indexes for table `developers`
+--
+ALTER TABLE `developers`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `developers_is_published_index` (`is_published`);
+
+--
+-- Indexes for table `developer_applications`
+--
+ALTER TABLE `developer_applications`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `developer_applications_user_id_unique` (`user_id`),
+  ADD KEY `developer_applications_reviewed_by_foreign` (`reviewed_by`),
+  ADD KEY `developer_applications_developer_id_foreign` (`developer_id`),
+  ADD KEY `developer_applications_status_index` (`status`);
+
+--
+-- Indexes for table `email_verification_codes`
+--
+ALTER TABLE `email_verification_codes`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `jobs_queue_index` (`queue`);
+
+--
+-- Indexes for table `job_batches`
+--
+ALTER TABLE `job_batches`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `marketing_campaigns`
+--
+ALTER TABLE `marketing_campaigns`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `marketing_campaigns_code_unique` (`code`),
+  ADD KEY `marketing_campaigns_created_by_foreign` (`created_by`);
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `password_reset_tokens`
+--
+ALTER TABLE `password_reset_tokens`
+  ADD PRIMARY KEY (`email`);
+
+--
+-- Indexes for table `properties`
+--
+ALTER TABLE `properties`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `properties_property_code_unique` (`property_code`),
+  ADD KEY `properties_owner_id_foreign` (`owner_id`),
+  ADD KEY `properties_created_by_foreign` (`created_by`),
+  ADD KEY `properties_agent_id_foreign` (`agent_id`),
+  ADD KEY `properties_category_index` (`category`),
+  ADD KEY `properties_status_index` (`status`),
+  ADD KEY `properties_district_index` (`district`),
+  ADD KEY `properties_city_index` (`city`),
+  ADD KEY `properties_total_price_index` (`total_price`),
+  ADD KEY `properties_property_category_id_index` (`property_category_id`),
+  ADD KEY `properties_listing_type_status_index` (`listing_type`,`status`),
+  ADD KEY `properties_featured_homepage_index` (`is_featured`,`status`,`featured_at`),
+  ADD KEY `properties_developer_id_foreign` (`developer_id`);
+
+--
+-- Indexes for table `property_categories`
+--
+ALTER TABLE `property_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `property_categories_slug_unique` (`slug`);
+
+--
+-- Indexes for table `property_code_aliases`
+--
+ALTER TABLE `property_code_aliases`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `property_code_aliases_code_unique` (`code`),
+  ADD KEY `property_code_aliases_property_id_foreign` (`property_id`);
+
+--
+-- Indexes for table `property_details`
+--
+ALTER TABLE `property_details`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `property_details_property_id_unique` (`property_id`);
+
+--
+-- Indexes for table `property_documents`
+--
+ALTER TABLE `property_documents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_documents_uploaded_by_foreign` (`uploaded_by`),
+  ADD KEY `property_documents_property_id_document_type_index` (`property_id`,`document_type`),
+  ADD KEY `property_documents_status_index` (`status`);
+
+--
+-- Indexes for table `property_document_reviews`
+--
+ALTER TABLE `property_document_reviews`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `property_document_reviews_property_document_id_unique` (`property_document_id`),
+  ADD KEY `property_document_reviews_reviewer_id_foreign` (`reviewer_id`);
+
+--
+-- Indexes for table `property_enquiries`
+--
+ALTER TABLE `property_enquiries`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_enquiries_property_id_foreign` (`property_id`),
+  ADD KEY `property_enquiries_status_index` (`status`),
+  ADD KEY `property_enquiries_customer_id_foreign` (`customer_id`);
+
+--
+-- Indexes for table `property_images`
+--
+ALTER TABLE `property_images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_images_property_id_foreign` (`property_id`);
+
+--
+-- Indexes for table `property_requests`
+--
+ALTER TABLE `property_requests`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_requests_customer_id_foreign` (`customer_id`),
+  ADD KEY `property_requests_created_at_index` (`created_at`);
+
+--
+-- Indexes for table `property_sales`
+--
+ALTER TABLE `property_sales`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_sales_lead_id_foreign` (`lead_id`),
+  ADD KEY `property_sales_buyer_id_foreign` (`buyer_id`),
+  ADD KEY `property_sales_seller_id_foreign` (`seller_id`),
+  ADD KEY `property_sales_agent_id_foreign` (`agent_id`),
+  ADD KEY `property_sales_property_id_sale_date_index` (`property_id`,`sale_date`),
+  ADD KEY `property_sales_status_sale_date_index` (`status`,`sale_date`),
+  ADD KEY `property_sales_status_index` (`status`);
+
+--
+-- Indexes for table `property_status_histories`
+--
+ALTER TABLE `property_status_histories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_status_histories_actor_id_foreign` (`actor_id`),
+  ADD KEY `property_status_histories_property_id_id_index` (`property_id`,`id`);
+
+--
+-- Indexes for table `property_verifications`
+--
+ALTER TABLE `property_verifications`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_verifications_reviewer_id_foreign` (`reviewer_id`),
+  ADD KEY `property_verifications_property_id_level_index` (`property_id`,`level`),
+  ADD KEY `property_verifications_status_index` (`status`);
+
+--
+-- Indexes for table `property_viewings`
+--
+ALTER TABLE `property_viewings`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `property_viewings_lead_id_foreign` (`lead_id`),
+  ADD KEY `property_viewings_customer_id_foreign` (`customer_id`),
+  ADD KEY `property_viewings_property_id_scheduled_at_index` (`property_id`,`scheduled_at`),
+  ADD KEY `property_viewings_assigned_to_scheduled_at_index` (`assigned_to`,`scheduled_at`),
+  ADD KEY `property_viewings_status_index` (`status`);
+
+--
+-- Indexes for table `revenue_payments`
+--
+ALTER TABLE `revenue_payments`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `revenue_payments_reference_unique` (`reference`),
+  ADD KEY `revenue_payments_property_id_foreign` (`property_id`),
+  ADD KEY `revenue_payments_recorded_by_foreign` (`recorded_by`),
+  ADD KEY `revenue_payments_voided_by_foreign` (`voided_by`),
+  ADD KEY `revenue_payments_type_voided_at_index` (`type`,`voided_at`),
+  ADD KEY `revenue_payments_paid_on_index` (`paid_on`);
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `roles_name_unique` (`name`);
+
+--
+-- Indexes for table `role_user`
+--
+ALTER TABLE `role_user`
+  ADD PRIMARY KEY (`user_id`,`role_id`),
+  ADD KEY `role_user_role_id_foreign` (`role_id`);
+
+--
+-- Indexes for table `saved_properties`
+--
+ALTER TABLE `saved_properties`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `saved_properties_user_id_property_id_unique` (`user_id`,`property_id`),
+  ADD KEY `saved_properties_property_id_foreign` (`property_id`);
+
+--
+-- Indexes for table `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sessions_user_id_index` (`user_id`),
+  ADD KEY `sessions_last_activity_index` (`last_activity`);
+
+--
+-- Indexes for table `sms_verification_codes`
+--
+ALTER TABLE `sms_verification_codes`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `subscription_plans`
+--
+ALTER TABLE `subscription_plans`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `subscription_plans_code_unique` (`code`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `testimonials_updated_by_foreign` (`updated_by`),
+  ADD KEY `testimonials_is_published_index` (`is_published`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`),
+  ADD KEY `users_is_active_index` (`is_active`);
+
+--
+-- Indexes for table `user_access_changes`
+--
+ALTER TABLE `user_access_changes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_access_changes_user_id_foreign` (`user_id`),
+  ADD KEY `user_access_changes_performed_by_foreign` (`performed_by`);
+
+--
+-- Indexes for table `website_visitors`
+--
+ALTER TABLE `website_visitors`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `website_visitors_visited_on_visitor_hash_unique` (`visited_on`,`visitor_hash`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `agent_applications`
+--
+ALTER TABLE `agent_applications`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `agent_subscriptions`
+--
+ALTER TABLE `agent_subscriptions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buyer_service_requests`
+--
+ALTER TABLE `buyer_service_requests`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `campaign_spends`
+--
+ALTER TABLE `campaign_spends`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `complaints`
+--
+ALTER TABLE `complaints`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `complaint_updates`
+--
+ALTER TABLE `complaint_updates`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `crm_leads`
+--
+ALTER TABLE `crm_leads`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `crm_lead_activities`
+--
+ALTER TABLE `crm_lead_activities`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `developers`
+--
+ALTER TABLE `developers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `developer_applications`
+--
+ALTER TABLE `developer_applications`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `marketing_campaigns`
+--
+ALTER TABLE `marketing_campaigns`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `properties`
+--
+ALTER TABLE `properties`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `property_categories`
+--
+ALTER TABLE `property_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `property_code_aliases`
+--
+ALTER TABLE `property_code_aliases`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `property_details`
+--
+ALTER TABLE `property_details`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `property_documents`
+--
+ALTER TABLE `property_documents`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `property_document_reviews`
+--
+ALTER TABLE `property_document_reviews`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `property_enquiries`
+--
+ALTER TABLE `property_enquiries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `property_images`
+--
+ALTER TABLE `property_images`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `property_requests`
+--
+ALTER TABLE `property_requests`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `property_sales`
+--
+ALTER TABLE `property_sales`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `property_status_histories`
+--
+ALTER TABLE `property_status_histories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `property_verifications`
+--
+ALTER TABLE `property_verifications`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `property_viewings`
+--
+ALTER TABLE `property_viewings`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `revenue_payments`
+--
+ALTER TABLE `revenue_payments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `saved_properties`
+--
+ALTER TABLE `saved_properties`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `subscription_plans`
+--
+ALTER TABLE `subscription_plans`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `user_access_changes`
+--
+ALTER TABLE `user_access_changes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `website_visitors`
+--
+ALTER TABLE `website_visitors`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=555;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `agent_applications`
+--
+ALTER TABLE `agent_applications`
+  ADD CONSTRAINT `agent_applications_reviewed_by_foreign` FOREIGN KEY (`reviewed_by`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `agent_applications_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `agent_subscriptions`
+--
+ALTER TABLE `agent_subscriptions`
+  ADD CONSTRAINT `agent_subscriptions_agent_id_foreign` FOREIGN KEY (`agent_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `agent_subscriptions_subscription_plan_id_foreign` FOREIGN KEY (`subscription_plan_id`) REFERENCES `subscription_plans` (`id`);
+
+--
+-- Constraints for table `buyer_service_requests`
+--
+ALTER TABLE `buyer_service_requests`
+  ADD CONSTRAINT `buyer_service_requests_customer_id_foreign` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `buyer_service_requests_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`);
+
+--
+-- Constraints for table `campaign_spends`
+--
+ALTER TABLE `campaign_spends`
+  ADD CONSTRAINT `campaign_spends_campaign_id_foreign` FOREIGN KEY (`campaign_id`) REFERENCES `marketing_campaigns` (`id`),
+  ADD CONSTRAINT `campaign_spends_recorded_by_foreign` FOREIGN KEY (`recorded_by`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `campaign_spends_voided_by_foreign` FOREIGN KEY (`voided_by`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `complaints`
+--
+ALTER TABLE `complaints`
+  ADD CONSTRAINT `complaints_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `complaint_updates`
+--
+ALTER TABLE `complaint_updates`
+  ADD CONSTRAINT `complaint_updates_complaint_id_foreign` FOREIGN KEY (`complaint_id`) REFERENCES `complaints` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `complaint_updates_reviewer_id_foreign` FOREIGN KEY (`reviewer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `crm_leads`
+--
+ALTER TABLE `crm_leads`
+  ADD CONSTRAINT `crm_leads_assigned_to_foreign` FOREIGN KEY (`assigned_to`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `crm_leads_buyer_service_request_id_foreign` FOREIGN KEY (`buyer_service_request_id`) REFERENCES `buyer_service_requests` (`id`),
+  ADD CONSTRAINT `crm_leads_enquiry_id_foreign` FOREIGN KEY (`enquiry_id`) REFERENCES `property_enquiries` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `crm_leads_marketing_campaign_id_foreign` FOREIGN KEY (`marketing_campaign_id`) REFERENCES `marketing_campaigns` (`id`),
+  ADD CONSTRAINT `crm_leads_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `crm_leads_property_request_id_foreign` FOREIGN KEY (`property_request_id`) REFERENCES `property_requests` (`id`);
+
+--
+-- Constraints for table `crm_lead_activities`
+--
+ALTER TABLE `crm_lead_activities`
+  ADD CONSTRAINT `crm_lead_activities_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `crm_leads` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `crm_lead_activities_performed_by_foreign` FOREIGN KEY (`performed_by`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `developer_applications`
+--
+ALTER TABLE `developer_applications`
+  ADD CONSTRAINT `developer_applications_developer_id_foreign` FOREIGN KEY (`developer_id`) REFERENCES `developers` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `developer_applications_reviewed_by_foreign` FOREIGN KEY (`reviewed_by`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `developer_applications_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `email_verification_codes`
+--
+ALTER TABLE `email_verification_codes`
+  ADD CONSTRAINT `email_verification_codes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `marketing_campaigns`
+--
+ALTER TABLE `marketing_campaigns`
+  ADD CONSTRAINT `marketing_campaigns_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `properties`
+--
+ALTER TABLE `properties`
+  ADD CONSTRAINT `properties_agent_id_foreign` FOREIGN KEY (`agent_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `properties_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `properties_developer_id_foreign` FOREIGN KEY (`developer_id`) REFERENCES `developers` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `properties_owner_id_foreign` FOREIGN KEY (`owner_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `properties_property_category_id_foreign` FOREIGN KEY (`property_category_id`) REFERENCES `property_categories` (`id`);
+
+--
+-- Constraints for table `property_code_aliases`
+--
+ALTER TABLE `property_code_aliases`
+  ADD CONSTRAINT `property_code_aliases_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `property_details`
+--
+ALTER TABLE `property_details`
+  ADD CONSTRAINT `property_details_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `property_documents`
+--
+ALTER TABLE `property_documents`
+  ADD CONSTRAINT `property_documents_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `property_documents_uploaded_by_foreign` FOREIGN KEY (`uploaded_by`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `property_document_reviews`
+--
+ALTER TABLE `property_document_reviews`
+  ADD CONSTRAINT `property_document_reviews_property_document_id_foreign` FOREIGN KEY (`property_document_id`) REFERENCES `property_documents` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `property_document_reviews_reviewer_id_foreign` FOREIGN KEY (`reviewer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `property_enquiries`
+--
+ALTER TABLE `property_enquiries`
+  ADD CONSTRAINT `property_enquiries_customer_id_foreign` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_enquiries_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`);
+
+--
+-- Constraints for table `property_images`
+--
+ALTER TABLE `property_images`
+  ADD CONSTRAINT `property_images_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `property_requests`
+--
+ALTER TABLE `property_requests`
+  ADD CONSTRAINT `property_requests_customer_id_foreign` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `property_sales`
+--
+ALTER TABLE `property_sales`
+  ADD CONSTRAINT `property_sales_agent_id_foreign` FOREIGN KEY (`agent_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_sales_buyer_id_foreign` FOREIGN KEY (`buyer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_sales_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `crm_leads` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_sales_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`),
+  ADD CONSTRAINT `property_sales_seller_id_foreign` FOREIGN KEY (`seller_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `property_status_histories`
+--
+ALTER TABLE `property_status_histories`
+  ADD CONSTRAINT `property_status_histories_actor_id_foreign` FOREIGN KEY (`actor_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_status_histories_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `property_verifications`
+--
+ALTER TABLE `property_verifications`
+  ADD CONSTRAINT `property_verifications_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `property_verifications_reviewer_id_foreign` FOREIGN KEY (`reviewer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `property_viewings`
+--
+ALTER TABLE `property_viewings`
+  ADD CONSTRAINT `property_viewings_assigned_to_foreign` FOREIGN KEY (`assigned_to`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_viewings_customer_id_foreign` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_viewings_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `crm_leads` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `property_viewings_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`);
+
+--
+-- Constraints for table `revenue_payments`
+--
+ALTER TABLE `revenue_payments`
+  ADD CONSTRAINT `revenue_payments_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `revenue_payments_recorded_by_foreign` FOREIGN KEY (`recorded_by`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `revenue_payments_voided_by_foreign` FOREIGN KEY (`voided_by`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `role_user`
+--
+ALTER TABLE `role_user`
+  ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `saved_properties`
+--
+ALTER TABLE `saved_properties`
+  ADD CONSTRAINT `saved_properties_property_id_foreign` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `saved_properties_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `sms_verification_codes`
+--
+ALTER TABLE `sms_verification_codes`
+  ADD CONSTRAINT `sms_verification_codes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD CONSTRAINT `testimonials_updated_by_foreign` FOREIGN KEY (`updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `user_access_changes`
+--
+ALTER TABLE `user_access_changes`
+  ADD CONSTRAINT `user_access_changes_performed_by_foreign` FOREIGN KEY (`performed_by`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `user_access_changes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
