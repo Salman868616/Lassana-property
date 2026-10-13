@@ -1,0 +1,12 @@
+// Preserve the public homepage's current base palette. Its Lassana branding is
+// supplied by the home view and shared header/footer. The separate app entry
+// retains its existing custom overrides for the other pages.
+@import "fonts";
+@import "variables";
+@import "variables-dark";
+@import "utilities";
+@import "bootstrap";
+@import "root";
+@import "reboot";
+@import "animations";
+@import "components";

@@ -1,0 +1,17 @@
+// _user.scss
+// Use this file to write your custom SCSS
+// Primary button hover and pressed colours
+.btn-primary,
+.btn-outline-primary {
+    --#{$prefix}btn-hover-bg: #5A1015;
+    --#{$prefix}btn-hover-border-color: #5A1015;
+    --#{$prefix}btn-hover-color: #FFFFFF;
+    --#{$prefix}btn-active-bg: #5A1015;
+    --#{$prefix}btn-active-border-color: #5A1015;
+    --#{$prefix}btn-active-color: #FFFFFF;
+}
+
+// Gold accent for selected decorative elements
+.text-brand-gold {
+    color: $lassana-gold !important;
+}

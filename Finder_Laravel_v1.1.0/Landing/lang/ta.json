@@ -1,0 +1,985 @@
+{
+
+    "Home": "முகப்பு",
+
+    "Properties": "சொத்துகள்",
+
+    "All properties": "அனைத்துச் சொத்துகள்",
+
+    "Rankings": "தரநிலைகள்",
+
+    "Services": "சேவைகள்",
+
+    "About us": "எங்களைப் பற்றி",
+
+    "Contact us": "தொடர்பு",
+
+    "Add property": "சொத்தைச் சேர்க்க",
+
+    "Add": "சேர்க்க",
+
+    "property": "சொத்து",
+
+    "properties": "சொத்துகள்",
+
+    "Log in": "உள்நுழைக",
+
+    "Register / Sign in": "பதிவு செய்க / உள்நுழைக",
+
+    "Log out": "வெளியேறு",
+
+    "My account": "எனது கணக்கு",
+
+    "My profile": "எனது சுயவிவரம்",
+
+    "Language": "மொழி",
+
+    "Change language": "மொழியை மாற்று",
+
+    "Go": "செல்",
+
+    "Close": "மூடு",
+
+    "Toggle navigation": "வழிசெலுத்தல் பட்டியைத் திறக்க அல்லது மூட",
+
+    "Browse Lassana Property": "Lassana Property-ஐப் பார்வையிடுக",
+
+    "Breadcrumb": "பக்க வழித்தடம்",
+
+    "breadcrumb": "பக்க வழித்தடம்",
+
+    "Search": "தேடு",
+
+    "Property type": "சொத்து வகை",
+
+    "Category": "வகை",
+
+    "Land": "காணி",
+
+    "House": "வீடு",
+
+    "Houses": "வீடுகள்",
+
+    "Apartment": "அடுக்குமாடி வீடு",
+
+    "Apartments": "அடுக்குமாடி வீடுகள்",
+
+    "Villa": "வில்லா",
+
+    "Commercial": "வணிகச் சொத்து",
+
+    "Commercials": "வணிகச் சொத்துகள்",
+
+    "Commercial properties": "வணிகச் சொத்துகள்",
+
+    "Apartment & villas": "அடுக்குமாடி வீடுகள் மற்றும் வில்லாக்கள்",
+
+    "Apartments & villas": "அடுக்குமாடி வீடுகள் மற்றும் வில்லாக்கள்",
+
+    "Land for sale": "விற்பனைக்கான காணிகள்",
+
+    "Houses for sale": "விற்பனைக்கான வீடுகள்",
+
+    "Properties for rent": "வாடகைக்கான சொத்துகள்",
+
+    "Browse all properties": "அனைத்துச் சொத்துகளையும் பார்க்க",
+
+    "Browse properties": "சொத்துகளைப் பார்க்க",
+
+    "Explore properties": "சொத்துகளைத் தேடிப் பார்க்க",
+
+    "Buy property": "சொத்து வாங்க",
+
+    "Browse land": "காணிகளைப் பார்க்க",
+
+    "Browse houses": "வீடுகளைப் பார்க்க",
+
+    "Browse apartments & villas": "அடுக்குமாடி வீடுகள் மற்றும் வில்லாக்களைப் பார்க்க",
+
+    "Browse commercial properties": "வணிகச் சொத்துகளைப் பார்க்க",
+
+    "District": "மாவட்டம்",
+
+    "City": "நகரம்",
+
+    "City / locality": "நகரம் / பிரதேசம்",
+
+    "Select district": "மாவட்டத்தைத் தேர்ந்தெடுக்கவும்",
+
+    "Select city (optional)": "நகரத்தைத் தேர்ந்தெடுக்கவும் (விருப்பத்திற்குரியது)",
+
+    "Location": "அமைவிடம்",
+
+    "Area": "பிரதேசம்",
+
+    "Price": "விலை",
+
+    "Rent on request": "வாடகையை விசாரிக்கவும்",
+
+    "Price on request": "விலையை விசாரிக்கவும்",
+
+    " / month": " / மாதம்",
+
+    "Find your land or home in Sri Lanka": "இலங்கையில் உங்கள் காணி அல்லது வீட்டைக் கண்டறியுங்கள்",
+
+    "Explore land, houses and apartments for sale across Sri Lanka.": "இலங்கை முழுவதும் விற்பனைக்குள்ள காணிகள், வீடுகள் மற்றும் அடுக்குமாடி வீடுகளைப் பார்வையிடுங்கள்.",
+
+    "Latest properties": "புதிய சொத்துகள்",
+
+    "Explore our latest property listings.": "எமது புதிய சொத்து விளம்பரங்களைப் பார்வையிடுங்கள்.",
+
+    "Featured properties": "சிறப்புச் சொத்துகள்",
+
+    "Featured": "சிறப்புத் தெரிவு",
+
+    "Explore properties selected by our team.": "எமது குழு தேர்ந்தெடுத்த சொத்துகளைப் பார்வையிடுங்கள்.",
+
+    "Verified properties": "சரிபார்க்கப்பட்ட சொத்துகள்",
+
+    "Browse verified properties": "சரிபார்க்கப்பட்ட சொத்துகளைப் பார்க்க",
+
+    "Published listings with completed Basic or Silver checks.": "Basic அல்லது Silver சரிபார்ப்புகள் நிறைவடைந்து வெளியிடப்பட்ட சொத்து விளம்பரங்கள்.",
+
+    "No verified properties are published right now.": "தற்போது சரிபார்க்கப்பட்ட சொத்து விளம்பரங்கள் எதுவும் வெளியிடப்படவில்லை.",
+
+    "Understand the checks": "சரிபார்ப்புகளைப் புரிந்துகொள்ளுங்கள்",
+
+    "Buy a property": "ஒரு சொத்து வாங்க",
+
+    "Sell a property": "ஒரு சொத்தை விற்க",
+
+    "Rent a property": "ஒரு சொத்தை வாடகைக்கு எடுக்க",
+
+    "Browse rentals": "வாடகைச் சொத்துகளைப் பார்க்க",
+
+    "List your property": "உங்கள் சொத்தைப் பட்டியலிடுங்கள்",
+
+    "Browse property categories": "சொத்து வகைகளைப் பார்க்க",
+
+    "Buy, sell or rent a property": "சொத்து வாங்க, விற்க அல்லது வாடகைக்கு எடுக்க",
+
+    "Search by city": "நகரத்தின்படி தேடுங்கள்",
+
+    "Browse cities": "நகரங்களைப் பார்க்க",
+
+    "City listings will appear when properties are published.": "சொத்து விளம்பரங்கள் வெளியிடப்பட்டதும் நகரங்களின் பட்டியல் காண்பிக்கப்படும்.",
+
+    "No properties are available right now. Please check back soon.": "தற்போது சொத்துகள் எதுவும் இல்லை. பின்னர் மீண்டும் பார்க்கவும்.",
+
+    "Meet our agents": "எமது முகவர்களைச் சந்தியுங்கள்",
+
+    "View all agents": "அனைத்து முகவர்களையும் பார்க்க",
+
+    "Our agents": "எமது முகவர்கள்",
+
+    "Agents": "முகவர்கள்",
+
+    "All agents": "அனைத்து முகவர்கள்",
+
+    "Browse agents": "முகவர்களைப் பார்க்க",
+
+    "Find an agent and explore their available properties.": "ஒரு முகவரைக் கண்டறிந்து அவருடைய சொத்து விளம்பரங்களைப் பார்வையிடுங்கள்.",
+
+    "No agents available at the moment.": "தற்போது முகவர்கள் எவரும் இல்லை.",
+
+    "View agent profile": "முகவரின் சுயவிவரத்தைப் பார்க்க",
+
+    "View profile": "சுயவிவரத்தைப் பார்க்க",
+
+    "Property agent": "சொத்து முகவர்",
+
+    "Call agent": "முகவரை அழைக்க",
+
+    "Areas served": "சேவை வழங்கும் பிரதேசங்கள்",
+
+    "This agent has no published properties at the moment.": "இந்த முகவர் தற்போது சொத்து விளம்பரங்கள் எதையும் வெளியிடவில்லை.",
+
+    "Developers": "கட்டுமான மேம்பாட்டு நிறுவனங்கள்",
+
+    "Developer:": "கட்டுமான மேம்பாட்டு நிறுவனம்:",
+
+    "Property directory": "சொத்து விபரக்கோவை",
+
+    "Explore developer companies and their published properties.": "கட்டுமான மேம்பாட்டு நிறுவனங்களையும் அவை வெளியிட்ட சொத்துகளையும் பார்வையிடுங்கள்.",
+
+    "No developer profiles are published yet.": "கட்டுமான மேம்பாட்டு நிறுவனங்களின் சுயவிவரங்கள் இன்னும் வெளியிடப்படவில்லை.",
+
+    "View company profile": "நிறுவனத்தின் சுயவிவரத்தைப் பார்க்க",
+
+    "Back to developers": "நிறுவனங்களின் பட்டியலுக்குத் திரும்ப",
+
+    "Company website": "நிறுவன இணையதளம்",
+
+    "Available properties": "கிடைக்கும் சொத்துகள்",
+
+    "No published properties are available for this developer right now.": "இந்த நிறுவனம் தற்போது சொத்து விளம்பரங்கள் எதையும் வெளியிடவில்லை.",
+
+    ":count published properties": "வெளியிடப்பட்ட சொத்துகள்: :count",
+
+    "View property": "சொத்தைப் பார்க்க",
+
+    "View details": "விவரங்களைப் பார்க்க",
+
+    "Photo coming soon": "புகைப்படம் விரைவில் சேர்க்கப்படும்",
+
+    "No photo available": "புகைப்படம் இல்லை",
+
+    "No photos available for this property.": "இந்தச் சொத்திற்கான புகைப்படங்கள் இல்லை.",
+
+    "Previous photo": "முந்தைய புகைப்படம்",
+
+    "Next photo": "அடுத்த புகைப்படம்",
+
+    "Property highlights": "சொத்தின் சிறப்பம்சங்கள்",
+
+    "More filters": "மேலும் வடிகட்டிகள்",
+
+    "Refine your search": "தேடலை மேம்படுத்துங்கள்",
+
+    "Apply filters": "வடிகட்டிகளைப் பயன்படுத்து",
+
+    "Clear": "அழி",
+
+    "Close filters": "வடிகட்டிகளை மூடு",
+
+    "Any": "ஏதேனும்",
+
+    "Sort by": "வரிசைப்படுத்து",
+
+    "Newest first": "புதியவை முதலில்",
+
+    "Price: high to low": "விலை: அதிகத்திலிருந்து குறைவாக",
+
+    "Price: low to high": "விலை: குறைவிலிருந்து அதிகமாக",
+
+    "Enter an area or locality": "பிரதேசம் அல்லது இடத்தை உள்ளிடுங்கள்",
+
+    "Bedrooms (exact; 0 for studio)": "படுக்கையறைகள் (சரியான எண்ணிக்கை; ஸ்டூடியோவிற்கு 0)",
+
+    "Minimum price (LKR)": "குறைந்தபட்ச விலை (LKR)",
+
+    "Maximum price (LKR)": "அதிகபட்ச விலை (LKR)",
+
+    "Minimum monthly rent (LKR)": "குறைந்தபட்ச மாத வாடகை (LKR)",
+
+    "Maximum monthly rent (LKR)": "அதிகபட்ச மாத வாடகை (LKR)",
+
+    "Minimum land size (perches)": "குறைந்தபட்ச காணிப் பரப்பளவு (பேர்ச்சுகள்)",
+
+    "Maximum land size (perches)": "அதிகபட்ச காணிப் பரப்பளவு (பேர்ச்சுகள்)",
+
+    "Minimum floor area (sq ft)": "குறைந்தபட்ச தளப் பரப்பளவு (சதுர அடி)",
+
+    "Maximum floor area (sq ft)": "அதிகபட்ச தளப் பரப்பளவு (சதுர அடி)",
+
+    "Showing :shown of :total properties": ":total சொத்துகளில் :shown காண்பிக்கப்படுகின்றன",
+
+    "Please check your search filters.": "உங்கள் தேடல் வடிகட்டிகளைச் சரிபார்க்கவும்.",
+
+    "Property details": "சொத்து விவரங்கள்",
+
+    "About this property": "இந்தச் சொத்தைப் பற்றி",
+
+    "Listed by": "பட்டியலிட்டவர்",
+
+    "Land size": "காணிப் பரப்பளவு",
+
+    "Land shape": "காணியின் வடிவம்",
+
+    "Price per perch": "ஒரு பேர்ச்சின் விலை",
+
+    "Map location is not available for this property yet.": "இந்தச் சொத்தின் வரைபட அமைவிடம் இன்னும் சேர்க்கப்படவில்லை.",
+
+    "View on Google Maps": "Google Maps-இல் பார்க்க",
+
+    "Interested in this property?": "இந்தச் சொத்தில் ஆர்வமுள்ளதா?",
+
+    "Your name": "உங்கள் பெயர்",
+
+    "Email address": "மின்னஞ்சல் முகவரி",
+
+    "Phone number": "தொலைபேசி எண்",
+
+    "Message": "செய்தி",
+
+    "Send enquiry": "விசாரணையை அனுப்பு",
+
+    "Property enquiries": "சொத்து தொடர்பான விசாரணைகள்",
+
+    "Request a property": "சொத்துக்கான கோரிக்கை விடுக்க",
+
+    "Save property": "சொத்தைச் சேமி",
+
+    "Saved property": "சேமித்த சொத்து",
+
+    "Saved": "சேமிக்கப்பட்டது",
+
+    "Remove from saved": "சேமிப்பிலிருந்து அகற்று",
+
+    "Sign in to save": "சேமிக்க உள்நுழையவும்",
+
+    "Please correct the highlighted information and try again.": "குறிக்கப்பட்ட தகவல்களைத் திருத்தி மீண்டும் முயற்சிக்கவும்.",
+
+    "Property services": "சொத்து தொடர்பான சேவைகள்",
+
+    "Find the right next step for your property plans.": "உங்கள் சொத்துத் திட்டங்களுக்கான அடுத்த சரியான படியைக் கண்டறியுங்கள்.",
+
+    "Learn more": "மேலும் அறிய",
+
+    "Sell your property": "உங்கள் சொத்தை விற்க",
+
+    "List your property with Lassana Property and manage it from your account.": "Lassana Property-இல் உங்கள் சொத்தைப் பட்டியலிட்டு உங்கள் கணக்கிலிருந்து நிர்வகியுங்கள்.",
+
+    "Prepare your listing": "உங்கள் விளம்பரத்தைத் தயார் செய்யுங்கள்",
+
+    "Add the location, price, description, photos and relevant property details.": "அமைவிடம், விலை, விளக்கம், புகைப்படங்கள் மற்றும் தொடர்புடைய சொத்து விவரங்களைச் சேர்க்கவும்.",
+
+    "Submit for review": "மதிப்பாய்வுக்குச் சமர்ப்பிக்கவும்",
+
+    "Our team reviews submitted listings. Only published properties appear on the public website.": "சமர்ப்பிக்கப்பட்ட விளம்பரங்களை எமது குழு மதிப்பாய்வு செய்கிறது. வெளியிடப்பட்ட சொத்துகள் மட்டுமே பொது இணையதளத்தில் காண்பிக்கப்படும்.",
+
+    "Manage enquiries": "விசாரணைகளை நிர்வகியுங்கள்",
+
+    "Return to your dashboard to update your drafts and follow enquiries about your listing.": "உங்கள் வரைவு விளம்பரங்களைப் புதுப்பிக்கவும் விசாரணைகளைப் பின்தொடரவும் உங்கள் நிர்வாகப் பக்கத்திற்குச் செல்லுங்கள்.",
+
+    "Start listing your property": "உங்கள் சொத்தைப் பட்டியலிடத் தொடங்குங்கள்",
+
+    "Property verification": "சொத்துச் சரிபார்ப்பு",
+
+    "Understand the checks attached to a property before making your next decision.": "உங்கள் அடுத்த முடிவை எடுப்பதற்கு முன் சொத்து தொடர்பாக மேற்கொள்ளப்பட்ட சரிபார்ப்புகளைப் புரிந்துகொள்ளுங்கள்.",
+
+    "Basic verification": "Basic சரிபார்ப்பு",
+
+    "Basic verification follows the listing review process. Check the property page for its current verification level.": "விளம்பர மதிப்பாய்வைத் தொடர்ந்து Basic சரிபார்ப்பு நடைபெறுகிறது. தற்போதைய சரிபார்ப்பு நிலையைச் சொத்துப் பக்கத்தில் பார்க்கவும்.",
+
+    "Silver verification": "Silver சரிபார்ப்பு",
+
+    "Silver verification records an additional review of the required property documents.": "தேவையான சொத்து ஆவணங்களின் மேலதிக மதிப்பாய்வை Silver சரிபார்ப்பு பதிவு செய்கிறது.",
+
+    "Know the scope": "சரிபார்ப்பின் வரம்பை அறியுங்கள்",
+
+    "A verification badge describes completed checks. Read the ranking details and discuss any further checks you need with the team.": "சரிபார்ப்புச் சின்னம் நிறைவடைந்த சோதனைகளைக் குறிக்கிறது. நிலை விவரங்களைப் படித்து, மேலும் தேவைப்படும் சோதனைகள் குறித்து எமது குழுவுடன் கலந்துரையாடுங்கள்.",
+
+    "View verification rankings": "சரிபார்ப்பு நிலைகளைப் பார்க்க",
+
+    "See what each verification level covers": "ஒவ்வொரு சரிபார்ப்பு நிலையும் உள்ளடக்குவதைப் பார்க்க",
+
+    "Property inspection": "சொத்து ஆய்வு",
+
+    "Request an inspection of a published property and tell our team what you want checked.": "வெளியிடப்பட்ட சொத்துக்கான ஆய்வைக் கோரி, எவற்றைச் சரிபார்க்க வேண்டும் என்பதை எமது குழுவுக்குத் தெரிவியுங்கள்.",
+
+    "Choose a property": "ஒரு சொத்தைத் தேர்ந்தெடுங்கள்",
+
+    "Keep the property reference from the listing and include it in your request.": "விளம்பரத்தில் உள்ள சொத்துக் குறிப்பு எண்ணை உங்கள் கோரிக்கையில் சேர்க்கவும்.",
+
+    "Share your requirements": "உங்கள் தேவைகளைப் பகிருங்கள்",
+
+    "Describe the areas you want checked, such as condition, road access, water or electricity. Add a preferred date if you have one.": "சொத்தின் நிலை, வீதி அணுகல், நீர் அல்லது மின்சாரம் போன்ற எவற்றைச் சரிபார்க்க வேண்டும் என விவரியுங்கள். விரும்பிய திகதி இருந்தால் சேர்க்கவும்.",
+
+    "Confirm the arrangements": "ஏற்பாடுகளை உறுதிப்படுத்துங்கள்",
+
+    "The team will contact you to agree the scope, availability and any fees. Submitting a request does not confirm an appointment.": "ஆய்வின் வரம்பு, கிடைக்கும் நேரம் மற்றும் கட்டணங்களை ஒப்புக்கொள்ள எமது குழு உங்களைத் தொடர்புகொள்ளும். கோரிக்கையைச் சமர்ப்பிப்பது சந்திப்பை உறுதிப்படுத்தாது.",
+
+    "Request inspection": "ஆய்வைக் கோருங்கள்",
+
+    "Property help from overseas": "வெளிநாட்டிலிருந்து சொத்து தொடர்பான உதவி",
+
+    "Explore properties in Sri Lanka and contact our team while you are abroad.": "நீங்கள் வெளிநாட்டில் இருக்கும்போதே இலங்கையிலுள்ள சொத்துகளைப் பார்த்து எமது குழுவுடன் தொடர்புகொள்ளுங்கள்.",
+
+    "Shortlist properties": "விருப்பமான சொத்துகளைத் தேர்ந்தெடுங்கள்",
+
+    "Browse current listings and keep the references for the properties that interest you.": "தற்போதைய விளம்பரங்களைப் பார்த்து, உங்களுக்கு விருப்பமான சொத்துகளின் குறிப்பு எண்களை வைத்திருங்கள்.",
+
+    "Tell us how to reach you": "உங்களைத் தொடர்புகொள்ளும் வழியைத் தெரிவியுங்கள்",
+
+    "Share your country, time zone and preferred contact time when you contact the team.": "குழுவைத் தொடர்புகொள்ளும்போது உங்கள் நாடு, நேர வலயம் மற்றும் விரும்பிய தொடர்பு நேரத்தைத் தெரிவியுங்கள்.",
+
+    "Discuss your next step": "உங்கள் அடுத்த படியைக் கலந்துரையாடுங்கள்",
+
+    "Ask about available property information, viewings or inspection requests. The team will confirm what can be arranged.": "கிடைக்கும் சொத்துத் தகவல்கள், நேரில் பார்வையிடுதல் அல்லது ஆய்வுக் கோரிக்கைகள் குறித்து விசாரியுங்கள். ஏற்பாடு செய்யக்கூடியவற்றைக் குழு உறுதிப்படுத்தும்.",
+
+    "Build your home / LGC services": "உங்கள் வீட்டைக் கட்டுங்கள் / LGC சேவைகள்",
+
+    "Share your building or property service requirements with the Lassana Gedara team.": "உங்கள் கட்டுமான அல்லது சொத்துச் சேவைத் தேவைகளை Lassana Gedara குழுவுடன் பகிருங்கள்.",
+
+    "Describe your project": "உங்கள் திட்டத்தை விவரியுங்கள்",
+
+    "Tell us the site location, the work you have in mind and your approximate budget or preferred timeline.": "தளத்தின் அமைவிடம், செய்ய விரும்பும் வேலை மற்றும் உத்தேச செலவுத்திட்டம் அல்லது கால அட்டவணையைத் தெரிவியுங்கள்.",
+
+    "Send your request": "உங்கள் கோரிக்கையை அனுப்புங்கள்",
+
+    "Use the LGC service request form. You can reference a published property or enter your own site location.": "LGC சேவைக் கோரிக்கைப் படிவத்தைப் பயன்படுத்துங்கள். வெளியிடப்பட்ட சொத்தின் குறிப்பு எண்ணை அல்லது உங்கள் சொந்தத் தளத்தின் அமைவிடத்தை வழங்கலாம்.",
+
+    "Agree the details": "விவரங்களை ஒப்புக்கொள்ளுங்கள்",
+
+    "The team will follow up to discuss your needs. Scope, availability, pricing and timing must be agreed before work starts.": "உங்கள் தேவைகளைப் பற்றிக் கலந்துரையாட குழு தொடர்புகொள்ளும். வேலை தொடங்குமுன் அதன் வரம்பு, கிடைக்கும் சேவைகள், விலை மற்றும் கால அட்டவணையை ஒப்புக்கொள்ள வேண்டும்.",
+
+    "Request LGC service": "LGC சேவையைக் கோருங்கள்",
+
+    "Contact our team": "எமது குழுவைத் தொடர்புகொள்ளுங்கள்",
+
+    "Email us": "எங்களுக்கு மின்னஞ்சல் அனுப்புங்கள்",
+
+    "Send email": "மின்னஞ்சல் அனுப்பு",
+
+    "Call our team": "எமது குழுவை அழையுங்கள்",
+
+    "Frequently asked questions": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+
+    "FAQs": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+
+    "Help with property searches, accounts and service requests.": "சொத்துத் தேடல்கள், கணக்குகள் மற்றும் சேவைக் கோரிக்கைகளுக்கான உதவி.",
+
+    "How do I find properties?": "சொத்துகளை எவ்வாறு கண்டறிவது?",
+
+    "Use the homepage search or browse the property pages. Filter by category, district, city and price, then open a listing to see its details.": "முகப்புப் பக்கத் தேடலைப் பயன்படுத்துங்கள் அல்லது சொத்துப் பக்கங்களைப் பாருங்கள். வகை, மாவட்டம், நகரம் மற்றும் விலை மூலம் வடிகட்டி, விவரங்களுக்கு ஒரு விளம்பரத்தைத் திறக்கவும்.",
+
+    "Can I browse properties for rent?": "வாடகைச் சொத்துகளைப் பார்க்க முடியுமா?",
+
+    "Yes. Open Properties for rent from the Properties menu. Rental prices are shown per month when a price is available.": "ஆம். சொத்துகள் பட்டியிலுள்ள வாடகைக்கான சொத்துகளைத் திறக்கவும். விலை இருந்தால் மாத வாடகையாகக் காண்பிக்கப்படும்.",
+
+    "How do I save a property?": "ஒரு சொத்தை எவ்வாறு சேமிப்பது?",
+
+    "Sign in with a buyer account and use Save property on its detail page. You can find saved listings in your buyer dashboard.": "வாங்குபவர் கணக்கில் உள்நுழைந்து சொத்தின் விவரப் பக்கத்தில் சேமி என்பதைப் பயன்படுத்துங்கள். சேமித்த விளம்பரங்களை உங்கள் வாங்குபவர் நிர்வாகப் பக்கத்தில் காணலாம்.",
+
+    "How do I contact the team about a property?": "ஒரு சொத்து பற்றி எமது குழுவை எவ்வாறு தொடர்புகொள்வது?",
+
+    "Open the listing and use its contact options. Include the property reference so the team can identify the listing.": "விளம்பரத்தைத் திறந்து அதிலுள்ள தொடர்பு வசதிகளைப் பயன்படுத்துங்கள். குழு விளம்பரத்தை அடையாளம் காண சொத்துக் குறிப்பு எண்ணைச் சேர்க்கவும்.",
+
+    "How do I advertise my property?": "எனது சொத்தை எவ்வாறு விளம்பரப்படுத்துவது?",
+
+    "Create an account or sign in, open My profile and enable seller access. Add your property details and photos, then submit the listing for review.": "கணக்கை உருவாக்கவும் அல்லது உள்நுழையவும். எனது சுயவிவரத்தில் விற்பனையாளர் அணுகலைச் செயல்படுத்துங்கள். சொத்து விவரங்கள் மற்றும் புகைப்படங்களைச் சேர்த்து மதிப்பாய்வுக்குச் சமர்ப்பியுங்கள்.",
+
+    "What do Basic and Silver verification mean?": "Basic மற்றும் Silver சரிபார்ப்புகள் என்றால் என்ன?",
+
+    "The verification rankings page explains the checks for each level. A listing badge shows its current level; it is separate from being selected as a Featured property.": "ஒவ்வொரு நிலையிலும் செய்யப்படும் சோதனைகளைச் சரிபார்ப்பு நிலைகள் பக்கம் விளக்குகிறது. விளம்பரச் சின்னம் தற்போதைய நிலையைக் காட்டுகிறது; சிறப்புச் சொத்தாகத் தேர்ந்தெடுக்கப்படுவது இதிலிருந்து வேறுபட்டது.",
+
+    "Does an inspection request confirm an appointment?": "ஆய்வுக் கோரிக்கை சந்திப்பை உறுதிப்படுத்துமா?",
+
+    "No. The team contacts you to agree the scope and arrangements. A preferred date is a request, not a confirmed appointment.": "இல்லை. வரம்பு மற்றும் ஏற்பாடுகளை ஒப்புக்கொள்ள குழு உங்களைத் தொடர்புகொள்ளும். விரும்பிய திகதி ஒரு கோரிக்கை மட்டுமே; அது உறுதிசெய்யப்பட்ட சந்திப்பு அல்ல.",
+
+    "Can I request help for a site that is not listed?": "பட்டியலிடப்படாத தளத்திற்கு உதவி கோர முடியுமா?",
+
+    "For an LGC service request, you can provide your site location instead of a property reference. Tell the team what work you need.": "LGC சேவைக் கோரிக்கையில் சொத்துக் குறிப்பு எண்ணுக்குப் பதிலாக உங்கள் தளத்தின் அமைவிடத்தை வழங்கலாம். தேவைப்படும் வேலையைக் குழுவுக்குத் தெரிவியுங்கள்.",
+
+    "Can I enquire from outside Sri Lanka?": "இலங்கைக்கு வெளியிலிருந்து விசாரிக்க முடியுமா?",
+
+    "Yes. Contact the team by email or the contact options shown on the website. Include your country, time zone and preferred contact time.": "ஆம். மின்னஞ்சல் அல்லது இணையதளத்திலுள்ள தொடர்பு வசதிகள் மூலம் குழுவைத் தொடர்புகொள்ளுங்கள். உங்கள் நாடு, நேர வலயம் மற்றும் விரும்பிய தொடர்பு நேரத்தைச் சேர்க்கவும்.",
+
+    "How do I reset my password?": "எனது கடவுச்சொல்லை எவ்வாறு மீட்டமைப்பது?",
+
+    "Choose Forgot password on the sign-in page and enter your account email. Check your inbox and spam folder for the reset message.": "உள்நுழைவுப் பக்கத்தில் கடவுச்சொல் மறந்துவிட்டதா என்பதைத் தேர்ந்தெடுத்து உங்கள் கணக்கு மின்னஞ்சலை உள்ளிடுங்கள். மீட்டமைப்புச் செய்திக்கு உள்வரும் அஞ்சல் மற்றும் தேவையற்ற அஞ்சல் கோப்புறைகளைப் பார்க்கவும்.",
+
+    "Which languages are available?": "எந்த மொழிகள் கிடைக்கின்றன?",
+
+    "Legal information": "சட்டத் தகவல்கள்",
+
+    "Terms and conditions": "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
+
+    "Privacy policy": "தனியுரிமைக் கொள்கை",
+
+    "Disclaimer": "பொறுப்புத் துறப்பு",
+
+    "The company-approved version of this page is being prepared.": "நிறுவனம் அங்கீகரித்த இந்தப் பக்கத்தின் பதிப்பு தயாரிக்கப்பட்டு வருகிறது.",
+
+    "Please contact our team if you need this information before using a service.": "சேவையைப் பயன்படுத்துமுன் இந்தத் தகவல் தேவைப்பட்டால் எமது குழுவைத் தொடர்புகொள்ளுங்கள்.",
+
+    "Explore": "பார்வையிடுங்கள்",
+
+    "Get in touch": "தொடர்பில் இருங்கள்",
+
+    "Social links": "சமூக வலைத்தள இணைப்புகள்",
+
+    "Developed by": "உருவாக்கியவர்",
+
+    "All rights reserved.": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+
+    "Find. Verify. Build. Own.": "கண்டறியுங்கள். சரிபாருங்கள். கட்டுங்கள். உரிமையாக்குங்கள்.",
+
+    "ABOUT LASSANA PROPERTY": "LASSANA PROPERTY பற்றி",
+
+    "Your next chapter": "உங்கள் அடுத்த அத்தியாயம்",
+
+    "starts with a place.": "ஒரு இடத்திலிருந்து தொடங்குகிறது.",
+
+    "Find land, houses and apartments in Sri Lanka. Explore properties, connect with our team and take the next step towards a place of your own.": "இலங்கையில் காணிகள், வீடுகள் மற்றும் அடுக்குமாடி வீடுகளைக் கண்டறியுங்கள். சொத்துகளைப் பார்த்து எமது குழுவுடன் இணைந்து, உங்களுக்கான இடத்தை நோக்கி அடுத்த படியை எடுங்கள்.",
+
+    "Talk to us": "எம்முடன் பேசுங்கள்",
+
+    "OUR BACKGROUND": "எமது பின்னணி",
+
+    "A foundation in": "எமது அடித்தளம்",
+
+    "creating spaces.": "இடங்களை உருவாக்குவதில் உள்ளது.",
+
+    "Who we are": "நாங்கள் யார்",
+
+    "Lassana Gedara Enterprises works in construction and design across Sri Lanka, serving residential, commercial and industrial projects. Its approach brings together architecture, engineering and sustainable building practices, with an emphasis on understanding each customer’s needs.": "Lassana Gedara Enterprises இலங்கை முழுவதும் குடியிருப்பு, வணிக மற்றும் தொழிற்துறைத் திட்டங்களுக்கான கட்டுமானம் மற்றும் வடிவமைப்புப் பணிகளை மேற்கொள்கிறது. ஒவ்வொரு வாடிக்கையாளரின் தேவைகளையும் புரிந்துகொண்டு, கட்டடக்கலை, பொறியியல் மற்றும் நிலையான கட்டுமான முறைகளை இணைத்துச் செயல்படுகிறது.",
+
+    "Lassana Property brings the property search experience into focus: discover available listings, save the places you like and send your requirements to our team.": "Lassana Property உங்கள் சொத்துத் தேடலை எளிதாக்குகிறது: கிடைக்கும் விளம்பரங்களைப் பார்த்து, விருப்பமான இடங்களைச் சேமித்து, உங்கள் தேவைகளை எமது குழுவுக்கு அனுப்புங்கள்.",
+
+    "Our mission": "எமது நோக்கம்",
+
+    "The company’s mission centres on lasting value: thoughtful design, dependable construction and trusted customer relationships. Modern methods, suitable materials and skilled workmanship support its commitment to quality and clear communication.": "சிந்தனைமிக்க வடிவமைப்பு, நம்பகமான கட்டுமானம் மற்றும் வாடிக்கையாளர் உறவுகள் மூலம் நீடித்த மதிப்பை உருவாக்குவது நிறுவனத்தின் நோக்கமாகும். நவீன முறைகள், பொருத்தமான பொருட்கள் மற்றும் திறமையான பணித்திறன் ஆகியவை தரத்திற்கும் தெளிவான தொடர்பாடலுக்கும் துணைபுரிகின்றன.",
+
+    "Our history & reach": "எமது வரலாறும் சேவைப் பரப்பும்",
+
+    "From small beginnings, Lassana Gedara has developed its design and construction work through customer relationships. Its reach extends across Sri Lanka, from urban developments to homes in rural communities.": "சிறிய தொடக்கத்திலிருந்து, வாடிக்கையாளர் உறவுகள் மூலம் Lassana Gedara தனது வடிவமைப்பு மற்றும் கட்டுமானப் பணிகளை வளர்த்துள்ளது. நகர்ப்புற அபிவிருத்திகளிலிருந்து கிராமப்புற வீடுகள் வரை இலங்கை முழுவதும் அதன் சேவை விரிவடைந்துள்ளது.",
+
+    "YOUR PROPERTY JOURNEY": "உங்கள் சொத்துப் பயணம்",
+
+    "A simpler way to get started": "தொடங்குவதற்கு ஓர் எளிய வழி",
+
+    "Find your location": "உங்கள் இடத்தைக் கண்டறியுங்கள்",
+
+    "Browse by district, city and property category to find listings that suit your plans.": "உங்கள் திட்டங்களுக்கேற்ற விளம்பரங்களைக் கண்டறிய மாவட்டம், நகரம் மற்றும் சொத்து வகையின்படி தேடுங்கள்.",
+
+    "Keep your favourites": "உங்கள் விருப்பங்களைச் சேமியுங்கள்",
+
+    "Save properties to your buyer account so you can return to them while deciding.": "முடிவெடுக்கும்போது மீண்டும் பார்க்க வசதியாக உங்கள் வாங்குபவர் கணக்கில் சொத்துகளைச் சேமியுங்கள்.",
+
+    "Speak with our team": "எமது குழுவுடன் பேசுங்கள்",
+
+    "Ask about a listing or share your property requirements for help with your search.": "உங்கள் தேடலுக்கு உதவி பெற, ஒரு விளம்பரம் பற்றி விசாரியுங்கள் அல்லது உங்கள் சொத்துத் தேவைகளைப் பகிருங்கள்.",
+
+    "Let’s talk about your next move.": "உங்கள் அடுத்த முயற்சி பற்றிப் பேசுவோம்.",
+
+    "Our team can help you take the next step.": "அடுத்த படியை எடுக்க எமது குழு உங்களுக்கு உதவலாம்.",
+
+    "CONTACT US": "தொடர்புகொள்ளுங்கள்",
+
+    "Let’s find your": "கண்டறிவோம் உங்கள்",
+
+    "next place.": "அடுத்த இடத்தை.",
+
+    "Have a question about a property, listing your land or getting started? Get in touch with the Lassana Gedara team.": "சொத்து, உங்கள் காணியைப் பட்டியலிடுதல் அல்லது தொடங்குவது பற்றிக் கேள்வி உள்ளதா? Lassana Gedara குழுவைத் தொடர்புகொள்ளுங்கள்.",
+
+    "Include the property ID if your question is about a listing.": "உங்கள் கேள்வி ஒரு விளம்பரம் பற்றியதெனில் சொத்து அடையாள எண்ணைச் சேர்க்கவும்.",
+
+    "FIND US IN GAMPAHA": "கம்பஹாவில் எம்மைச் சந்தியுங்கள்",
+
+    "Visit our office": "எமது அலுவலகத்திற்கு வருகை தாருங்கள்",
+
+    "Contact us before visiting to arrange a convenient time.": "வருகைக்கு முன் வசதியான நேரத்தை ஏற்பாடு செய்ய எம்மைத் தொடர்புகொள்ளுங்கள்.",
+
+    "Open in Google Maps": "Google Maps-இல் திறக்க",
+
+    "HOW CAN WE HELP?": "நாங்கள் எவ்வாறு உதவலாம்?",
+
+    "Make your enquiry more useful": "உங்கள் விசாரணையை மேலும் பயனுள்ளதாக மாற்றுங்கள்",
+
+    "For a listed property, tell us its property ID.": "பட்டியலிடப்பட்ட சொத்து எனில் அதன் அடையாள எண்ணைத் தெரிவியுங்கள்.",
+
+    "For your search, include your preferred district, city and budget.": "உங்கள் தேடலுக்கு விரும்பிய மாவட்டம், நகரம் மற்றும் செலவுத்திட்டத்தைச் சேர்க்கவும்.",
+
+    "For a visit, share your preferred dates and a contact number.": "நேரில் பார்வையிட விரும்பிய திகதிகள் மற்றும் தொடர்பு எண்ணைப் பகிருங்கள்.",
+
+    "LASSANA VERIFIED": "LASSANA சரிபார்ப்பு",
+
+    "behind each property.": "ஒவ்வொரு சொத்தின் பின்னணியிலும்.",
+
+    "Our verification rankings explain the level of review behind a listing. Explore Basic, Silver, Gold and Platinum to see what each level covers.": "ஒரு விளம்பரத்தின் மதிப்பாய்வு நிலையை எமது சரிபார்ப்பு நிலைகள் விளக்குகின்றன. ஒவ்வொன்றும் உள்ளடக்குவதை அறிய Basic, Silver, Gold மற்றும் Platinum நிலைகளைப் பாருங்கள்.",
+
+    "Basic and Silver are our current verification levels.": "Basic மற்றும் Silver ஆகியவை எமது தற்போதைய சரிபார்ப்பு நிலைகள்.",
+
+    "Gold and Platinum are planned for a future release.": "Gold மற்றும் Platinum நிலைகள் எதிர்காலத்தில் அறிமுகப்படுத்தத் திட்டமிடப்பட்டுள்ளன.",
+
+    "READ THE BADGE": "சரிபார்ப்புச் சின்னத்தைப் புரிந்துகொள்ளுங்கள்",
+
+    "Know what has been reviewed.": "மதிப்பாய்வு செய்யப்பட்டவற்றை அறிந்துகொள்ளுங்கள்.",
+
+    "A verification badge applies to the checks completed for that particular listing. A published property does not automatically receive a verification badge.": "ஒரு விளம்பரத்திற்காக முடிக்கப்பட்ட சோதனைகளையே சரிபார்ப்புச் சின்னம் குறிக்கிறது. சொத்து வெளியிடப்பட்டதாலேயே தானாகச் சரிபார்ப்புச் சின்னம் வழங்கப்படாது.",
+
+    "If you need more detail about a property's verification, contact our team with its property reference. A badge describes the review scope; it does not guarantee legal title or the property's condition.": "சொத்தின் சரிபார்ப்பு பற்றி மேலதிக விவரம் தேவைப்பட்டால் அதன் குறிப்பு எண்ணுடன் எமது குழுவைத் தொடர்புகொள்ளுங்கள். சின்னம் மதிப்பாய்வின் வரம்பைக் குறிக்கிறது; சட்டபூர்வ உரிமையையோ சொத்தின் நிலையையோ உறுதிப்படுத்தாது.",
+
+    "Find your next property.": "உங்கள் அடுத்த சொத்தைக் கண்டறியுங்கள்.",
+
+    "Browse listings or speak with our team about verification.": "விளம்பரங்களைப் பாருங்கள் அல்லது சரிபார்ப்பு குறித்து எமது குழுவுடன் பேசுங்கள்.",
+
+    "Silver Verified": "Silver சரிபார்க்கப்பட்டது",
+
+    "You are signed in as": "நீங்கள் உள்நுழைந்துள்ள கணக்கு",
+
+    "You can continue browsing properties with your current account.": "உங்கள் தற்போதைய கணக்குடன் சொத்துகளைத் தொடர்ந்து பார்வையிடலாம்.",
+
+    "Sign out to switch accounts": "கணக்கை மாற்ற வெளியேறுங்கள்",
+
+    "for assistance.": "உதவிக்காக.",
+
+    "Planned": "திட்டமிடப்பட்டது",
+
+    "Current level": "தற்போதைய நிலை",
+
+    "Planned scope": "திட்டமிடப்பட்ட வரம்பு",
+
+    "Checks included": "உள்ளடங்கும் சரிபார்ப்புகள்",
+
+    "Not yet available. Full requirements will be published before launch.": "இன்னும் கிடைக்கவில்லை. அறிமுகத்திற்கு முன் முழுமையான தேவைகள் வெளியிடப்படும்.",
+
+    "Awarded after the required checks are reviewed and approved.": "தேவையான சரிபார்ப்புகள் மதிப்பாய்வு செய்யப்பட்டு அங்கீகரிக்கப்பட்ட பின் வழங்கப்படும்.",
+
+    "Level :level": "நிலை :level",
+
+    "bedrooms": "படுக்கையறைகள்",
+
+    "bathrooms": "குளியலறைகள்",
+
+    "sq ft": "சதுர அடி",
+
+    "perches": "பேர்ச்சுகள்",
+
+    "parking": "வாகனத் தரிப்பிடம்",
+
+    "Electricity": "மின்சாரம்",
+
+    "Water": "நீர்",
+
+    "Access:": "அணுகல்:",
+
+    "Previous": "முந்தையது",
+
+    "Next": "அடுத்தது",
+
+    "Pagination Navigation": "பக்க வழிசெலுத்தல்",
+
+    "Top": "மேலே",
+
+    "For rent": "வாடகைக்கு",
+
+    "For sale": "விற்பனைக்கு",
+
+    "Reference:": "குறிப்பு எண்:",
+
+    "No description provided.": "விளக்கம் வழங்கப்படவில்லை.",
+
+    "Facilities": "வசதிகள்",
+
+    "Property age (years)": "சொத்தின் வயது (ஆண்டுகள்)",
+
+    "Condition": "நிலை",
+
+    "Bedrooms": "படுக்கையறைகள்",
+
+    "Bathrooms": "குளியலறைகள்",
+
+    "Floor area": "தளப் பரப்பளவு",
+
+    "Parking spaces": "வாகனத் தரிப்பிடங்கள்",
+
+    "Total floors": "மொத்த மாடிகள்",
+
+    "Floor number": "மாடி எண்",
+
+    "Unit type": "அலகு வகை",
+
+    "Developer": "கட்டுமான மேம்பாட்டு நிறுவனம்",
+
+    "Road access": "வீதி அணுகல்",
+
+    "Facing direction": "நோக்கியிருக்கும் திசை",
+
+    "Survey available": "நில அளவை வரைபடம் உள்ளது",
+
+    "Yes": "ஆம்",
+
+    "No": "இல்லை",
+
+    "Contact our sales team": "எமது விற்பனைக் குழுவைத் தொடர்புகொள்ளுங்கள்",
+
+    "Call": "அழைக்க",
+
+    "Share property": "சொத்தைப் பகிர",
+
+    "Copy link": "இணைப்பை நகலெடு",
+
+    "Share": "பகிர்",
+
+    "Property videos": "சொத்தின் காணொளிகள்",
+
+    "Watch video": "காணொளியைப் பார்க்க",
+
+    "The first level of listing verification.": "விளம்பரச் சரிபார்ப்பின் முதல் நிலை.",
+
+    "Seller identity checked": "விற்பனையாளரின் அடையாளம் சரிபார்க்கப்பட்டது",
+
+    "Property information reviewed": "சொத்துத் தகவல்கள் மதிப்பாய்வு செய்யப்பட்டன",
+
+    "Property photos reviewed": "சொத்துப் புகைப்படங்கள் மதிப்பாய்வு செய்யப்பட்டன",
+
+    "Additional review of property documents.": "சொத்து ஆவணங்களின் மேலதிக மதிப்பாய்வு.",
+
+    "Basic verification completed": "Basic சரிபார்ப்பு நிறைவடைந்தது",
+
+    "Survey document reviewed": "நில அளவை ஆவணம் மதிப்பாய்வு செய்யப்பட்டது",
+
+    "Ownership documents reviewed": "உரிமை ஆவணங்கள் மதிப்பாய்வு செய்யப்பட்டன",
+
+    "A planned level involving an on-site review.": "தளத்தில் நேரடி ஆய்வை உள்ளடக்கும் திட்டமிடப்பட்ட நிலை.",
+
+    "Physical property inspection": "சொத்தின் நேரடி ஆய்வு",
+
+    "Relevant cross-checks of property details": "சொத்து விவரங்களின் தொடர்புடைய ஒப்பீட்டுச் சரிபார்ப்புகள்",
+
+    "A planned level with a broader professional review.": "விரிவான தொழில்முறை மதிப்பாய்வுடன் திட்டமிடப்பட்ட நிலை.",
+
+    "Expanded legal review": "விரிவான சட்ட மதிப்பாய்வு",
+
+    "Expanded technical review": "விரிவான தொழில்நுட்ப மதிப்பாய்வு",
+
+    "Reviews by appropriately qualified professionals": "பொருத்தமான தகுதிகளுள்ள நிபுணர்களின் மதிப்பாய்வுகள்",
+
+    "No properties match your search.": "உங்கள் தேடலுக்குப் பொருத்தமான சொத்துகள் இல்லை.",
+
+    "Remove from saved properties": "சேமித்த சொத்துகளிலிருந்து அகற்று",
+
+    "Sign in to save this property": "இந்தச் சொத்தைச் சேமிக்க உள்நுழையுங்கள்",
+
+    "Save": "சேமி",
+
+    "photo": "புகைப்படம்",
+
+    "photos": "புகைப்படங்கள்",
+
+    "Assigned agent": "நியமிக்கப்பட்ட முகவர்",
+
+    "Seller / owner": "விற்பனையாளர் / உரிமையாளர்",
+
+    "Share this property": "இந்தச் சொத்தைப் பகிருங்கள்",
+
+    "Share on Facebook": "Facebook-இல் பகிர்",
+
+    "Share on WhatsApp": "WhatsApp-இல் பகிர்",
+
+    "Share this property on Facebook (opens a new tab)": "இந்தச் சொத்தை Facebook-இல் பகிருங்கள் (புதிய தாவலில் திறக்கும்)",
+
+    "Share this property on WhatsApp (opens a new tab)": "இந்தச் சொத்தை WhatsApp-இல் பகிருங்கள் (புதிய தாவலில் திறக்கும்)",
+
+    "Property link copied.": "சொத்தின் இணைப்பு நகலெடுக்கப்பட்டது.",
+
+    "Copy the selected link to share this property.": "இந்தச் சொத்தைப் பகிர தேர்ந்தெடுத்த இணைப்பை நகலெடுக்கவும்.",
+
+    "Property link — select and copy": "சொத்தின் இணைப்பு — தேர்ந்தெடுத்து நகலெடுக்கவும்",
+
+    "How to shortlist a property": "விருப்பமான சொத்தை எவ்வாறு தேர்ந்தெடுப்பது",
+
+    "Compare locations, prices and listing details before making an enquiry.": "விசாரணை செய்வதற்கு முன் அமைவிடங்கள், விலைகள் மற்றும் விளம்பர விவரங்களை ஒப்பிடுங்கள்.",
+
+    "Start with your requirements": "உங்கள் தேவைகளிலிருந்து தொடங்குங்கள்",
+
+    "Choose a property type and preferred area. Use the price filter, then open the listings that fit your search.": "சொத்து வகை மற்றும் விரும்பிய பிரதேசத்தைத் தேர்ந்தெடுங்கள். விலை வடிகட்டியைப் பயன்படுத்தி, பொருத்தமான விளம்பரங்களைத் திறக்கவும்.",
+
+    "Compare the details": "விவரங்களை ஒப்பிடுங்கள்",
+
+    "Read each listing description and compare the location, advertised price, size, photos and available facilities. Ask the team about information that is missing or unclear.": "ஒவ்வொரு விளம்பரத்தையும் படித்து அமைவிடம், விளம்பர விலை, பரப்பளவு, புகைப்படங்கள் மற்றும் வசதிகளை ஒப்பிடுங்கள். விடுபட்ட அல்லது தெளிவற்ற தகவல்களைக் குழுவிடம் கேளுங்கள்.",
+
+    "Keep the property reference": "சொத்துக் குறிப்பு எண்ணை வைத்திருங்கள்",
+
+    "Sign in as a buyer to save a listing. Include its reference when you contact the team so everyone is discussing the same property.": "விளம்பரத்தைச் சேமிக்க வாங்குபவராக உள்நுழையுங்கள். ஒரே சொத்தைப் பற்றிக் கலந்துரையாடுவதை உறுதிப்படுத்த, குழுவைத் தொடர்புகொள்ளும்போது அதன் குறிப்பு எண்ணைச் சேர்க்கவும்.",
+
+    "Ask about the next step": "அடுத்த படியைப் பற்றி விசாரியுங்கள்",
+
+    "Use the enquiry form, telephone or WhatsApp options on the property page. Tell the team what interests you and what you would like to know.": "சொத்துப் பக்கத்திலுள்ள விசாரணைப் படிவம், தொலைபேசி அல்லது WhatsApp வசதியைப் பயன்படுத்துங்கள். உங்கள் ஆர்வத்தையும் அறிய விரும்புவதையும் குழுவுக்குத் தெரிவியுங்கள்.",
+
+    "Prepare for a property viewing": "சொத்தை நேரில் பார்வையிடத் தயாராகுங்கள்",
+
+    "Keep useful questions and the property reference ready before your visit.": "வருகைக்கு முன் கேள்விகளையும் சொத்துக் குறிப்பு எண்ணையும் தயார் நிலையில் வைத்திருங்கள்.",
+
+    "Read the listing first": "முதலில் விளம்பரத்தைப் படியுங்கள்",
+
+    "Review the photos, location and property details. Make a short list of questions about anything you want to see or clarify.": "புகைப்படங்கள், அமைவிடம் மற்றும் சொத்து விவரங்களைப் பாருங்கள். பார்க்க அல்லது தெளிவுபடுத்த விரும்புபவற்றைப் பற்றிய கேள்விகளைப் பட்டியலிடுங்கள்.",
+
+    "Agree the arrangements": "ஏற்பாடுகளை ஒப்புக்கொள்ளுங்கள்",
+
+    "Ask the team to confirm the date, meeting point and contact person. An enquiry or preferred date alone does not confirm a visit.": "திகதி, சந்திக்கும் இடம் மற்றும் தொடர்புகொள்ள வேண்டிய நபரைக் குழுவிடம் உறுதிப்படுத்துங்கள். விசாரணை அல்லது விரும்பிய திகதி மட்டும் வருகையை உறுதிப்படுத்தாது.",
+
+    "Record your observations": "உங்கள் அவதானிப்புகளைப் பதிவு செய்யுங்கள்",
+
+    "During the visit, note the features that matter to you and the questions that still need an answer. Ask permission before taking photos.": "வருகையின்போது உங்களுக்கு முக்கியமான அம்சங்களையும் பதில் தேவைப்படும் கேள்விகளையும் குறித்துக்கொள்ளுங்கள். புகைப்படங்கள் எடுப்பதற்கு முன் அனுமதி கேளுங்கள்.",
+
+    "Follow up with the team": "குழுவுடன் தொடர்ந்து தொடர்புகொள்ளுங்கள்",
+
+    "Quote the property reference in your follow-up. If you need a separate inspection, explain what you want checked and agree the arrangements with the team.": "தொடர் தொடர்புகளில் சொத்துக் குறிப்பு எண்ணைக் குறிப்பிடுங்கள். தனியான ஆய்வு தேவைப்பட்டால் எதைச் சரிபார்க்க வேண்டும் என்று விளக்கி, குழுவுடன் ஏற்பாடுகளை ஒப்புக்கொள்ளுங்கள்.",
+
+    "Prepare your home-building brief": "உங்கள் வீடு கட்டும் திட்டக் குறிப்பைத் தயாரியுங்கள்",
+
+    "Organise your site information and requirements for an LGC service enquiry.": "LGC சேவை விசாரணைக்காக உங்கள் தளத் தகவல்களையும் தேவைகளையும் தொகுத்துக்கொள்ளுங்கள்.",
+
+    "Describe your site": "உங்கள் தளத்தை விவரியுங்கள்",
+
+    "Provide the location or a property reference. Mention the site information you already have and what you still need to confirm.": "அமைவிடம் அல்லது சொத்துக் குறிப்பு எண்ணை வழங்குங்கள். ஏற்கனவே உள்ள தளத் தகவல்களையும் இன்னும் உறுதிப்படுத்த வேண்டியவற்றையும் குறிப்பிடுங்கள்.",
+
+    "Explain how you want to live": "நீங்கள் வாழ விரும்பும் விதத்தை விளக்குங்கள்",
+
+    "List the rooms, spaces and everyday needs that matter to you. Include your preferred timeline and an approximate project budget if available.": "தேவையான அறைகள், இடங்கள் மற்றும் அன்றாடத் தேவைகளைப் பட்டியலிடுங்கள். விரும்பிய கால அட்டவணையையும் உத்தேச செலவுத்திட்டத்தையும் முடிந்தால் சேர்க்கவும்.",
+
+    "Choose the help you need": "உங்களுக்குத் தேவையான உதவியைத் தேர்ந்தெடுங்கள்",
+
+    "Ask about house plans, architectural design or a bill of quantities (BOQ). Tell the team whether you are starting from an idea or already have drawings.": "வீட்டுத் திட்டங்கள், கட்டடக்கலை வடிவமைப்பு அல்லது அளவுப் பட்டியல் (BOQ) குறித்து விசாரியுங்கள். யோசனையிலிருந்து தொடங்குகிறீர்களா அல்லது வரைபடங்கள் ஏற்கனவே உள்ளனவா என்பதைக் குழுவுக்குத் தெரிவியுங்கள்.",
+
+    "Agree the scope": "பணியின் வரம்பை ஒப்புக்கொள்ளுங்கள்",
+
+    "Send an LGC service request. The team will discuss availability, deliverables, fees and timing with you before work begins.": "LGC சேவைக் கோரிக்கையை அனுப்புங்கள். வேலை தொடங்குமுன் கிடைக்கும் சேவை, வழங்கப்படும் பணிகள், கட்டணங்கள் மற்றும் கால அட்டவணையைக் குழு உங்களுடன் கலந்துரையாடும்.",
+
+    "House plans": "வீட்டுத் திட்டங்கள்",
+
+    "Discuss the layout and spaces you want for your future home.": "உங்கள் எதிர்கால வீட்டிற்கு விரும்பும் அமைப்பையும் இடங்களையும் கலந்துரையாடுங்கள்.",
+
+    "Share your site information": "உங்கள் தளத் தகவல்களைப் பகிருங்கள்",
+
+    "Provide the site location or property reference and describe the rooms and spaces you need.": "தளத்தின் அமைவிடம் அல்லது சொத்துக் குறிப்பு எண்ணை வழங்கி, தேவையான அறைகளையும் இடங்களையும் விவரியுங்கள்.",
+
+    "Explain your priorities": "உங்கள் முன்னுரிமைகளை விளக்குங்கள்",
+
+    "Tell the team about your preferred layout, approximate budget and timing. Mention any drawings you already have.": "விரும்பிய அமைப்பு, உத்தேச செலவுத்திட்டம் மற்றும் கால அட்டவணையைக் குழுவுக்குத் தெரிவியுங்கள். ஏற்கனவே உள்ள வரைபடங்களையும் குறிப்பிடுங்கள்.",
+
+    "Discuss the service": "சேவையைப் பற்றிக் கலந்துரையாடுங்கள்",
+
+    "The team will confirm the proposed scope, deliverables, availability and fees before any work starts.": "வேலை தொடங்குமுன் முன்மொழியப்பட்ட வரம்பு, வழங்கப்படும் பணிகள், கிடைக்கும் சேவை மற்றும் கட்டணங்களைக் குழு உறுதிப்படுத்தும்.",
+
+    "Architectural design": "கட்டடக்கலை வடிவமைப்பு",
+
+    "Start a conversation about the design requirements for your home or property project.": "உங்கள் வீடு அல்லது சொத்துத் திட்டத்திற்கான வடிவமைப்புத் தேவைகள் பற்றிக் கலந்துரையாடத் தொடங்குங்கள்.",
+
+    "Describe the project": "திட்டத்தை விவரியுங்கள்",
+
+    "Explain how the property will be used and the spaces, style and practical needs you have in mind.": "சொத்து எவ்வாறு பயன்படுத்தப்படும், தேவையான இடங்கள், வடிவமைப்புப் பாணி மற்றும் நடைமுறைத் தேவைகளை விளக்குங்கள்.",
+
+    "Prepare a brief": "திட்டக் குறிப்பைத் தயாரியுங்கள்",
+
+    "Share the location, available site information, preferred timeline and any existing drawings with the team.": "அமைவிடம், கிடைக்கும் தளத் தகவல்கள், விரும்பிய கால அட்டவணை மற்றும் ஏற்கனவே உள்ள வரைபடங்களைக் குழுவுடன் பகிருங்கள்.",
+
+    "Agree the next step": "அடுத்த படியை ஒப்புக்கொள்ளுங்கள்",
+
+    "Discuss the proposed design service and confirm its scope, deliverables and fees before work begins.": "முன்மொழியப்பட்ட வடிவமைப்புச் சேவையைக் கலந்துரையாடி, வேலை தொடங்குமுன் அதன் வரம்பு, வழங்கப்படும் பணிகள் மற்றும் கட்டணங்களை உறுதிப்படுத்துங்கள்.",
+
+    "BOQ services": "அளவுப் பட்டியல் (BOQ) சேவைகள்",
+
+    "Enquire about a bill of quantities for your planned building work.": "திட்டமிட்ட கட்டுமானப் பணிக்கான அளவுப் பட்டியல் பற்றி விசாரியுங்கள்.",
+
+    "Explain the planned work": "திட்டமிட்ட வேலையை விளக்குங்கள்",
+
+    "Tell the team what you intend to build and whether you already have drawings or specifications.": "நீங்கள் கட்ட விரும்புவதையும் வரைபடங்கள் அல்லது விவரக்குறிப்புகள் ஏற்கனவே உள்ளனவா என்பதையும் குழுவுக்குத் தெரிவியுங்கள்.",
+
+    "Discuss the information needed": "தேவையான தகவல்களைக் கலந்துரையாடுங்கள்",
+
+    "Ask which project details are needed to define the proposed BOQ service.": "முன்மொழியப்பட்ட BOQ சேவையை வரையறுக்க எந்தத் திட்ட விவரங்கள் தேவை என்று கேளுங்கள்.",
+
+    "Confirm the scope": "பணியின் வரம்பை உறுதிப்படுத்துங்கள்",
+
+    "Agree the deliverables, availability, fees and timing directly with the team before proceeding.": "தொடர்வதற்கு முன் வழங்கப்படும் பணிகள், கிடைக்கும் சேவை, கட்டணங்கள் மற்றும் கால அட்டவணையைக் குழுவுடன் நேரடியாக ஒப்புக்கொள்ளுங்கள்.",
+
+    "Property guides": "சொத்து வழிகாட்டிகள்",
+
+    "Practical help for your next property step.": "உங்கள் அடுத்த சொத்து முயற்சிக்கான நடைமுறை உதவி.",
+
+    "Read guide": "வழிகாட்டியைப் படிக்க",
+
+    "All property guides": "அனைத்துச் சொத்து வழிகாட்டிகள்",
+
+    "Prepared by Lassana Property": "Lassana Property தயாரித்தது",
+
+    "Let’s talk about your next step": "உங்கள் அடுத்த படியைப் பற்றிப் பேசுவோம்",
+
+    "Ask about a property, listing your own property or getting help with a building project.": "ஒரு சொத்து, உங்கள் சொத்தைப் பட்டியலிடுதல் அல்லது கட்டுமானத் திட்டத்திற்கான உதவி குறித்து விசாரியுங்கள்.",
+
+    "Make an enquiry": "விசாரணை செய்யுங்கள்",
+
+    "Land, homes and property services in Sri Lanka": "இலங்கையில் காணிகள், வீடுகள் மற்றும் சொத்துச் சேவைகள்",
+
+    "Find properties for sale and rent in Sri Lanka, explore verified listings and enquire about LGC home-building services.": "இலங்கையில் விற்பனை மற்றும் வாடகைச் சொத்துகளைக் கண்டறிந்து, சரிபார்க்கப்பட்ட விளம்பரங்களைப் பார்த்து, LGC வீடு கட்டும் சேவைகள் பற்றி விசாரியுங்கள்.",
+
+    "Find a property, understand its verification and plan your next step with LGC services.": "ஒரு சொத்தைக் கண்டறிந்து அதன் சரிபார்ப்பைப் புரிந்துகொண்டு, LGC சேவைகளுடன் உங்கள் அடுத்த படியைத் திட்டமிடுங்கள்.",
+
+    "Work with Lassana Property": "Lassana Property உடன் இணைந்து செயல்படுங்கள்",
+
+    "Are you a property agent?": "நீங்கள் சொத்து முகவரா?",
+
+    "Tell us about your experience and the areas you serve. Agent applications are reviewed before access is approved.": "உங்கள் அனுபவத்தையும் சேவை வழங்கும் பிரதேசங்களையும் தெரிவியுங்கள். முகவர் அணுகல் வழங்கப்படுமுன் விண்ணப்பங்கள் மதிப்பாய்வு செய்யப்படும்.",
+
+    "Apply as an agent": "முகவராக விண்ணப்பியுங்கள்",
+
+    "Represent a developer company?": "கட்டுமான மேம்பாட்டு நிறுவனத்தைப் பிரதிநிதித்துவப்படுத்துகிறீர்களா?",
+
+    "Submit your company and project details for review. Our team will help prepare your developer directory profile.": "உங்கள் நிறுவனம் மற்றும் திட்ட விவரங்களை மதிப்பாய்வுக்குச் சமர்ப்பியுங்கள். நிறுவன விபரக்கோவையில் உங்கள் சுயவிவரத்தைத் தயாரிக்க எமது குழு உதவும்.",
+
+    "Register your company": "உங்கள் நிறுவனத்தைப் பதிவு செய்யுங்கள்",
+
+    "From finding land to planning your home": "காணி தேடுவதிலிருந்து உங்கள் வீட்டைத் திட்டமிடுவது வரை",
+
+    "Lassana Property connects your property search with LGC professional services. Share your site, ideas and requirements so the team can discuss the next step.": "Lassana Property உங்கள் சொத்துத் தேடலை LGC தொழில்முறைச் சேவைகளுடன் இணைக்கிறது. அடுத்த படியைக் கலந்துரையாட உங்கள் தளம், யோசனைகள் மற்றும் தேவைகளைக் குழுவுடன் பகிருங்கள்.",
+
+    "Explore this service": "இந்தச் சேவையைப் பார்க்க",
+
+    "Discuss your building project": "உங்கள் கட்டுமானத் திட்டத்தைக் கலந்துரையாடுங்கள்",
+
+    "How LGC services work": "LGC சேவைகள் செயல்படும் விதம்",
+
+    "Exploring Sri Lankan property from overseas?": "வெளிநாட்டிலிருந்து இலங்கைச் சொத்துகளைத் தேடுகிறீர்களா?",
+
+    "Browse listings, share the property references that interest you and arrange a conversation with our team from wherever you are.": "விளம்பரங்களைப் பார்த்து, விருப்பமான சொத்துகளின் குறிப்பு எண்களைப் பகிர்ந்து, நீங்கள் எங்கிருந்தாலும் எமது குழுவுடன் உரையாடலை ஏற்பாடு செய்யுங்கள்.",
+
+    "Explore overseas buyer support": "வெளிநாட்டு வாங்குபவர்களுக்கான உதவியைப் பார்க்க",
+
+    "Email the team": "குழுவுக்கு மின்னஞ்சல் அனுப்புங்கள்",
+
+    "Shortlist the properties you would like to discuss.": "கலந்துரையாட விரும்பும் சொத்துகளைத் தேர்ந்தெடுங்கள்.",
+
+    "Share your country, time zone and preferred contact time.": "உங்கள் நாடு, நேர வலயம் மற்றும் விரும்பிய தொடர்பு நேரத்தைப் பகிருங்கள்.",
+
+    "Ask the team about available viewing or inspection arrangements.": "கிடைக்கும் நேரில் பார்வையிடல் அல்லது ஆய்வு ஏற்பாடுகளைக் குழுவிடம் விசாரியுங்கள்.",
+
+    "What our customers say": "எமது வாடிக்கையாளர்களின் கருத்துகள்",
+
+    "How Lassana Verified works": "Lassana சரிபார்ப்பு செயல்படும் விதம்",
+
+    "Understand the checks behind a listing before deciding your next step.": "அடுத்த படியை முடிவுசெய்யுமுன் விளம்பரத்திற்காக செய்யப்பட்ட சரிபார்ப்புகளைப் புரிந்துகொள்ளுங்கள்.",
+
+    "Understand verification levels": "சரிபார்ப்பு நிலைகளைப் புரிந்துகொள்ளுங்கள்",
+
+    "Explore property inspections": "சொத்து ஆய்வுகளைப் பற்றி அறியுங்கள்",
+
+    "Professional services": "தொழில்முறைச் சேவைகள்",
+
+    "Listing review": "விளம்பர மதிப்பாய்வு",
+
+    "The team reviews the submitted property information and records its verification level.": "சமர்ப்பிக்கப்பட்ட சொத்துத் தகவல்களைக் குழு மதிப்பாய்வு செய்து அதன் சரிபார்ப்பு நிலையைப் பதிவு செய்கிறது.",
+
+    "Document review": "ஆவண மதிப்பாய்வு",
+
+    "Silver verification adds a review of the required property documents.": "Silver சரிபார்ப்பில் தேவையான சொத்து ஆவணங்களின் மதிப்பாய்வும் அடங்கும்.",
+
+    "Check the scope": "சரிபார்ப்பின் வரம்பைப் பாருங்கள்",
+
+    "Read the current badge and ranking details. Ask the team about any further checks you need.": "தற்போதைய சின்னத்தையும் சரிபார்ப்பு நிலை விவரங்களையும் படியுங்கள். மேலும் தேவைப்படும் சோதனைகளைக் குழுவிடம் கேளுங்கள்.",
+
+    "Discuss the rooms, spaces and layout you want for your future home.": "உங்கள் எதிர்கால வீட்டிற்குத் தேவையான அறைகள், இடங்கள் மற்றும் அமைப்பைக் கலந்துரையாடுங்கள்.",
+
+    "Prepare a design brief around your site and the way you want to live.": "உங்கள் தளத்திற்கும் நீங்கள் வாழ விரும்பும் விதத்திற்கும் ஏற்ப வடிவமைப்புக் குறிப்பைத் தயாரியுங்கள்.",
+
+    "Ask about a bill of quantities for your planned building work.": "திட்டமிட்ட கட்டுமானப் பணிக்கான அளவுப் பட்டியல் பற்றி விசாரியுங்கள்.",
+
+    "Practical guides to shortlisting a property, preparing for a viewing and planning a building enquiry.": "சொத்தைத் தேர்ந்தெடுத்தல், நேரில் பார்வையிடத் தயாராதல் மற்றும் கட்டுமான விசாரணையைத் திட்டமிடுவதற்கான நடைமுறை வழிகாட்டிகள்.",
+
+    "Build your home / LGC": "வீடு கட்டுங்கள் / LGC",
+
+    "Overseas buyer support": "வெளிநாட்டு வாங்குபவர் உதவி",
+
+    "View all services": "அனைத்துச் சேவைகளையும் பார்க்க",
+
+    "Available in English, Sinhala and Tamil.": "ஆங்கிலம், சிங்களம் மற்றும் தமிழில் கிடைக்கிறது.",
+
+    "Public website navigation and interface text are available in English, Sinhala and Tamil. Property descriptions and company profile text are shown as supplied.": "பொது இணையதளத்தின் வழிசெலுத்தல் மற்றும் இடைமுக உரைகள் ஆங்கிலம், சிங்களம் மற்றும் தமிழில் கிடைக்கின்றன. சொத்து விளக்கங்களும் நிறுவனச் சுயவிவரங்களும் வழங்கப்பட்ட மொழியிலேயே காண்பிக்கப்படும்.",
+
+    "Selecting a language reloads this page.": "மொழியைத் தேர்ந்தெடுத்ததும் இந்தப் பக்கம் மீண்டும் ஏற்றப்படும்.",
+
+    "Negotiable": "விலை பேசலாம்",
+
+    "Price negotiable": "விலை பேசலாம்",
+    "Property photos": "சொத்தின் புகைப்படங்கள்",
+    "Open photo :number of :title": ":title இன் :number ஆவது புகைப்படத்தைத் திறக்கவும்",
+    "Show photo :number": ":number ஆவது புகைப்படத்தைக் காட்டு",
+    "Photo :current of :total": ":total புகைப்படங்களில் :current",
+    "Restrictions / site concerns": "கட்டுப்பாடுகள் / சொத்து தொடர்பான சிக்கல்கள்",
+    "Optional": "விருப்பத்திற்குரியது",
+    "Mention any known access limits, flooding, building restrictions or other site concerns. These notes will be visible to buyers. Maximum 3,000 characters.": "அறியப்பட்ட அணுகல் வரம்புகள், வெள்ள அபாயம், கட்டிடக் கட்டுப்பாடுகள் அல்லது பிற சொத்து தொடர்பான சிக்கல்களைக் குறிப்பிடவும். இந்தக் குறிப்புகள் வாங்குபவர்களுக்குத் தெரியும். அதிகபட்சம் 3,000 எழுத்துகள்."
+}

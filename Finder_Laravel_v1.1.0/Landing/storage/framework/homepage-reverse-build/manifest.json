@@ -1,0 +1,38 @@
+{
+  "_dropdown-hover-Bmy5FHhd.js": {
+    "file": "assets/dropdown-hover-Bmy5FHhd.js",
+    "name": "dropdown-hover"
+  },
+  "resources/fonts/inter-variable-latin.woff2": {
+    "file": "assets/inter-variable-latin-DDPelQgH.woff2",
+    "src": "resources/fonts/inter-variable-latin.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C1PeW86Q.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_dropdown-hover-Bmy5FHhd.js"
+    ]
+  },
+  "resources/js/home.js": {
+    "file": "assets/home-BtGMEm5K.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_dropdown-hover-Bmy5FHhd.js"
+    ]
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app-CmxxukSR.css",
+    "src": "resources/scss/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/home.scss": {
+    "file": "assets/home-CMANpSB5.css",
+    "src": "resources/scss/home.scss",
+    "isEntry": true
+  }
+}

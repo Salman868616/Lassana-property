@@ -1,0 +1,21 @@
+.lp-rankings .lp-rankings-intro { max-width: 780px; }
+.lp-rankings .lp-rankings-availability { display: flex; flex-wrap: wrap; gap: .25rem .5rem; padding: 1rem 1.25rem; border-left: 3px solid #C89B3C; background: #FBF8F3; border-radius: 0 .5rem .5rem 0; color: #55483E; font-size: .9375rem; }
+.lp-rankings .lp-rank-card { --rank-color: #8B1E24; --rank-tint: #FBF1F1; display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid #E5DFD7; border-top: 4px solid var(--rank-color); border-radius: 1rem; background: #fff; }
+.lp-rankings .lp-rank-silver { --rank-color: #596777; --rank-tint: #F0F3F6; }
+.lp-rankings .lp-rank-gold { --rank-color: #8A6518; --rank-tint: #FBF4E3; }
+.lp-rankings .lp-rank-platinum { --rank-color: #555167; --rank-tint: #F2F0F7; }
+.lp-rankings .lp-rank-card-top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.lp-rankings .lp-rank-emblem { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; flex: 0 0 60px; border-radius: 50%; background: var(--rank-tint); color: var(--rank-color); }
+.lp-rankings .lp-rank-status { border-radius: 2rem; background: var(--rank-tint); color: var(--rank-color); padding: .35rem .65rem; font-size: .75rem; font-weight: 600; white-space: nowrap; }
+.lp-rankings .lp-rank-level { font-size: .75rem; font-weight: 600; letter-spacing: .12em; color: var(--rank-color); }
+.lp-rankings .lp-rank-card h2 { color: #28252B; }
+.lp-rankings .lp-rank-summary { color: #5D5962; min-height: 3rem; }
+.lp-rankings .lp-rank-checks-title { font-size: .875rem; font-weight: 700; color: #39343D; margin: .5rem 0 .75rem; }
+.lp-rankings .lp-rank-checks { padding-left: 1.125rem; margin-bottom: 1.5rem; color: #514B54; }
+.lp-rankings .lp-rank-checks li { padding-left: .25rem; margin-bottom: .625rem; }
+.lp-rankings .lp-rank-checks li::marker { color: var(--rank-color); }
+.lp-rankings .lp-rank-note { font-size: .8125rem; line-height: 1.6; color: #67616A; padding-top: 1rem; border-top: 1px solid #EAE5E0; margin: auto 0 0; }
+@media (max-width: 575.98px) {
+    .lp-rankings .lp-rank-card { padding: 1.25rem; }
+    .lp-rankings .lp-rank-summary { min-height: 0; }
+}

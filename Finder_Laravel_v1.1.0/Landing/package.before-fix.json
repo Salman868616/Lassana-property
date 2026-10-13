@@ -1,0 +1,33 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "author": "SRBThemes",
+    "version": "1.1.0",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "axios": "^1.7.9",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.1.1",
+        "sass-embedded": "^1.80.3",
+        "vite": "^6.0.11"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "choices.js": "^11.0.2",
+        "cleave.js": "^1.6.0",
+        "flatpickr": "^4.6.13",
+        "glightbox": "^3.3.0",
+        "img-comparison-slider": "^8.0.6",
+        "leaflet": "^1.9.4",
+        "list.js": "^2.3.1",
+        "nouislider": "^15.8.1",
+        "simplebar": "^6.2.7",
+        "swiper": "^11.1.14",
+        "timezz": "^9.0.2",
+        "popper.js": "^1.16.1"
+    }
+}

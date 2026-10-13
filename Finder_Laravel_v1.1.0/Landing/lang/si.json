@@ -1,0 +1,985 @@
+{
+
+  "Home": "මුල් පිටුව",
+
+  "Properties": "දේපළ",
+
+  "All properties": "සියලු දේපළ",
+
+  "Rankings": "සත්‍යාපන මට්ටම්",
+
+  "Services": "සේවා",
+
+  "About us": "අප ගැන",
+
+  "Contact us": "අප අමතන්න",
+
+  "Add property": "දේපළක් එක් කරන්න",
+
+  "Add": "එක් කරන්න",
+
+  "property": "දේපළ",
+
+  "properties": "දේපළ",
+
+  "Log in": "පිවිසෙන්න",
+
+  "Register / Sign in": "ලියාපදිංචි වන්න / පිවිසෙන්න",
+
+  "Log out": "ඉවත් වන්න",
+
+  "My account": "මගේ ගිණුම",
+
+  "My profile": "මගේ පැතිකඩ",
+
+  "Language": "භාෂාව",
+
+  "Change language": "භාෂාව වෙනස් කරන්න",
+
+  "Go": "යන්න",
+
+  "Close": "වසන්න",
+
+  "Toggle navigation": "මෙනුව විවෘත කරන්න",
+
+  "Browse Lassana Property": "Lassana Property බලන්න",
+
+  "Breadcrumb": "පිටු මාර්ගය",
+
+  "breadcrumb": "පිටු මාර්ගය",
+
+  "Search": "සොයන්න",
+
+  "Property type": "දේපළ වර්ගය",
+
+  "Category": "වර්ගය",
+
+  "Land": "ඉඩම්",
+
+  "House": "නිවස",
+
+  "Houses": "නිවාස",
+
+  "Apartment": "මහල් නිවාසය",
+
+  "Apartments": "මහල් නිවාස",
+
+  "Villa": "විලා නිවස",
+
+  "Commercial": "වාණිජ දේපළ",
+
+  "Commercials": "වාණිජ දේපළ",
+
+  "Commercial properties": "වාණිජ දේපළ",
+
+  "Apartment & villas": "මහල් නිවාස සහ විලා නිවාස",
+
+  "Apartments & villas": "මහල් නිවාස සහ විලා නිවාස",
+
+  "Land for sale": "විකිණීමට ඇති ඉඩම්",
+
+  "Houses for sale": "විකිණීමට ඇති නිවාස",
+
+  "Properties for rent": "කුලියට ඇති දේපළ",
+
+  "Browse all properties": "සියලු දේපළ බලන්න",
+
+  "Browse properties": "දේපළ බලන්න",
+
+  "Explore properties": "දේපළ සොයා බලන්න",
+
+  "Buy property": "දේපළ මිලදී ගන්න",
+
+  "Browse land": "ඉඩම් බලන්න",
+
+  "Browse houses": "නිවාස බලන්න",
+
+  "Browse apartments & villas": "මහල් නිවාස සහ විලා බලන්න",
+
+  "Browse commercial properties": "වාණිජ දේපළ බලන්න",
+
+  "District": "දිස්ත්‍රික්කය",
+
+  "City": "නගරය",
+
+  "City / locality": "නගරය / ප්‍රදේශය",
+
+  "Select district": "දිස්ත්‍රික්කය තෝරන්න",
+
+  "Select city (optional)": "නගරය තෝරන්න (අනිවාර්ය නොවේ)",
+
+  "Location": "පිහිටීම",
+
+  "Area": "ප්‍රදේශය",
+
+  "Price": "මිල",
+
+  "Rent on request": "කුලිය විමසන්න",
+
+  "Price on request": "මිල විමසන්න",
+
+  " / month": " / මාසයකට",
+
+  "Find your land or home in Sri Lanka": "ශ්‍රී ලංකාවේ ඔබේ ඉඩම හෝ නිවස සොයා ගන්න",
+
+  "Explore land, houses and apartments for sale across Sri Lanka.": "ශ්‍රී ලංකාව පුරා විකිණීමට ඇති ඉඩම්, නිවාස සහ මහල් නිවාස සොයා බලන්න.",
+
+  "Latest properties": "නවතම දේපළ",
+
+  "Explore our latest property listings.": "අපගේ නවතම දේපළ දැන්වීම් බලන්න.",
+
+  "Featured properties": "විශේෂ දේපළ",
+
+  "Featured": "විශේෂ",
+
+  "Explore properties selected by our team.": "අපගේ කණ්ඩායම තෝරාගත් දේපළ බලන්න.",
+
+  "Verified properties": "සත්‍යාපිත දේපළ",
+
+  "Browse verified properties": "සත්‍යාපිත දේපළ බලන්න",
+
+  "Published listings with completed Basic or Silver checks.": "Basic හෝ Silver පරීක්ෂණ සම්පූර්ණ කළ ප්‍රකාශිත දේපළ.",
+
+  "No verified properties are published right now.": "දැනට සත්‍යාපිත දේපළ ප්‍රකාශ කර නැත.",
+
+  "Understand the checks": "පරීක්ෂණ ගැන දැනගන්න",
+
+  "Buy a property": "දේපළක් මිලදී ගන්න",
+
+  "Sell a property": "දේපළක් විකුණන්න",
+
+  "Rent a property": "දේපළක් කුලියට ගන්න",
+
+  "Browse rentals": "කුලියට ඇති දේපළ බලන්න",
+
+  "List your property": "ඔබේ දේපළ එක් කරන්න",
+
+  "Browse property categories": "දේපළ වර්ග බලන්න",
+
+  "Buy, sell or rent a property": "දේපළ මිලදී ගන්න, විකුණන්න හෝ කුලියට ගන්න",
+
+  "Search by city": "නගරය අනුව සොයන්න",
+
+  "Browse cities": "නගර බලන්න",
+
+  "City listings will appear when properties are published.": "දේපළ ප්‍රකාශ කළ පසු නගර ලැයිස්තුව පෙන්වනු ඇත.",
+
+  "No properties are available right now. Please check back soon.": "දැනට දේපළ නොමැත. පසුව නැවත බලන්න.",
+
+  "Meet our agents": "අපගේ නියෝජිතයන් හඳුනාගන්න",
+
+  "View all agents": "සියලු නියෝජිතයන් බලන්න",
+
+  "Our agents": "අපගේ නියෝජිතයන්",
+
+  "Agents": "නියෝජිතයන්",
+
+  "All agents": "සියලු නියෝජිතයන්",
+
+  "Browse agents": "නියෝජිතයන් බලන්න",
+
+  "Find an agent and explore their available properties.": "නියෝජිතයකු සොයා ඔවුන්ගේ දේපළ බලන්න.",
+
+  "No agents available at the moment.": "දැනට නියෝජිතයන් නොමැත.",
+
+  "View agent profile": "නියෝජිත පැතිකඩ බලන්න",
+
+  "View profile": "පැතිකඩ බලන්න",
+
+  "Property agent": "දේපළ නියෝජිතයා",
+
+  "Call agent": "නියෝජිතයා අමතන්න",
+
+  "Areas served": "සේවා සපයන ප්‍රදේශ",
+
+  "This agent has no published properties at the moment.": "මෙම නියෝජිතයාගේ ප්‍රකාශිත දේපළ දැනට නොමැත.",
+
+  "Developers": "දේපළ සංවර්ධන සමාගම්",
+
+  "Developer:": "සංවර්ධන සමාගම:",
+
+  "Property directory": "දේපළ නාමාවලිය",
+
+  "Explore developer companies and their published properties.": "දේපළ සංවර්ධන සමාගම් සහ ඔවුන්ගේ ප්‍රකාශිත දේපළ බලන්න.",
+
+  "No developer profiles are published yet.": "සමාගම් පැතිකඩ තවමත් ප්‍රකාශ කර නැත.",
+
+  "View company profile": "සමාගම් පැතිකඩ බලන්න",
+
+  "Back to developers": "සමාගම් ලැයිස්තුවට ආපසු",
+
+  "Company website": "සමාගමේ වෙබ් අඩවිය",
+
+  "Available properties": "ලබා ගත හැකි දේපළ",
+
+  "No published properties are available for this developer right now.": "මෙම සමාගමට අදාළ ප්‍රකාශිත දේපළ දැනට නොමැත.",
+
+  ":count published properties": "ප්‍රකාශිත දේපළ :count",
+
+  "View property": "දේපළ බලන්න",
+
+  "View details": "විස්තර බලන්න",
+
+  "Photo coming soon": "ඡායාරූපය ළඟදීම",
+
+  "No photo available": "ඡායාරූපයක් නොමැත",
+
+  "No photos available for this property.": "මෙම දේපළ සඳහා ඡායාරූප නොමැත.",
+
+  "Previous photo": "පෙර ඡායාරූපය",
+
+  "Next photo": "ඊළඟ ඡායාරූපය",
+
+  "Property highlights": "දේපළේ විශේෂාංග",
+
+  "More filters": "තවත් පෙරහන්",
+
+  "Refine your search": "සෙවීම සීමා කරන්න",
+
+  "Apply filters": "පෙරහන් යොදන්න",
+
+  "Clear": "හිස් කරන්න",
+
+  "Close filters": "පෙරහන් වසන්න",
+
+  "Any": "ඕනෑම",
+
+  "Sort by": "අනුපිළිවෙළ",
+
+  "Newest first": "නවතම දේපළ පළමුව",
+
+  "Price: high to low": "මිල: වැඩි සිට අඩු",
+
+  "Price: low to high": "මිල: අඩු සිට වැඩි",
+
+  "Enter an area or locality": "ප්‍රදේශයක් ඇතුළත් කරන්න",
+
+  "Bedrooms (exact; 0 for studio)": "නිදන කාමර (නිශ්චිත ගණන; ස්ටුඩියෝ සඳහා 0)",
+
+  "Minimum price (LKR)": "අවම මිල (රු.)",
+
+  "Maximum price (LKR)": "උපරිම මිල (රු.)",
+
+  "Minimum monthly rent (LKR)": "අවම මාසික කුලිය (රු.)",
+
+  "Maximum monthly rent (LKR)": "උපරිම මාසික කුලිය (රු.)",
+
+  "Minimum land size (perches)": "අවම ඉඩම් ප්‍රමාණය (පර්චස්)",
+
+  "Maximum land size (perches)": "උපරිම ඉඩම් ප්‍රමාණය (පර්චස්)",
+
+  "Minimum floor area (sq ft)": "අවම ගොඩනැගිලි වර්ගඵලය (වර්ග අඩි)",
+
+  "Maximum floor area (sq ft)": "උපරිම ගොඩනැගිලි වර්ගඵලය (වර්ග අඩි)",
+
+  "Showing :shown of :total properties": "දේපළ :total කින් :shown ක් පෙන්වයි",
+
+  "Please check your search filters.": "ඔබගේ සෙවුම් පෙරහන් පරීක්ෂා කරන්න.",
+
+  "Property details": "දේපළ විස්තර",
+
+  "About this property": "මෙම දේපළ ගැන",
+
+  "Listed by": "දැන්වීම පළ කළේ",
+
+  "Land size": "ඉඩම් ප්‍රමාණය",
+
+  "Land shape": "ඉඩමේ හැඩය",
+
+  "Price per perch": "පර්චසයක මිල",
+
+  "Map location is not available for this property yet.": "මෙම දේපළේ සිතියම් පිහිටීම තවමත් නොමැත.",
+
+  "View on Google Maps": "Google Maps හි බලන්න",
+
+  "Interested in this property?": "මෙම දේපළ ගැන උනන්දුවක් තිබේද?",
+
+  "Your name": "ඔබගේ නම",
+
+  "Email address": "ඊමේල් ලිපිනය",
+
+  "Phone number": "දුරකථන අංකය",
+
+  "Message": "පණිවිඩය",
+
+  "Send enquiry": "විමසීම යවන්න",
+
+  "Property enquiries": "දේපළ විමසීම්",
+
+  "Request a property": "දේපළ ඉල්ලීමක් කරන්න",
+
+  "Save property": "දේපළ සුරකින්න",
+
+  "Saved property": "සුරැකි දේපළ",
+
+  "Saved": "සුරැකිය",
+
+  "Remove from saved": "සුරැකි ලැයිස්තුවෙන් ඉවත් කරන්න",
+
+  "Sign in to save": "සුරැකීමට පිවිසෙන්න",
+
+  "Please correct the highlighted information and try again.": "පෙන්වා ඇති තොරතුරු නිවැරදි කර නැවත උත්සාහ කරන්න.",
+
+  "Property services": "දේපළ සේවා",
+
+  "Find the right next step for your property plans.": "ඔබගේ දේපළ සැලසුම් සඳහා ඊළඟ පියවර සොයා ගන්න.",
+
+  "Learn more": "වැඩි විස්තර",
+
+  "Sell your property": "ඔබේ දේපළ විකුණන්න",
+
+  "List your property with Lassana Property and manage it from your account.": "Lassana Property හි ඔබේ දේපළ එක් කර ගිණුමෙන් කළමනාකරණය කරන්න.",
+
+  "Prepare your listing": "දැන්වීම සකස් කරන්න",
+
+  "Add the location, price, description, photos and relevant property details.": "පිහිටීම, මිල, විස්තර, ඡායාරූප සහ අදාළ දේපළ තොරතුරු ඇතුළත් කරන්න.",
+
+  "Submit for review": "සමාලෝචනයට යවන්න",
+
+  "Our team reviews submitted listings. Only published properties appear on the public website.": "අපගේ කණ්ඩායම දැන්වීම් සමාලෝචනය කරයි. ප්‍රකාශිත දේපළ පමණක් වෙබ් අඩවියේ පෙන්වයි.",
+
+  "Manage enquiries": "විමසීම් කළමනාකරණය කරන්න",
+
+  "Return to your dashboard to update your drafts and follow enquiries about your listing.": "කෙටුම්පත් සංස්කරණයට සහ දැන්වීමට ලැබෙන විමසීම් බැලීමට ඔබේ පාලක පුවරුවට යන්න.",
+
+  "Start listing your property": "ඔබේ දේපළ එක් කිරීම අරඹන්න",
+
+  "Property verification": "දේපළ සත්‍යාපනය",
+
+  "Understand the checks attached to a property before making your next decision.": "තීරණයක් ගැනීමට පෙර දේපළට අදාළ පරීක්ෂණ ගැන දැනගන්න.",
+
+  "Basic verification": "Basic සත්‍යාපනය",
+
+  "Basic verification follows the listing review process. Check the property page for its current verification level.": "දැන්වීම් සමාලෝචනයෙන් පසු Basic සත්‍යාපනය සිදු වේ. වත්මන් මට්ටම දේපළ පිටුවෙන් බලන්න.",
+
+  "Silver verification": "Silver සත්‍යාපනය",
+
+  "Silver verification records an additional review of the required property documents.": "අවශ්‍ය දේපළ ලේඛනවල අමතර සමාලෝචනය Silver සත්‍යාපනයෙන් සටහන් වේ.",
+
+  "Know the scope": "පරීක්ෂණයේ සීමාව දැනගන්න",
+
+  "A verification badge describes completed checks. Read the ranking details and discuss any further checks you need with the team.": "සත්‍යාපන ලාංඡනයෙන් සම්පූර්ණ කළ පරීක්ෂණ පෙන්වයි. මට්ටම් විස්තර කියවා අමතර පරීක්ෂණ ගැන කණ්ඩායමෙන් විමසන්න.",
+
+  "View verification rankings": "සත්‍යාපන මට්ටම් බලන්න",
+
+  "See what each verification level covers": "එක් එක් සත්‍යාපන මට්ටමේ පරීක්ෂණ බලන්න",
+
+  "Property inspection": "දේපළ පරීක්ෂාව",
+
+  "Request an inspection of a published property and tell our team what you want checked.": "ප්‍රකාශිත දේපළක් පරීක්ෂා කිරීමට ඉල්ලා, පරීක්ෂා කළ යුතු කරුණු දන්වන්න.",
+
+  "Choose a property": "දේපළක් තෝරන්න",
+
+  "Keep the property reference from the listing and include it in your request.": "දැන්වීමේ දේපළ යොමු අංකය ඔබගේ ඉල්ලීමට ඇතුළත් කරන්න.",
+
+  "Share your requirements": "ඔබේ අවශ්‍යතා දන්වන්න",
+
+  "Describe the areas you want checked, such as condition, road access, water or electricity. Add a preferred date if you have one.": "තත්ත්වය, මාර්ග ප්‍රවේශය, ජලය හෝ විදුලිය වැනි පරීක්ෂා කළ යුතු කරුණු සඳහන් කරන්න. කැමති දිනයක් තිබේ නම් එක් කරන්න.",
+
+  "Confirm the arrangements": "විධිවිධාන තහවුරු කරන්න",
+
+  "The team will contact you to agree the scope, availability and any fees. Submitting a request does not confirm an appointment.": "පරීක්ෂණයේ කරුණු, ලබා ගත හැකි වේලාවන් සහ ගාස්තු එකඟ වීමට කණ්ඩායම ඔබ අමතයි. ඉල්ලීම යැවීමෙන් හමුවක් තහවුරු නොවේ.",
+
+  "Request inspection": "පරීක්ෂාවක් ඉල්ලන්න",
+
+  "Property help from overseas": "විදේශගත අයට දේපළ සහාය",
+
+  "Explore properties in Sri Lanka and contact our team while you are abroad.": "විදේශයේ සිට ශ්‍රී ලංකාවේ දේපළ බලන්න. අපගේ කණ්ඩායම අමතන්න.",
+
+  "Shortlist properties": "කැමති දේපළ තෝරන්න",
+
+  "Browse current listings and keep the references for the properties that interest you.": "වත්මන් දැන්වීම් බලා කැමති දේපළවල යොමු අංක සටහන් කරගන්න.",
+
+  "Tell us how to reach you": "ඔබව සම්බන්ධ කරගන්නා ආකාරය දන්වන්න",
+
+  "Share your country, time zone and preferred contact time when you contact the team.": "කණ්ඩායම අමතන විට ඔබේ රට, වේලා කලාපය සහ සම්බන්ධ වීමට සුදුසු වේලාව දන්වන්න.",
+
+  "Discuss your next step": "ඊළඟ පියවර සාකච්ඡා කරන්න",
+
+  "Ask about available property information, viewings or inspection requests. The team will confirm what can be arranged.": "දේපළ තොරතුරු, නැරඹීම් හෝ පරීක්ෂණ ඉල්ලීම් ගැන විමසන්න. සකස් කළ හැකි දේ කණ්ඩායම තහවුරු කරයි.",
+
+  "Build your home / LGC services": "ඔබේ නිවස ඉදිකරන්න / LGC සේවා",
+
+  "Share your building or property service requirements with the Lassana Gedara team.": "ගොඩනැගිලි හෝ දේපළ සේවා අවශ්‍යතා Lassana Gedara කණ්ඩායමට දන්වන්න.",
+
+  "Describe your project": "ව්‍යාපෘතිය විස්තර කරන්න",
+
+  "Tell us the site location, the work you have in mind and your approximate budget or preferred timeline.": "ඉඩමේ පිහිටීම, අවශ්‍ය වැඩ සහ දළ අයවැය හෝ අපේක්ෂිත කාලසීමාව දන්වන්න.",
+
+  "Send your request": "ඉල්ලීම යවන්න",
+
+  "Use the LGC service request form. You can reference a published property or enter your own site location.": "LGC සේවා ඉල්ලීම් පෝරමය භාවිත කරන්න. ප්‍රකාශිත දේපළක් සඳහන් කළ හැකිය, නැතිනම් ඔබේ ඉඩමේ පිහිටීම ඇතුළත් කරන්න.",
+
+  "Agree the details": "විස්තර එකඟ කරගන්න",
+
+  "The team will follow up to discuss your needs. Scope, availability, pricing and timing must be agreed before work starts.": "ඔබේ අවශ්‍යතා ගැන කණ්ඩායම සාකච්ඡා කරයි. වැඩ ඇරඹීමට පෙර වැඩ විෂය පථය, ලබා ගත හැකි බව, මිල සහ කාලය එකඟ කරගත යුතුය.",
+
+  "Request LGC service": "LGC සේවාවක් ඉල්ලන්න",
+
+  "Contact our team": "අපගේ කණ්ඩායම අමතන්න",
+
+  "Email us": "අපට ඊමේල් කරන්න",
+
+  "Send email": "ඊමේල් යවන්න",
+
+  "Call our team": "අපගේ කණ්ඩායමට අමතන්න",
+
+  "Frequently asked questions": "නිතර අසන ප්‍රශ්න",
+
+  "FAQs": "නිතර අසන ප්‍රශ්න",
+
+  "Help with property searches, accounts and service requests.": "දේපළ සෙවීම, ගිණුම් සහ සේවා ඉල්ලීම් සඳහා සහාය.",
+
+  "How do I find properties?": "දේපළ සොයන්නේ කෙසේද?",
+
+  "Use the homepage search or browse the property pages. Filter by category, district, city and price, then open a listing to see its details.": "මුල් පිටුවේ සෙවීම හෝ දේපළ පිටු භාවිත කරන්න. වර්ගය, දිස්ත්‍රික්කය, නගරය සහ මිල අනුව පෙරහන් කර විස්තර බලන්න.",
+
+  "Can I browse properties for rent?": "කුලියට ඇති දේපළ බැලිය හැකිද?",
+
+  "Yes. Open Properties for rent from the Properties menu. Rental prices are shown per month when a price is available.": "ඔව්. දේපළ මෙනුවේ කුලියට ඇති දේපළ තෝරන්න. මිලක් ඇති විට මාසික කුලිය පෙන්වයි.",
+
+  "How do I save a property?": "දේපළක් සුරකින්නේ කෙසේද?",
+
+  "Sign in with a buyer account and use Save property on its detail page. You can find saved listings in your buyer dashboard.": "ගැනුම්කරු ගිණුමෙන් පිවිස දේපළ විස්තර පිටුවේ සුරකින්න තෝරන්න. සුරැකි දැන්වීම් ගැනුම්කරු පාලක පුවරුවේ ඇත.",
+
+  "How do I contact the team about a property?": "දේපළක් ගැන කණ්ඩායම අමතන්නේ කෙසේද?",
+
+  "Open the listing and use its contact options. Include the property reference so the team can identify the listing.": "දැන්වීම විවෘත කර සම්බන්ධ වීමේ විකල්ප භාවිත කරන්න. දැන්වීම හඳුනාගැනීමට දේපළ යොමු අංකය සඳහන් කරන්න.",
+
+  "How do I advertise my property?": "මගේ දේපළ පළ කරන්නේ කෙසේද?",
+
+  "Create an account or sign in, open My profile and enable seller access. Add your property details and photos, then submit the listing for review.": "ගිණුමක් සාදා හෝ පිවිස මගේ පැතිකඩෙන් විකුණුම්කරු ප්‍රවේශය සක්‍රිය කරන්න. දේපළ තොරතුරු හා ඡායාරූප එක් කර සමාලෝචනයට යවන්න.",
+
+  "What do Basic and Silver verification mean?": "Basic සහ Silver සත්‍යාපනය යනු කුමක්ද?",
+
+  "The verification rankings page explains the checks for each level. A listing badge shows its current level; it is separate from being selected as a Featured property.": "එක් එක් මට්ටමේ පරීක්ෂණ සත්‍යාපන මට්ටම් පිටුවේ ඇත. ලාංඡනය වත්මන් මට්ටම පෙන්වයි. විශේෂ දේපළක් ලෙස තේරීම වෙනම ක්‍රියාවලියකි.",
+
+  "Does an inspection request confirm an appointment?": "පරීක්ෂණ ඉල්ලීමෙන් හමුවක් තහවුරු වේද?",
+
+  "No. The team contacts you to agree the scope and arrangements. A preferred date is a request, not a confirmed appointment.": "නැත. කරුණු හා විධිවිධාන එකඟ වීමට කණ්ඩායම ඔබ අමතයි. කැමති දිනය ඉල්ලීමක් පමණි; තහවුරු කළ හමුවක් නොවේ.",
+
+  "Can I request help for a site that is not listed?": "දැන්වීමක් නොමැති ඉඩමකට සහාය ඉල්ලිය හැකිද?",
+
+  "For an LGC service request, you can provide your site location instead of a property reference. Tell the team what work you need.": "LGC සේවා ඉල්ලීමේ දේපළ යොමු අංකය වෙනුවට ඔබේ ඉඩමේ පිහිටීම ඇතුළත් කළ හැකිය. අවශ්‍ය වැඩ දන්වන්න.",
+
+  "Can I enquire from outside Sri Lanka?": "ශ්‍රී ලංකාවෙන් පිටත සිට විමසිය හැකිද?",
+
+  "Yes. Contact the team by email or the contact options shown on the website. Include your country, time zone and preferred contact time.": "ඔව්. ඊමේල් හෝ වෙබ් අඩවියේ සම්බන්ධ වීමේ විකල්ප භාවිත කරන්න. රට, වේලා කලාපය සහ කැමති වේලාව දන්වන්න.",
+
+  "How do I reset my password?": "මුරපදය නැවත සකසන්නේ කෙසේද?",
+
+  "Choose Forgot password on the sign-in page and enter your account email. Check your inbox and spam folder for the reset message.": "පිවිසුම් පිටුවේ Forgot password තෝරා ගිණුමේ ඊමේල් ලිපිනය ඇතුළත් කරන්න. පණිවිඩය සඳහා inbox සහ spam පරීක්ෂා කරන්න.",
+
+  "Which languages are available?": "ලබා ගත හැකි භාෂා මොනවාද?",
+
+  "Legal information": "නීතිමය තොරතුරු",
+
+  "Terms and conditions": "නියමයන් සහ කොන්දේසි",
+
+  "Privacy policy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
+
+  "Disclaimer": "වගකීම් සීමාව",
+
+  "The company-approved version of this page is being prepared.": "මෙම පිටුව සඳහා සමාගම අනුමත කළ අන්තර්ගතය සකස් කරමින් පවතී.",
+
+  "Please contact our team if you need this information before using a service.": "සේවාවක් භාවිත කිරීමට පෙර මෙම තොරතුරු අවශ්‍ය නම් කණ්ඩායම අමතන්න.",
+
+  "Explore": "සොයා බලන්න",
+
+  "Get in touch": "සම්බන්ධ වන්න",
+
+  "Social links": "සමාජ මාධ්‍ය සබැඳි",
+
+  "Developed by": "නිර්මාණය කළේ",
+
+  "All rights reserved.": "සියලු හිමිකම් ඇවිරිණි.",
+
+  "Find. Verify. Build. Own.": "සොයන්න. සත්‍යාපනය කරන්න. ගොඩනගන්න. හිමිකරගන්න.",
+
+  "ABOUT LASSANA PROPERTY": "LASSANA PROPERTY ගැන",
+
+  "Your next chapter": "ඔබේ ජීවිතයේ ඊළඟ පියවර",
+
+  "starts with a place.": "තැනකින් ඇරඹෙයි.",
+
+  "Find land, houses and apartments in Sri Lanka. Explore properties, connect with our team and take the next step towards a place of your own.": "ශ්‍රී ලංකාවේ ඉඩම්, නිවාස සහ මහල් නිවාස සොයන්න. දේපළ බලා කණ්ඩායම සමඟ සම්බන්ධ වී ඔබටම තැනක් හිමිකරගැනීමට ඊළඟ පියවර ගන්න.",
+
+  "Talk to us": "අප සමඟ කතා කරන්න",
+
+  "OUR BACKGROUND": "අපගේ පසුබිම",
+
+  "A foundation in": "අපගේ පදනම",
+
+  "creating spaces.": "අවකාශ නිර්මාණය කිරීමයි.",
+
+  "Who we are": "අප කවුද",
+
+  "Lassana Gedara Enterprises works in construction and design across Sri Lanka, serving residential, commercial and industrial projects. Its approach brings together architecture, engineering and sustainable building practices, with an emphasis on understanding each customer’s needs.": "Lassana Gedara Enterprises ශ්‍රී ලංකාව පුරා නේවාසික, වාණිජ සහ කාර්මික ව්‍යාපෘති සඳහා ඉදිකිරීම් හා සැලසුම් සේවා සපයයි. පාරිභෝගික අවශ්‍යතා හඳුනාගෙන ගෘහ නිර්මාණ, ඉංජිනේරු හා තිරසාර ඉදිකිරීම් ක්‍රම එක් කරයි.",
+
+  "Lassana Property brings the property search experience into focus: discover available listings, save the places you like and send your requirements to our team.": "Lassana Property මඟින් දේපළ සොයා, කැමති දේපළ සුරැකීමට සහ ඔබේ අවශ්‍යතා අපගේ කණ්ඩායමට යැවීමට හැකිය.",
+
+  "Our mission": "අපගේ මෙහෙවර",
+
+  "The company’s mission centres on lasting value: thoughtful design, dependable construction and trusted customer relationships. Modern methods, suitable materials and skilled workmanship support its commitment to quality and clear communication.": "අපගේ මෙහෙවර හොඳ සැලසුම්, විශ්වාසදායක ඉදිකිරීම් සහ පාරිභෝගික සබඳතා තුළින් දිගුකාලීන වටිනාකමක් ලබාදීමයි. නවීන ක්‍රම, සුදුසු ද්‍රව්‍ය සහ දක්ෂ කාර්මික ශිල්පය ගුණාත්මකභාවයට හා පැහැදිලි සන්නිවේදනයට සහාය වේ.",
+
+  "Our history & reach": "අපගේ ඉතිහාසය සහ ව්‍යාප්තිය",
+
+  "From small beginnings, Lassana Gedara has developed its design and construction work through customer relationships. Its reach extends across Sri Lanka, from urban developments to homes in rural communities.": "කුඩා ආරම්භයකින් Lassana Gedara පාරිභෝගික සබඳතා තුළින් සැලසුම් හා ඉදිකිරීම් වැඩ වර්ධනය කර ඇත. නාගරික සංවර්ධනවල සිට ග්‍රාමීය නිවාස දක්වා ශ්‍රී ලංකාව පුරා සේවා සපයයි.",
+
+  "YOUR PROPERTY JOURNEY": "ඔබේ දේපළ ගමන",
+
+  "A simpler way to get started": "ආරම්භ කිරීමට පහසු මඟක්",
+
+  "Find your location": "ඔබේ ප්‍රදේශය සොයන්න",
+
+  "Browse by district, city and property category to find listings that suit your plans.": "ඔබට ගැළපෙන දැන්වීම් සොයාගැනීමට දිස්ත්‍රික්කය, නගරය සහ වර්ගය අනුව බලන්න.",
+
+  "Keep your favourites": "කැමති දේපළ සුරකින්න",
+
+  "Save properties to your buyer account so you can return to them while deciding.": "තීරණය කරන අතර නැවත බැලීමට ගැනුම්කරු ගිණුමේ දේපළ සුරකින්න.",
+
+  "Speak with our team": "අපගේ කණ්ඩායම සමඟ කතා කරන්න",
+
+  "Ask about a listing or share your property requirements for help with your search.": "දැන්වීමක් ගැන විමසන්න හෝ සෙවීමට සහාය ලබාගැනීමට ඔබේ අවශ්‍යතා දන්වන්න.",
+
+  "Let’s talk about your next move.": "ඔබේ ඊළඟ පියවර ගැන කතා කරමු.",
+
+  "Our team can help you take the next step.": "ඊළඟ පියවර සඳහා අපගේ කණ්ඩායමට සහාය විය හැකිය.",
+
+  "CONTACT US": "අප අමතන්න",
+
+  "Let’s find your": "අපි ඔබගේ",
+
+  "next place.": "ඊළඟ තැන සොයමු.",
+
+  "Have a question about a property, listing your land or getting started? Get in touch with the Lassana Gedara team.": "දේපළක්, ඉඩම් දැන්වීමක් හෝ ආරම්භ කිරීම ගැන ප්‍රශ්නයක් තිබේද? Lassana Gedara කණ්ඩායම අමතන්න.",
+
+  "Include the property ID if your question is about a listing.": "දැන්වීමක් ගැන විමසන්නේ නම් දේපළ අංකය සඳහන් කරන්න.",
+
+  "FIND US IN GAMPAHA": "ගම්පහදී අප හමුවන්න",
+
+  "Visit our office": "අපගේ කාර්යාලයට එන්න",
+
+  "Contact us before visiting to arrange a convenient time.": "පැමිණීමට පෙර සුදුසු වේලාවක් සකස් කරගැනීමට අප අමතන්න.",
+
+  "Open in Google Maps": "Google Maps හි විවෘත කරන්න",
+
+  "HOW CAN WE HELP?": "අපෙන් ඔබට කෙරෙන සහාය කුමක්ද?",
+
+  "Make your enquiry more useful": "ඔබගේ විමසීමට අවශ්‍ය තොරතුරු එක් කරන්න",
+
+  "For a listed property, tell us its property ID.": "දැන්වීමකට අදාළ දේපළ අංකය සඳහන් කරන්න.",
+
+  "For your search, include your preferred district, city and budget.": "සෙවීම සඳහා කැමති දිස්ත්‍රික්කය, නගරය සහ අයවැය සඳහන් කරන්න.",
+
+  "For a visit, share your preferred dates and a contact number.": "නැරඹීමකට කැමති දින සහ දුරකථන අංකයක් සඳහන් කරන්න.",
+
+  "LASSANA VERIFIED": "LASSANA සත්‍යාපනය",
+
+  "behind each property.": "එක් එක් දේපළ සම්බන්ධයෙන්.",
+
+  "Our verification rankings explain the level of review behind a listing. Explore Basic, Silver, Gold and Platinum to see what each level covers.": "දැන්වීමේ සමාලෝචන මට්ටම සත්‍යාපන ශ්‍රේණි මඟින් පැහැදිලි කරයි. Basic, Silver, Gold සහ Platinum මට්ටම්වල පරීක්ෂණ බලන්න.",
+
+  "Basic and Silver are our current verification levels.": "දැනට පවතින සත්‍යාපන මට්ටම් Basic සහ Silver වේ.",
+
+  "Gold and Platinum are planned for a future release.": "Gold සහ Platinum ඉදිරියේදී හඳුන්වා දීමට සැලසුම් කර ඇත.",
+
+  "READ THE BADGE": "ලාංඡනය තේරුම් ගන්න",
+
+  "Know what has been reviewed.": "සමාලෝචනය කළ කරුණු දැනගන්න.",
+
+  "A verification badge applies to the checks completed for that particular listing. A published property does not automatically receive a verification badge.": "ලාංඡනය අදාළ දැන්වීම සඳහා සම්පූර්ණ කළ පරීක්ෂණවලට පමණක් අදාළ වේ. දේපළක් ප්‍රකාශ කළ පමණින් සත්‍යාපන ලාංඡනයක් නොලැබේ.",
+
+  "If you need more detail about a property's verification, contact our team with its property reference. A badge describes the review scope; it does not guarantee legal title or the property's condition.": "සත්‍යාපනය ගැන වැඩි විස්තර සඳහා දේපළ යොමු අංකය සමඟ අප අමතන්න. ලාංඡනය සමාලෝචනයේ සීමාව පෙන්වයි; නීතිමය හිමිකම හෝ දේපළේ තත්ත්වය සහතික නොකරයි.",
+
+  "Find your next property.": "ඔබේ ඊළඟ දේපළ සොයා ගන්න.",
+
+  "Browse listings or speak with our team about verification.": "දැන්වීම් බලන්න හෝ සත්‍යාපනය ගැන කණ්ඩායමෙන් විමසන්න.",
+
+  "Silver Verified": "Silver සත්‍යාපිතයි",
+
+  "You are signed in as": "ඔබ පිවිස ඇත්තේ",
+
+  "You can continue browsing properties with your current account.": "ඔබගේ වත්මන් ගිණුමෙන් දේපළ දිගටම බැලිය හැකිය.",
+
+  "Sign out to switch accounts": "වෙනත් ගිණුමකට යාමට ඉවත් වන්න",
+
+  "for assistance.": "සහාය සඳහා.",
+
+  "Planned": "සැලසුම් කර ඇත",
+
+  "Current level": "වත්මන් මට්ටම",
+
+  "Planned scope": "සැලසුම් කළ පරීක්ෂණ",
+
+  "Checks included": "ඇතුළත් පරීක්ෂණ",
+
+  "Not yet available. Full requirements will be published before launch.": "තවම ලබා ගත නොහැක. හඳුන්වා දීමට පෙර සම්පූර්ණ අවශ්‍යතා ප්‍රකාශ කරනු ඇත.",
+
+  "Awarded after the required checks are reviewed and approved.": "අවශ්‍ය පරීක්ෂණ සමාලෝචනය කර අනුමත කිරීමෙන් පසු ලබාදෙයි.",
+
+  "Level :level": "මට්ටම :level",
+
+  "bedrooms": "නිදන කාමර",
+
+  "bathrooms": "නාන කාමර",
+
+  "sq ft": "වර්ග අඩි",
+
+  "perches": "පර්චස්",
+
+  "parking": "වාහන නැවැත්වීම්",
+
+  "Electricity": "විදුලිය",
+
+  "Water": "ජලය",
+
+  "Access:": "ප්‍රවේශය:",
+
+  "Previous": "පෙර",
+
+  "Next": "ඊළඟ",
+
+  "Pagination Navigation": "පිටු අතර ගමන් කිරීම",
+
+  "Top": "ඉහළට",
+
+  "For rent": "කුලියට",
+
+  "For sale": "විකිණීමට",
+
+  "Reference:": "යොමු අංකය:",
+
+  "No description provided.": "විස්තර සපයා නොමැත.",
+
+  "Facilities": "පහසුකම්",
+
+  "Property age (years)": "දේපළේ වයස (වසර)",
+
+  "Condition": "තත්ත්වය",
+
+  "Bedrooms": "නිදන කාමර",
+
+  "Bathrooms": "නාන කාමර",
+
+  "Floor area": "ගොඩනැගිලි වර්ගඵලය",
+
+  "Parking spaces": "වාහන නැවැත්වීමේ ඉඩ",
+
+  "Total floors": "මහල් ගණන",
+
+  "Floor number": "මහල් අංකය",
+
+  "Unit type": "ඒකක වර්ගය",
+
+  "Developer": "සංවර්ධන සමාගම",
+
+  "Road access": "මාර්ග ප්‍රවේශය",
+
+  "Facing direction": "මුහුණලා ඇති දිශාව",
+
+  "Survey available": "මිනින්දෝරු සැලැස්ම තිබේ",
+
+  "Yes": "ඔව්",
+
+  "No": "නැත",
+
+  "Contact our sales team": "අපගේ විකුණුම් කණ්ඩායම අමතන්න",
+
+  "Call": "අමතන්න",
+
+  "Share property": "දේපළ බෙදාගන්න",
+
+  "Copy link": "සබැඳිය පිටපත් කරන්න",
+
+  "Share": "බෙදාගන්න",
+
+  "Property videos": "දේපළ වීඩියෝ",
+
+  "Watch video": "වීඩියෝව බලන්න",
+
+  "The first level of listing verification.": "දැන්වීම් සත්‍යාපනයේ පළමු මට්ටම.",
+
+  "Seller identity checked": "විකුණුම්කරුගේ අනන්‍යතාව පරීක්ෂා කර ඇත",
+
+  "Property information reviewed": "දේපළ තොරතුරු සමාලෝචනය කර ඇත",
+
+  "Property photos reviewed": "දේපළ ඡායාරූප සමාලෝචනය කර ඇත",
+
+  "Additional review of property documents.": "දේපළ ලේඛනවල අමතර සමාලෝචනය.",
+
+  "Basic verification completed": "Basic සත්‍යාපනය සම්පූර්ණයි",
+
+  "Survey document reviewed": "මිනින්දෝරු ලේඛනය සමාලෝචනය කර ඇත",
+
+  "Ownership documents reviewed": "හිමිකම් ලේඛන සමාලෝචනය කර ඇත",
+
+  "A planned level involving an on-site review.": "ස්ථානීය පරීක්ෂාවක් ඇතුළත් කිරීමට සැලසුම් කළ මට්ටමකි.",
+
+  "Physical property inspection": "දේපළේ ස්ථානීය පරීක්ෂාව",
+
+  "Relevant cross-checks of property details": "දේපළ විස්තරවල අදාළ හරස් පරීක්ෂණ",
+
+  "A planned level with a broader professional review.": "පුළුල් වෘත්තීය සමාලෝචනයක් සඳහා සැලසුම් කළ මට්ටමකි.",
+
+  "Expanded legal review": "පුළුල් නීතිමය සමාලෝචනය",
+
+  "Expanded technical review": "පුළුල් තාක්ෂණික සමාලෝචනය",
+
+  "Reviews by appropriately qualified professionals": "අදාළ සුදුසුකම් ලත් වෘත්තිකයන්ගේ සමාලෝචන",
+
+  "No properties match your search.": "ඔබේ සෙවීමට ගැළපෙන දේපළ නොමැත.",
+
+  "Remove from saved properties": "සුරැකි දේපළවලින් ඉවත් කරන්න",
+
+  "Sign in to save this property": "මෙම දේපළ සුරැකීමට පිවිසෙන්න",
+
+  "Save": "සුරකින්න",
+
+  "photo": "ඡායාරූපය",
+
+  "photos": "ඡායාරූප",
+
+  "Assigned agent": "පත් කළ නියෝජිතයා",
+
+  "Seller / owner": "විකුණුම්කරු / හිමිකරු",
+
+  "Share this property": "මෙම දේපළ බෙදාගන්න",
+
+  "Share on Facebook": "Facebook හරහා බෙදාගන්න",
+
+  "Share on WhatsApp": "WhatsApp හරහා බෙදාගන්න",
+
+  "Share this property on Facebook (opens a new tab)": "මෙම දේපළ Facebook හරහා බෙදාගන්න (නව ටැබයක විවෘත වේ)",
+
+  "Share this property on WhatsApp (opens a new tab)": "මෙම දේපළ WhatsApp හරහා බෙදාගන්න (නව ටැබයක විවෘත වේ)",
+
+  "Property link copied.": "දේපළ සබැඳිය පිටපත් කරන ලදී.",
+
+  "Copy the selected link to share this property.": "මෙම දේපළ බෙදා ගැනීමට තෝරාගත් සබැඳිය පිටපත් කරන්න.",
+
+  "Property link — select and copy": "දේපළ සබැඳිය — තෝරා පිටපත් කරන්න",
+
+  "How to shortlist a property": "ගැළපෙන දේපළ තෝරාගන්නේ කෙසේද",
+
+  "Compare locations, prices and listing details before making an enquiry.": "විමසීමක් කිරීමට පෙර ස්ථාන, මිල ගණන් සහ දැන්වීම් විස්තර සසඳන්න.",
+
+  "Start with your requirements": "ඔබේ අවශ්‍යතාවලින් ආරම්භ කරන්න",
+
+  "Choose a property type and preferred area. Use the price filter, then open the listings that fit your search.": "දේපළ වර්ගය සහ කැමති ප්‍රදේශය තෝරන්න. මිල පෙරහන භාවිත කර ඔබේ සෙවීමට ගැළපෙන දැන්වීම් විවෘත කරන්න.",
+
+  "Compare the details": "විස්තර සසඳන්න",
+
+  "Read each listing description and compare the location, advertised price, size, photos and available facilities. Ask the team about information that is missing or unclear.": "එක් එක් දැන්වීමේ විස්තර කියවා ස්ථානය, සඳහන් මිල, ප්‍රමාණය, ඡායාරූප සහ පහසුකම් සසඳන්න. නොමැති හෝ පැහැදිලි නැති තොරතුරු පිළිබඳ කණ්ඩායමෙන් විමසන්න.",
+
+  "Keep the property reference": "දේපළ යොමු අංකය සටහන් කරගන්න",
+
+  "Sign in as a buyer to save a listing. Include its reference when you contact the team so everyone is discussing the same property.": "දැන්වීමක් සුරැකීමට ගැනුම්කරුවෙකු ලෙස පිවිසෙන්න. කණ්ඩායම අමතන විට අදාළ දේපළ හඳුනාගැනීමට එහි යොමු අංකය දක්වන්න.",
+
+  "Ask about the next step": "ඊළඟ පියවර පිළිබඳ විමසන්න",
+
+  "Use the enquiry form, telephone or WhatsApp options on the property page. Tell the team what interests you and what you would like to know.": "දේපළ පිටුවේ විමසීම් පෝරමය, දුරකථන හෝ WhatsApp විකල්ප භාවිත කරන්න. ඔබේ කැමැත්ත සහ දැනගැනීමට අවශ්‍ය දේ කණ්ඩායමට කියන්න.",
+
+  "Prepare for a property viewing": "දේපළ බැලීමකට සූදානම් වන්න",
+
+  "Keep useful questions and the property reference ready before your visit.": "ඔබේ පැමිණීමට පෙර විමසීමට ඇති ප්‍රශ්න සහ දේපළ යොමු අංකය සූදානම් කරගන්න.",
+
+  "Read the listing first": "පළමුව දැන්වීම කියවන්න",
+
+  "Review the photos, location and property details. Make a short list of questions about anything you want to see or clarify.": "ඡායාරූප, ස්ථානය සහ දේපළ විස්තර බලන්න. බැලීමට හෝ පැහැදිලි කරගැනීමට අවශ්‍ය දේ පිළිබඳ කෙටි ප්‍රශ්න ලැයිස්තුවක් සකස් කරන්න.",
+
+  "Agree the arrangements": "අදාළ කටයුතු තහවුරු කරගන්න",
+
+  "Ask the team to confirm the date, meeting point and contact person. An enquiry or preferred date alone does not confirm a visit.": "දිනය, හමුවන ස්ථානය සහ සම්බන්ධ විය යුතු පුද්ගලයා කණ්ඩායමෙන් තහවුරු කරගන්න. විමසීමක් හෝ කැමති දිනයක් සඳහන් කිරීමෙන් පමණක් පැමිණීම තහවුරු නොවේ.",
+
+  "Record your observations": "ඔබේ නිරීක්ෂණ සටහන් කරන්න",
+
+  "During the visit, note the features that matter to you and the questions that still need an answer. Ask permission before taking photos.": "බැලීමේදී ඔබට වැදගත් ලක්ෂණ සහ තවමත් පිළිතුරු අවශ්‍ය ප්‍රශ්න සටහන් කරන්න. ඡායාරූප ගැනීමට පෙර අවසර ලබාගන්න.",
+
+  "Follow up with the team": "කණ්ඩායම සමඟ නැවත සම්බන්ධ වන්න",
+
+  "Quote the property reference in your follow-up. If you need a separate inspection, explain what you want checked and agree the arrangements with the team.": "නැවත සම්බන්ධ වන විට දේපළ යොමු අංකය දක්වන්න. වෙනම පරීක්ෂාවක් අවශ්‍ය නම් පරීක්ෂා කළ යුතු දේ පැහැදිලි කර කණ්ඩායම සමඟ කටයුතු එකඟ කරගන්න.",
+
+  "Prepare your home-building brief": "ඔබේ නිවාස ඉදිකිරීමේ අවශ්‍යතා සකස් කරන්න",
+
+  "Organise your site information and requirements for an LGC service enquiry.": "LGC සේවා විමසීමක් සඳහා ඔබේ ඉඩමේ තොරතුරු සහ අවශ්‍යතා සකස් කරගන්න.",
+
+  "Describe your site": "ඔබේ ඉඩම ගැන විස්තර කරන්න",
+
+  "Provide the location or a property reference. Mention the site information you already have and what you still need to confirm.": "ස්ථානය හෝ දේපළ යොමු අංකයක් ලබාදෙන්න. දැනට ඇති ඉඩමේ තොරතුරු සහ තවදුරටත් තහවුරු කරගත යුතු දේ සඳහන් කරන්න.",
+
+  "Explain how you want to live": "ඔබට අවශ්‍ය නිවස ගැන පැහැදිලි කරන්න",
+
+  "List the rooms, spaces and everyday needs that matter to you. Include your preferred timeline and an approximate project budget if available.": "ඔබට වැදගත් කාමර, අවකාශ සහ දෛනික අවශ්‍යතා ලැයිස්තුගත කරන්න. කැමති කාලසීමාව සහ තිබේ නම් ආසන්න ව්‍යාපෘති අයවැයක් දක්වන්න.",
+
+  "Choose the help you need": "ඔබට අවශ්‍ය සහාය තෝරන්න",
+
+  "Ask about house plans, architectural design or a bill of quantities (BOQ). Tell the team whether you are starting from an idea or already have drawings.": "නිවාස සැලසුම්, වාස්තු විද්‍යාත්මක නිර්මාණ හෝ ප්‍රමාණ පත්‍රයක් (BOQ) පිළිබඳ විමසන්න. ඔබ අදහසකින් ආරම්භ කරන්නේද නැතහොත් දැනටමත් සැලසුම් තිබේද යන්න කණ්ඩායමට කියන්න.",
+
+  "Agree the scope": "සේවාවේ විෂය පථය එකඟ කරගන්න",
+
+  "Send an LGC service request. The team will discuss availability, deliverables, fees and timing with you before work begins.": "LGC සේවා ඉල්ලීමක් යවන්න. වැඩ ආරම්භ කිරීමට පෙර සේවාව ලබාදිය හැකිද, ලබාදෙන දේ, ගාස්තු සහ කාලය පිළිබඳ කණ්ඩායම ඔබ සමඟ සාකච්ඡා කරනු ඇත.",
+
+  "House plans": "නිවාස සැලසුම්",
+
+  "Discuss the layout and spaces you want for your future home.": "ඔබේ අනාගත නිවසේ අවශ්‍ය සැකැස්ම සහ අවකාශ පිළිබඳ සාකච්ඡා කරන්න.",
+
+  "Share your site information": "ඔබේ ඉඩමේ තොරතුරු ලබාදෙන්න",
+
+  "Provide the site location or property reference and describe the rooms and spaces you need.": "ඉඩමේ ස්ථානය හෝ දේපළ යොමු අංකය ලබාදී ඔබට අවශ්‍ය කාමර සහ අවකාශ විස්තර කරන්න.",
+
+  "Explain your priorities": "ඔබේ ප්‍රමුඛතා පැහැදිලි කරන්න",
+
+  "Tell the team about your preferred layout, approximate budget and timing. Mention any drawings you already have.": "ඔබ කැමති සැකැස්ම, ආසන්න අයවැය සහ කාලසීමාව කණ්ඩායමට කියන්න. දැනට ඇති සැලසුම් තිබේ නම් සඳහන් කරන්න.",
+
+  "Discuss the service": "සේවාව පිළිබඳ සාකච්ඡා කරන්න",
+
+  "The team will confirm the proposed scope, deliverables, availability and fees before any work starts.": "වැඩ ආරම්භ කිරීමට පෙර යෝජිත විෂය පථය, ලබාදෙන දේ, සේවාව ලබාදිය හැකි කාලය සහ ගාස්තු කණ්ඩායම තහවුරු කරනු ඇත.",
+
+  "Architectural design": "වාස්තු විද්‍යාත්මක නිර්මාණ",
+
+  "Start a conversation about the design requirements for your home or property project.": "ඔබේ නිවසේ හෝ දේපළ ව්‍යාපෘතියේ නිර්මාණ අවශ්‍යතා පිළිබඳ සාකච්ඡාවක් ආරම්භ කරන්න.",
+
+  "Describe the project": "ව්‍යාපෘතිය විස්තර කරන්න",
+
+  "Explain how the property will be used and the spaces, style and practical needs you have in mind.": "දේපළ භාවිත කරන ආකාරය සහ ඔබ සිතන අවකාශ, රටාව හා ප්‍රායෝගික අවශ්‍යතා පැහැදිලි කරන්න.",
+
+  "Prepare a brief": "අවශ්‍යතා සටහනක් සකස් කරන්න",
+
+  "Share the location, available site information, preferred timeline and any existing drawings with the team.": "ස්ථානය, ලබාගත හැකි ඉඩමේ තොරතුරු, කැමති කාලසීමාව සහ දැනට ඇති සැලසුම් කණ්ඩායමට ලබාදෙන්න.",
+
+  "Agree the next step": "ඊළඟ පියවර එකඟ කරගන්න",
+
+  "Discuss the proposed design service and confirm its scope, deliverables and fees before work begins.": "යෝජිත නිර්මාණ සේවාව පිළිබඳ සාකච්ඡා කර වැඩ ආරම්භ කිරීමට පෙර එහි විෂය පථය, ලබාදෙන දේ සහ ගාස්තු තහවුරු කරගන්න.",
+
+  "BOQ services": "BOQ සේවා",
+
+  "Enquire about a bill of quantities for your planned building work.": "ඔබ සැලසුම් කරන ඉදිකිරීම් වැඩ සඳහා ප්‍රමාණ පත්‍රයක් පිළිබඳ විමසන්න.",
+
+  "Explain the planned work": "සැලසුම් කරන වැඩ විස්තර කරන්න",
+
+  "Tell the team what you intend to build and whether you already have drawings or specifications.": "ඉදිකිරීමට බලාපොරොත්තු වන දේ සහ දැනට සැලසුම් හෝ පිරිවිතර තිබේද යන්න කණ්ඩායමට කියන්න.",
+
+  "Discuss the information needed": "අවශ්‍ය තොරතුරු පිළිබඳ සාකච්ඡා කරන්න",
+
+  "Ask which project details are needed to define the proposed BOQ service.": "යෝජිත BOQ සේවාව නිර්වචනය කිරීමට අවශ්‍ය ව්‍යාපෘති විස්තර මොනවාදැයි විමසන්න.",
+
+  "Confirm the scope": "විෂය පථය තහවුරු කරන්න",
+
+  "Agree the deliverables, availability, fees and timing directly with the team before proceeding.": "ඉදිරියට යාමට පෙර ලබාදෙන දේ, සේවාව ලබාදිය හැකි කාලය, ගාස්තු සහ කාලසීමාව කණ්ඩායම සමඟ සෘජුව එකඟ කරගන්න.",
+
+  "Property guides": "දේපළ මාර්ගෝපදේශ",
+
+  "Practical help for your next property step.": "ඔබේ ඊළඟ දේපළ පියවර සඳහා ප්‍රායෝගික සහාය.",
+
+  "Read guide": "මාර්ගෝපදේශය කියවන්න",
+
+  "All property guides": "සියලු දේපළ මාර්ගෝපදේශ",
+
+  "Prepared by Lassana Property": "Lassana Property විසින් සකස් කරන ලදී",
+
+  "Let’s talk about your next step": "ඔබේ ඊළඟ පියවර ගැන කතා කරමු",
+
+  "Ask about a property, listing your own property or getting help with a building project.": "දේපළක් ගැන, ඔබේ දේපළ දැන්වීම්ගත කිරීම ගැන හෝ ඉදිකිරීම් ව්‍යාපෘතියකට සහාය ගැන විමසන්න.",
+
+  "Make an enquiry": "විමසීමක් කරන්න",
+
+  "Land, homes and property services in Sri Lanka": "ශ්‍රී ලංකාවේ ඉඩම්, නිවාස සහ දේපළ සේවා",
+
+  "Find properties for sale and rent in Sri Lanka, explore verified listings and enquire about LGC home-building services.": "ශ්‍රී ලංකාවේ විකිණීමට සහ කුලියට ඇති දේපළ සොයන්න, සත්‍යාපිත දැන්වීම් බලන්න සහ LGC නිවාස ඉදිකිරීම් සේවා පිළිබඳ විමසන්න.",
+
+  "Find a property, understand its verification and plan your next step with LGC services.": "දේපළක් සොයන්න, එහි සත්‍යාපනය තේරුම් ගන්න සහ LGC සේවා සමඟ ඔබේ ඊළඟ පියවර සැලසුම් කරන්න.",
+
+  "Work with Lassana Property": "Lassana Property සමඟ එක්වන්න",
+
+  "Are you a property agent?": "ඔබ දේපළ නියෝජිතයෙක්ද?",
+
+  "Tell us about your experience and the areas you serve. Agent applications are reviewed before access is approved.": "ඔබේ අත්දැකීම් සහ සේවය කරන ප්‍රදේශ ගැන අපට කියන්න. ප්‍රවේශය අනුමත කිරීමට පෙර නියෝජිත අයදුම්පත් සමාලෝචනය කෙරේ.",
+
+  "Apply as an agent": "නියෝජිතයෙකු ලෙස අයදුම් කරන්න",
+
+  "Represent a developer company?": "ඔබ සංවර්ධන සමාගමක් නියෝජනය කරනවාද?",
+
+  "Submit your company and project details for review. Our team will help prepare your developer directory profile.": "සමාලෝචනය සඳහා ඔබේ සමාගමේ සහ ව්‍යාපෘති විස්තර ඉදිරිපත් කරන්න. සංවර්ධක නාමාවලියේ පැතිකඩ සකස් කිරීමට අපගේ කණ්ඩායම සහාය වනු ඇත.",
+
+  "Register your company": "ඔබේ සමාගම ලියාපදිංචි කරන්න",
+
+  "From finding land to planning your home": "ඉඩම සෙවීමේ සිට නිවස සැලසුම් කිරීම දක්වා",
+
+  "Lassana Property connects your property search with LGC professional services. Share your site, ideas and requirements so the team can discuss the next step.": "Lassana Property ඔබේ දේපළ සෙවීම LGC වෘත්තීය සේවා සමඟ සම්බන්ධ කරයි. ඊළඟ පියවර සාකච්ඡා කිරීමට ඔබේ ඉඩම, අදහස් සහ අවශ්‍යතා කණ්ඩායමට ලබාදෙන්න.",
+
+  "Explore this service": "මෙම සේවාව ගැන බලන්න",
+
+  "Discuss your building project": "ඔබේ ඉදිකිරීම් ව්‍යාපෘතිය සාකච්ඡා කරන්න",
+
+  "How LGC services work": "LGC සේවා ක්‍රියාත්මක වන ආකාරය",
+
+  "Exploring Sri Lankan property from overseas?": "විදේශයක සිට ශ්‍රී ලංකාවේ දේපළ සොයනවාද?",
+
+  "Browse listings, share the property references that interest you and arrange a conversation with our team from wherever you are.": "දැන්වීම් බලන්න, කැමති දේපළ යොමු අංක ලබාදෙන්න සහ ඔබ සිටින ස්ථානයේ සිට අපගේ කණ්ඩායම සමඟ සාකච්ඡාවක් සූදානම් කරගන්න.",
+
+  "Explore overseas buyer support": "විදේශගත ගැනුම්කරුවන් සඳහා සහාය බලන්න",
+
+  "Email the team": "කණ්ඩායමට ඊමේල් යවන්න",
+
+  "Shortlist the properties you would like to discuss.": "සාකච්ඡා කිරීමට කැමති දේපළ තෝරාගන්න.",
+
+  "Share your country, time zone and preferred contact time.": "ඔබේ රට, වේලා කලාපය සහ සම්බන්ධ වීමට කැමති වේලාව දක්වන්න.",
+
+  "Ask the team about available viewing or inspection arrangements.": "ලබාගත හැකි දේපළ බැලීම් හෝ පරීක්ෂණ කටයුතු පිළිබඳ කණ්ඩායමෙන් විමසන්න.",
+
+  "What our customers say": "අපගේ පාරිභෝගිකයන්ගේ අදහස්",
+
+  "How Lassana Verified works": "Lassana Verified ක්‍රියාත්මක වන ආකාරය",
+
+  "Understand the checks behind a listing before deciding your next step.": "ඔබේ ඊළඟ පියවර තීරණය කිරීමට පෙර දැන්වීමකට අදාළ පරීක්ෂා තේරුම් ගන්න.",
+
+  "Understand verification levels": "සත්‍යාපන මට්ටම් තේරුම් ගන්න",
+
+  "Explore property inspections": "දේපළ පරීක්ෂණ ගැන බලන්න",
+
+  "Professional services": "වෘත්තීය සේවා",
+
+  "Listing review": "දැන්වීම් සමාලෝචනය",
+
+  "The team reviews the submitted property information and records its verification level.": "කණ්ඩායම ඉදිරිපත් කළ දේපළ තොරතුරු සමාලෝචනය කර සත්‍යාපන මට්ටම සටහන් කරයි.",
+
+  "Document review": "ලේඛන සමාලෝචනය",
+
+  "Silver verification adds a review of the required property documents.": "Silver සත්‍යාපනයට අවශ්‍ය දේපළ ලේඛන සමාලෝචනයක් ඇතුළත් වේ.",
+
+  "Check the scope": "විෂය පථය බලන්න",
+
+  "Read the current badge and ranking details. Ask the team about any further checks you need.": "වර්තමාන ලාංඡනය සහ ශ්‍රේණි විස්තර කියවන්න. අවශ්‍ය අමතර පරීක්ෂා පිළිබඳ කණ්ඩායමෙන් විමසන්න.",
+
+  "Discuss the rooms, spaces and layout you want for your future home.": "ඔබේ අනාගත නිවසට අවශ්‍ය කාමර, අවකාශ සහ සැකැස්ම පිළිබඳ සාකච්ඡා කරන්න.",
+
+  "Prepare a design brief around your site and the way you want to live.": "ඔබේ ඉඩම සහ ජීවන අවශ්‍යතාවලට ගැළපෙන නිර්මාණ අවශ්‍යතා සටහනක් සකස් කරන්න.",
+
+  "Ask about a bill of quantities for your planned building work.": "ඔබේ සැලසුම් කළ ඉදිකිරීම් සඳහා ප්‍රමාණ පත්‍රයක් පිළිබඳ විමසන්න.",
+
+  "Practical guides to shortlisting a property, preparing for a viewing and planning a building enquiry.": "දේපළ තෝරාගැනීම, බැලීමකට සූදානම් වීම සහ ඉදිකිරීම් විමසීමක් සැලසුම් කිරීම සඳහා ප්‍රායෝගික මාර්ගෝපදේශ.",
+
+  "Build your home / LGC": "ඔබේ නිවස ඉදිකරන්න / LGC",
+
+  "Overseas buyer support": "විදේශගත ගැනුම්කරුවන්ට සහාය",
+
+  "View all services": "සියලු සේවා බලන්න",
+
+  "Available in English, Sinhala and Tamil.": "ඉංග්‍රීසි, සිංහල සහ දෙමළෙන් ඇත.",
+
+  "Public website navigation and interface text are available in English, Sinhala and Tamil. Property descriptions and company profile text are shown as supplied.": "පොදු වෙබ් අඩවියේ මෙනු සහ අතුරුමුහුණත ඉංග්‍රීසි, සිංහල සහ දෙමළෙන් ඇත. දේපළ හා සමාගම් විස්තර සපයා ඇති ආකාරයෙන් පෙන්වයි.",
+
+  "Selecting a language reloads this page.": "භාෂාවක් තේරූ විට මෙම පිටුව නැවත පූරණය වේ.",
+
+  "Negotiable": "මිල සාකච්ඡා කළ හැක",
+
+  "Price negotiable": "මිල සාකච්ඡා කළ හැක",
+    "Property photos": "දේපළ ඡායාරූප",
+    "Open photo :number of :title": ":title හි :number වැනි ඡායාරූපය විවෘත කරන්න",
+    "Show photo :number": ":number වැනි ඡායාරූපය පෙන්වන්න",
+    "Photo :current of :total": "ඡායාරූප :total න් :current",
+    "Restrictions / site concerns": "සීමාවන් / ඉඩම සම්බන්ධ ගැටලු",
+    "Optional": "අත්‍යවශ්‍ය නොවේ",
+    "Mention any known access limits, flooding, building restrictions or other site concerns. These notes will be visible to buyers. Maximum 3,000 characters.": "දන්නා ප්‍රවේශ සීමා, ගංවතුර අවදානම්, ඉදිකිරීම් සීමා හෝ වෙනත් ඉඩම් ගැටලු සඳහන් කරන්න. මෙම සටහන් ගැනුම්කරුවන්ට පෙනේ. උපරිම අක්ෂර 3,000 කි."
+}

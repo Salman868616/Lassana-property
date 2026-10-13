@@ -1,0 +1,17 @@
+{
+  "resources/fonts/inter-variable-latin.woff2": {
+    "file": "assets/inter-variable-latin-DDPelQgH.woff2",
+    "src": "resources/fonts/inter-variable-latin.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BdboUeep.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app-Czm2k2P8.css",
+    "src": "resources/scss/app.scss",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,1 @@
+<span class="position-absolute top-0 start-0 m-3 badge rounded-pill px-3 py-2 shadow-sm" style="z-index:3;background:#8B1E24;color:#fff;pointer-events:none;@if($property->is_price_negotiable && $property->total_price !== null)max-width:calc(50% - 24px);white-space:normal;@endif">{{ __(ucfirst($property->category)).($property->isForRent() ? ' · '.__('For rent') : '') }}</span>
